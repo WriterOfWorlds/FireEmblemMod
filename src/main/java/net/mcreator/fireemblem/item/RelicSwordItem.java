@@ -14,7 +14,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.fireemblem.procedures.RelicSwordToolInHandTickProcedure;
-import net.mcreator.fireemblem.procedures.AutoRegenProcedure;
+import net.mcreator.fireemblem.procedures.RelicSwordLivingEntityIsHitWithToolProcedure;
 import net.mcreator.fireemblem.FireEmblemModElements;
 
 import java.util.Map;
@@ -65,7 +65,7 @@ public class RelicSwordItem extends FireEmblemModElements.ModElement {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
 					$_dependencies.put("entity", entity);
-					AutoRegenProcedure.executeProcedure($_dependencies);
+					RelicSwordLivingEntityIsHitWithToolProcedure.executeProcedure($_dependencies);
 				}
 				return retval;
 			}

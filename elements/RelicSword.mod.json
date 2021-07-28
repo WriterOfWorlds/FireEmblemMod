@@ -24,7 +24,7 @@
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onEntityHitWith": {
-      "name": "AutoRegen"
+      "name": "RelicSwordLivingEntityIsHitWithTool"
     },
     "onItemInUseTick": {
       "name": "RelicSwordToolInHandTick"
