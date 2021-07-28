@@ -340,6 +340,23 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "silver_apple_recipe"
+    },
+    {
+      "name": "GemDropped",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gem_dropped",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -348,8 +365,8 @@
     "en_us": {
       "item.fire_emblem.stone_relic": "Stone Relic",
       "item.fire_emblem.silver_sword": "Silver Sword",
-      "block.fire_emblem.silver_ore": "Silver Ore",
       "item.fire_emblem.silver_axe": "Silver Axe",
+      "block.fire_emblem.silver_ore": "Silver Ore",
       "item.fire_emblem.ice_relic_sword": "Hero\u0027s Icicle",
       "item.fire_emblem.relic_sword": "Flamebringer",
       "item.fire_emblem.silver_pickaxe": "Silver Pickaxe",

@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "silver_ingot",
+    "texture": "silveringot",
     "customModelName": "Normal",
     "name": "Silver",
     "rarity": "COMMON",
@@ -29,6 +29,9 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onDroppedByPlayer": {
+      "name": "GemDropped"
+    },
     "hasDispenseBehavior": false
   }
 }
