@@ -12,6 +12,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.fireemblem.item.RelicSwordItem;
+import net.mcreator.fireemblem.item.IceRelicSwordItem;
 import net.mcreator.fireemblem.FireEmblemMod;
 
 import java.util.Map;
@@ -52,10 +53,19 @@ public class AutoRegenProcedure {
 			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You feel well rested. The Flamebringer was repaired."), (false));
 			}
+		} else if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == IceRelicSwordItem.block)) {
+			(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).setDamage(
+					(int) (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getDamage())
+							- 55));
+			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You feel well rested. The Hero's Icicle was repaired."), (false));
+			}
 		}
 		if (entity instanceof PlayerEntity)
-			((PlayerEntity) entity).getFoodStats().setFoodLevel((int) 20);
-		if (entity instanceof PlayerEntity)
 			((PlayerEntity) entity).giveExperiencePoints((int) 10);
+		if (entity instanceof PlayerEntity) {
+			((PlayerEntity) entity).addExhaustion((float) 1);
+		}
 	}
 }
