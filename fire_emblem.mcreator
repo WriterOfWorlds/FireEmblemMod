@@ -110,23 +110,6 @@
       }
     },
     {
-      "name": "RemoveSlotContents",
-      "type": "procedure",
-      "sortid": 43,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "remove_slot_contents",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "CrushedDust",
       "type": "item",
       "sortid": 44,
@@ -178,6 +161,185 @@
           }
         ]
       }
+    },
+    {
+      "name": "SilverIngot",
+      "type": "item",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_ingot"
+    },
+    {
+      "name": "SilverOre",
+      "type": "block",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_ore"
+    },
+    {
+      "name": "SilverBlock",
+      "type": "block",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_block"
+    },
+    {
+      "name": "SilverOreBlockRecipe",
+      "type": "recipe",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_ore_block_recipe"
+    },
+    {
+      "name": "SilverBlockOreRecipe",
+      "type": "recipe",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_block_ore_recipe"
+    },
+    {
+      "name": "SilverOreSmelting",
+      "type": "recipe",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_ore_smelting"
+    },
+    {
+      "name": "SilverPickaxe",
+      "type": "tool",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_pickaxe"
+    },
+    {
+      "name": "SilverAxe",
+      "type": "tool",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_axe"
+    },
+    {
+      "name": "SilverSword",
+      "type": "tool",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_sword"
+    },
+    {
+      "name": "SilverShovel",
+      "type": "tool",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_shovel"
+    },
+    {
+      "name": "SilverHoe",
+      "type": "tool",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_hoe"
+    },
+    {
+      "name": "SilverPickaxeRecipe",
+      "type": "recipe",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_pickaxe_recipe"
+    },
+    {
+      "name": "SilverAxeRecipe",
+      "type": "recipe",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_axe_recipe"
+    },
+    {
+      "name": "SilverSwordRecipe",
+      "type": "recipe",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_sword_recipe"
+    },
+    {
+      "name": "SilverShovelRecipe",
+      "type": "recipe",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_shovel_recipe"
+    },
+    {
+      "name": "SilverHoeRecipe",
+      "type": "recipe",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_hoe_recipe"
+    },
+    {
+      "name": "SilverAppleFoodEaten",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_apple_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SilverApple",
+      "type": "food",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_apple"
+    },
+    {
+      "name": "SilverAppleRecipe",
+      "type": "recipe",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_apple_recipe"
     }
   ],
   "variable_elements": [],
@@ -185,10 +347,19 @@
   "language_map": {
     "en_us": {
       "item.fire_emblem.stone_relic": "Stone Relic",
-      "item.fire_emblem.relic_sword": "Flamebringer",
+      "item.fire_emblem.silver_sword": "Silver Sword",
+      "block.fire_emblem.silver_ore": "Silver Ore",
+      "item.fire_emblem.silver_axe": "Silver Axe",
       "item.fire_emblem.ice_relic_sword": "Hero\u0027s Icicle",
+      "item.fire_emblem.relic_sword": "Flamebringer",
+      "item.fire_emblem.silver_pickaxe": "Silver Pickaxe",
+      "item.fire_emblem.silver_hoe": "Silver Hoe",
+      "item.fire_emblem.silver_shovel": "Silver Shovel",
+      "item.fire_emblem.silver_ingot": "Silver",
+      "block.fire_emblem.silver_block": "Block of Silver",
       "item.fire_emblem.crushed_dust": "Dehydrating Dust",
-      "block.fire_emblem.affect_table": "Relic Table"
+      "block.fire_emblem.affect_table": "Relic Table",
+      "item.fire_emblem.silver_apple": "Silver Apple"
     }
   },
   "foldersRoot": {

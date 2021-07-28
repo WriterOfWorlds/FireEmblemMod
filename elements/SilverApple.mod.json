@@ -1,0 +1,29 @@
+{
+  "_fv": 23,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "silverapple",
+    "customModelName": "Normal",
+    "name": "Silver Apple",
+    "rarity": "RARE",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "FOOD"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatingSpeed": 32,
+    "resultItem": {
+      "value": ""
+    },
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "eat",
+    "hasGlow": true,
+    "onEaten": {
+      "name": "SilverAppleFoodEaten"
+    }
+  }
+}

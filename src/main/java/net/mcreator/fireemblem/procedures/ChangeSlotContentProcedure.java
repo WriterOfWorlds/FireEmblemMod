@@ -12,7 +12,9 @@ import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.block.Blocks;
 
 import net.mcreator.fireemblem.item.StoneRelicItem;
+import net.mcreator.fireemblem.item.SilverIngotItem;
 import net.mcreator.fireemblem.item.RelicSwordItem;
+import net.mcreator.fireemblem.item.IceRelicSwordItem;
 import net.mcreator.fireemblem.item.CrushedDustItem;
 import net.mcreator.fireemblem.FireEmblemMod;
 
@@ -152,7 +154,124 @@ public class ChangeSlotContentProcedure {
 				}
 			}
 		} else {
-			if ((((!((new Object() {
+			if (((((new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (0))).getItem() == RelicSwordItem.block) && ((new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (1))).getItem() == Blocks.BLUE_ICE.asItem())) && ((new Object() {
+				public ItemStack getItemStack(int sltid) {
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								return ((Slot) ((Map) invobj).get(sltid)).getStack();
+							}
+						}
+					}
+					return ItemStack.EMPTY;
+				}
+			}.getItemStack((int) (2))).getItem() == SilverIngotItem.block))) {
+				if (entity instanceof PlayerEntity) {
+					Container _current = ((PlayerEntity) entity).openContainer;
+					if (_current instanceof Supplier) {
+						Object invobj = ((Supplier) _current).get();
+						if (invobj instanceof Map) {
+							ItemStack _setstack = new ItemStack(IceRelicSwordItem.block);
+							_setstack.setCount((int) 1);
+							((Slot) ((Map) invobj).get((int) (3))).putStack(_setstack);
+							_current.detectAndSendChanges();
+						}
+					}
+				}
+				((new Object() {
+					public ItemStack getItemStack(int sltid) {
+						Entity _ent = entity;
+						if (_ent instanceof ServerPlayerEntity) {
+							Container _current = ((ServerPlayerEntity) _ent).openContainer;
+							if (_current instanceof Supplier) {
+								Object invobj = ((Supplier) _current).get();
+								if (invobj instanceof Map) {
+									return ((Slot) ((Map) invobj).get(sltid)).getStack();
+								}
+							}
+						}
+						return ItemStack.EMPTY;
+					}
+				}.getItemStack((int) (3)))).setDisplayName(new StringTextComponent((new Object() {
+					public String getText() {
+						TextFieldWidget _tf = (TextFieldWidget) guistate.get("text:relicname");
+						if (_tf != null) {
+							return _tf.getText();
+						}
+						return "";
+					}
+				}.getText())));
+				{
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								((Slot) ((Map) invobj).get((int) (0))).decrStackSize((int) (1));
+								_current.detectAndSendChanges();
+							}
+						}
+					}
+				}
+				{
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								((Slot) ((Map) invobj).get((int) (1))).decrStackSize((int) (1));
+								_current.detectAndSendChanges();
+							}
+						}
+					}
+				}
+				{
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						Container _current = ((ServerPlayerEntity) _ent).openContainer;
+						if (_current instanceof Supplier) {
+							Object invobj = ((Supplier) _current).get();
+							if (invobj instanceof Map) {
+								((Slot) ((Map) invobj).get((int) (2))).decrStackSize((int) (1));
+								_current.detectAndSendChanges();
+							}
+						}
+					}
+				}
+			} else if ((((!((new Object() {
 				public ItemStack getItemStack(int sltid) {
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {

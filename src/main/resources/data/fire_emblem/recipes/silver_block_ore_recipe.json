@@ -1,0 +1,13 @@
+{
+  "group": "fire_emblem",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fire_emblem:silver_block"
+    }
+  ],
+  "result": {
+    "item": "fire_emblem:silver_ingot",
+    "count": 9
+  }
+}

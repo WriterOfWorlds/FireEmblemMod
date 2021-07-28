@@ -1,0 +1,27 @@
+{
+  "group": "fire_emblem",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    " 3",
+    " 5"
+  ],
+  "key": {
+    "0": {
+      "item": "fire_emblem:silver_ingot"
+    },
+    "1": {
+      "item": "fire_emblem:silver_ingot"
+    },
+    "3": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "fire_emblem:silver_hoe",
+    "count": 1
+  }
+}
