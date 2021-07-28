@@ -1,0 +1,23 @@
+{
+  "_fv": 23,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Brewing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "brewingInputStack": {
+      "value": "Items.POTIONITEM"
+    },
+    "brewingIngredientStack": {
+      "value": "CUSTOM:CrushedDust"
+    },
+    "brewingReturnStack": {
+      "value": "Items.GLASS_BOTTLE"
+    },
+    "name": "brew_dust",
+    "namespace": "mod"
+  }
+}
