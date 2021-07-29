@@ -1,1 +1,12 @@
-{}
+{
+  "lost-in-thoughts-all-alone": {
+    "category": "music",
+    "subtitle": "subtitles.lost-in-thoughts-all-alone",
+    "sounds": [
+      {
+        "name": "fire_emblem:lost-in-thoughts-all-alone",
+        "stream": true
+      }
+    ]
+  }
+}

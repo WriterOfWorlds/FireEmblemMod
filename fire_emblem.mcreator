@@ -342,13 +342,93 @@
       "registry_name": "silver_apple_recipe"
     },
     {
-      "name": "GemDropped",
-      "type": "procedure",
+      "name": "Hammor",
+      "type": "tool",
       "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "gem_dropped",
+      "registry_name": "hammor"
+    },
+    {
+      "name": "HammorLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hammor_living_entity_is_hit_with_tool",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RespawnParticles",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "respawn_particles",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Alone",
+      "type": "musicdisc",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "alone"
+    },
+    {
+      "name": "StatHealth",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stat_health",
       "metadata": {
         "dependencies": [
           {
@@ -359,20 +439,52 @@
       }
     }
   ],
-  "variable_elements": [],
-  "sound_elements": [],
+  "variable_elements": [
+    {
+      "name": "atk",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "hlt",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "rec",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "lost-in-thoughts-all-alone",
+      "files": [
+        "lost-in-thoughts-all-alone"
+      ],
+      "category": "music",
+      "subtitle": "True Credits"
+    }
+  ],
   "language_map": {
     "en_us": {
       "item.fire_emblem.stone_relic": "Stone Relic",
       "item.fire_emblem.silver_sword": "Silver Sword",
+      "item.fire_emblem.alone": "Music Disc",
       "item.fire_emblem.silver_axe": "Silver Axe",
       "block.fire_emblem.silver_ore": "Silver Ore",
       "item.fire_emblem.ice_relic_sword": "Hero\u0027s Icicle",
+      "subtitles.lost-in-thoughts-all-alone": "True Credits",
+      "item.fire_emblem.hammor": "Bloodbath",
       "item.fire_emblem.relic_sword": "Flamebringer",
       "item.fire_emblem.silver_pickaxe": "Silver Pickaxe",
       "item.fire_emblem.silver_hoe": "Silver Hoe",
+      "item.fire_emblem.alone.desc": "FE Three Houses - Lost In Thoughts All Alone",
       "item.fire_emblem.silver_shovel": "Silver Shovel",
-      "item.fire_emblem.silver_ingot": "Silver",
+      "item.fire_emblem.silver_ingot": "Silver Ingot",
       "block.fire_emblem.silver_block": "Block of Silver",
       "item.fire_emblem.crushed_dust": "Dehydrating Dust",
       "block.fire_emblem.affect_table": "Relic Table",

@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "silveringot",
     "customModelName": "Normal",
-    "name": "Silver",
+    "name": "Silver Ingot",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "MISC"
@@ -29,9 +29,6 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onDroppedByPlayer": {
-      "name": "GemDropped"
-    },
     "hasDispenseBehavior": false
   }
 }
