@@ -67,25 +67,31 @@ public class FireEmblemModVariables {
 		@Override
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
-			nbt.putDouble("atk", instance.atk);
-			nbt.putDouble("hlt", instance.hlt);
-			nbt.putDouble("rec", instance.rec);
+			nbt.putDouble("slowness", instance.slowness);
+			nbt.putDouble("headslow", instance.headslow);
+			nbt.putDouble("chestslow", instance.chestslow);
+			nbt.putDouble("legslow", instance.legslow);
+			nbt.putDouble("footslow", instance.footslow);
 			return nbt;
 		}
 
 		@Override
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
-			instance.atk = nbt.getDouble("atk");
-			instance.hlt = nbt.getDouble("hlt");
-			instance.rec = nbt.getDouble("rec");
+			instance.slowness = nbt.getDouble("slowness");
+			instance.headslow = nbt.getDouble("headslow");
+			instance.chestslow = nbt.getDouble("chestslow");
+			instance.legslow = nbt.getDouble("legslow");
+			instance.footslow = nbt.getDouble("footslow");
 		}
 	}
 
 	public static class PlayerVariables {
-		public double atk = 0;
-		public double hlt = 0;
-		public double rec = 0;
+		public double slowness = 0;
+		public double headslow = 0;
+		public double chestslow = 0;
+		public double legslow = 0;
+		public double footslow = 0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				FireEmblemMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -118,10 +124,12 @@ public class FireEmblemModVariables {
 		PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new PlayerVariables()));
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-		clone.atk = original.atk;
-		clone.hlt = original.hlt;
-		clone.rec = original.rec;
 		if (!event.isWasDeath()) {
+			clone.slowness = original.slowness;
+			clone.headslow = original.headslow;
+			clone.chestslow = original.chestslow;
+			clone.legslow = original.legslow;
+			clone.footslow = original.footslow;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -145,9 +153,11 @@ public class FireEmblemModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
-					variables.atk = message.data.atk;
-					variables.hlt = message.data.hlt;
-					variables.rec = message.data.rec;
+					variables.slowness = message.data.slowness;
+					variables.headslow = message.data.headslow;
+					variables.chestslow = message.data.chestslow;
+					variables.legslow = message.data.legslow;
+					variables.footslow = message.data.footslow;
 				}
 			});
 			context.setPacketHandled(true);

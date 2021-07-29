@@ -413,25 +413,67 @@
           }
         ]
       }
+    },
+    {
+      "name": "DebugbuffCommandExecuted",
+      "type": "procedure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "debugbuff_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Debugbuff",
+      "type": "command",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "debugbuff"
     }
   ],
   "variable_elements": [
     {
-      "name": "atk",
+      "name": "slowness",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "player_lifetime",
       "value": "0"
     },
     {
-      "name": "hlt",
+      "name": "headslow",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "player_lifetime",
       "value": "0"
     },
     {
-      "name": "rec",
+      "name": "chestslow",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "legslow",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "footslow",
+      "type": "number",
+      "scope": "player_lifetime",
       "value": "0"
     }
   ],

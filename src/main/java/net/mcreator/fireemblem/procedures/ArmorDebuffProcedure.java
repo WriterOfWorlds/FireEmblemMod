@@ -13,11 +13,11 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.fireemblem.FireEmblemModVariables;
 import net.mcreator.fireemblem.FireEmblemMod;
 
 import java.util.Map;
 import java.util.HashMap;
-import java.util.Collection;
 
 public class ArmorDebuffProcedure {
 	@Mod.EventBusSubscriber
@@ -51,266 +51,100 @@ public class ArmorDebuffProcedure {
 		if ((((entity instanceof LivingEntity)
 				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
 				: ItemStack.EMPTY).getItem() == Items.IRON_HELMET)) {
-			if ((new Object() {
-				boolean check(Entity _entity) {
-					if (_entity instanceof LivingEntity) {
-						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-						for (EffectInstance effect : effects) {
-							if (effect.getPotion() == Effects.SLOWNESS)
-								return true;
-						}
-					}
-					return false;
-				}
-			}.check(entity))) {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) ((new Object() {
-						int check(Entity _entity) {
-							if (_entity instanceof LivingEntity) {
-								Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-								for (EffectInstance effect : effects) {
-									if (effect.getPotion() == Effects.SLOWNESS)
-										return effect.getAmplifier();
-								}
-							}
-							return 0;
-						}
-					}.check(entity)) + 1)));
-			} else {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) 0));
+			{
+				double _setval = (double) 1;
+				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.headslow = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		}
 		if ((((entity instanceof LivingEntity)
 				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
 				: ItemStack.EMPTY).getItem() == Items.IRON_CHESTPLATE)) {
-			if ((new Object() {
-				boolean check(Entity _entity) {
-					if (_entity instanceof LivingEntity) {
-						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-						for (EffectInstance effect : effects) {
-							if (effect.getPotion() == Effects.SLOWNESS)
-								return true;
-						}
-					}
-					return false;
-				}
-			}.check(entity))) {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) ((new Object() {
-						int check(Entity _entity) {
-							if (_entity instanceof LivingEntity) {
-								Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-								for (EffectInstance effect : effects) {
-									if (effect.getPotion() == Effects.SLOWNESS)
-										return effect.getAmplifier();
-								}
-							}
-							return 0;
-						}
-					}.check(entity)) + 1)));
-			} else {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) 0));
+			{
+				double _setval = (double) 1;
+				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.chestslow = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		}
 		if ((((entity instanceof LivingEntity)
 				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
 				: ItemStack.EMPTY).getItem() == Items.IRON_LEGGINGS)) {
-			if ((new Object() {
-				boolean check(Entity _entity) {
-					if (_entity instanceof LivingEntity) {
-						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-						for (EffectInstance effect : effects) {
-							if (effect.getPotion() == Effects.SLOWNESS)
-								return true;
-						}
-					}
-					return false;
-				}
-			}.check(entity))) {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) ((new Object() {
-						int check(Entity _entity) {
-							if (_entity instanceof LivingEntity) {
-								Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-								for (EffectInstance effect : effects) {
-									if (effect.getPotion() == Effects.SLOWNESS)
-										return effect.getAmplifier();
-								}
-							}
-							return 0;
-						}
-					}.check(entity)) + 1)));
-			} else {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) 0));
+			{
+				double _setval = (double) 1;
+				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.legslow = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		}
 		if ((((entity instanceof LivingEntity)
 				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
 				: ItemStack.EMPTY).getItem() == Items.IRON_BOOTS)) {
-			if ((new Object() {
-				boolean check(Entity _entity) {
-					if (_entity instanceof LivingEntity) {
-						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-						for (EffectInstance effect : effects) {
-							if (effect.getPotion() == Effects.SLOWNESS)
-								return true;
-						}
-					}
-					return false;
-				}
-			}.check(entity))) {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) ((new Object() {
-						int check(Entity _entity) {
-							if (_entity instanceof LivingEntity) {
-								Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-								for (EffectInstance effect : effects) {
-									if (effect.getPotion() == Effects.SLOWNESS)
-										return effect.getAmplifier();
-								}
-							}
-							return 0;
-						}
-					}.check(entity)) + 1)));
-			} else {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) 0));
+			{
+				double _setval = (double) 1;
+				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.footslow = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		}
 		if ((((entity instanceof LivingEntity)
 				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
 				: ItemStack.EMPTY).getItem() == Items.DIAMOND_HELMET)) {
-			if ((new Object() {
-				boolean check(Entity _entity) {
-					if (_entity instanceof LivingEntity) {
-						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-						for (EffectInstance effect : effects) {
-							if (effect.getPotion() == Effects.SLOWNESS)
-								return true;
-						}
-					}
-					return false;
-				}
-			}.check(entity))) {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) ((new Object() {
-						int check(Entity _entity) {
-							if (_entity instanceof LivingEntity) {
-								Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-								for (EffectInstance effect : effects) {
-									if (effect.getPotion() == Effects.SLOWNESS)
-										return effect.getAmplifier();
-								}
-							}
-							return 0;
-						}
-					}.check(entity)) + 1)));
-			} else {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) 0));
+			{
+				double _setval = (double) 1;
+				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.headslow = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		}
 		if ((((entity instanceof LivingEntity)
 				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
 				: ItemStack.EMPTY).getItem() == Items.DIAMOND_CHESTPLATE)) {
-			if ((new Object() {
-				boolean check(Entity _entity) {
-					if (_entity instanceof LivingEntity) {
-						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-						for (EffectInstance effect : effects) {
-							if (effect.getPotion() == Effects.SLOWNESS)
-								return true;
-						}
-					}
-					return false;
-				}
-			}.check(entity))) {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) ((new Object() {
-						int check(Entity _entity) {
-							if (_entity instanceof LivingEntity) {
-								Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-								for (EffectInstance effect : effects) {
-									if (effect.getPotion() == Effects.SLOWNESS)
-										return effect.getAmplifier();
-								}
-							}
-							return 0;
-						}
-					}.check(entity)) + 1)));
-			} else {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) 0));
+			{
+				double _setval = (double) 2;
+				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.chestslow = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		}
 		if ((((entity instanceof LivingEntity)
 				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
 				: ItemStack.EMPTY).getItem() == Items.DIAMOND_LEGGINGS)) {
-			if ((new Object() {
-				boolean check(Entity _entity) {
-					if (_entity instanceof LivingEntity) {
-						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-						for (EffectInstance effect : effects) {
-							if (effect.getPotion() == Effects.SLOWNESS)
-								return true;
-						}
-					}
-					return false;
-				}
-			}.check(entity))) {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) ((new Object() {
-						int check(Entity _entity) {
-							if (_entity instanceof LivingEntity) {
-								Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-								for (EffectInstance effect : effects) {
-									if (effect.getPotion() == Effects.SLOWNESS)
-										return effect.getAmplifier();
-								}
-							}
-							return 0;
-						}
-					}.check(entity)) + 1)));
-			} else {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) 0));
+			{
+				double _setval = (double) 2;
+				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.legslow = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		}
 		if ((((entity instanceof LivingEntity)
 				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
 				: ItemStack.EMPTY).getItem() == Items.DIAMOND_BOOTS)) {
-			if ((new Object() {
-				boolean check(Entity _entity) {
-					if (_entity instanceof LivingEntity) {
-						Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-						for (EffectInstance effect : effects) {
-							if (effect.getPotion() == Effects.SLOWNESS)
-								return true;
-						}
-					}
-					return false;
-				}
-			}.check(entity))) {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) ((new Object() {
-						int check(Entity _entity) {
-							if (_entity instanceof LivingEntity) {
-								Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
-								for (EffectInstance effect : effects) {
-									if (effect.getPotion() == Effects.SLOWNESS)
-										return effect.getAmplifier();
-								}
-							}
-							return 0;
-						}
-					}.check(entity)) + 1)));
-			} else {
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20, (int) 0));
+			{
+				double _setval = (double) 1;
+				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.footslow = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		}
+		if (entity instanceof LivingEntity)
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20,
+					(int) ((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new FireEmblemModVariables.PlayerVariables())).headslow)
+							+ ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+									.orElse(new FireEmblemModVariables.PlayerVariables())).chestslow))
+							+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+									.orElse(new FireEmblemModVariables.PlayerVariables())).legslow)
+									+ ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+											.orElse(new FireEmblemModVariables.PlayerVariables())).footslow)))));
 	}
 }
