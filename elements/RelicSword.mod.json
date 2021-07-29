@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "herorelic",
+    "texture": "heroerelic",
     "customModelName": "Normal",
     "name": "Flamebringer",
     "specialInfo": [],

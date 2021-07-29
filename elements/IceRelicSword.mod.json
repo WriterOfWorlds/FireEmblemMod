@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "icerelic",
+    "texture": "iceshank",
     "customModelName": "Normal",
     "name": "Hero's Icicle",
     "specialInfo": [],
