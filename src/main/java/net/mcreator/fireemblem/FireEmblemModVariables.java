@@ -67,7 +67,6 @@ public class FireEmblemModVariables {
 		@Override
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
-			nbt.putDouble("slowness", instance.slowness);
 			nbt.putDouble("headslow", instance.headslow);
 			nbt.putDouble("chestslow", instance.chestslow);
 			nbt.putDouble("legslow", instance.legslow);
@@ -78,7 +77,6 @@ public class FireEmblemModVariables {
 		@Override
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
-			instance.slowness = nbt.getDouble("slowness");
 			instance.headslow = nbt.getDouble("headslow");
 			instance.chestslow = nbt.getDouble("chestslow");
 			instance.legslow = nbt.getDouble("legslow");
@@ -87,7 +85,6 @@ public class FireEmblemModVariables {
 	}
 
 	public static class PlayerVariables {
-		public double slowness = 0;
 		public double headslow = 0;
 		public double chestslow = 0;
 		public double legslow = 0;
@@ -125,7 +122,6 @@ public class FireEmblemModVariables {
 				.orElse(new PlayerVariables()));
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		if (!event.isWasDeath()) {
-			clone.slowness = original.slowness;
 			clone.headslow = original.headslow;
 			clone.chestslow = original.chestslow;
 			clone.legslow = original.legslow;
@@ -153,7 +149,6 @@ public class FireEmblemModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
-					variables.slowness = message.data.slowness;
 					variables.headslow = message.data.headslow;
 					variables.chestslow = message.data.chestslow;
 					variables.legslow = message.data.legslow;

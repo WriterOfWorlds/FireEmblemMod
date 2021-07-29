@@ -413,45 +413,9 @@
           }
         ]
       }
-    },
-    {
-      "name": "DebugbuffCommandExecuted",
-      "type": "procedure",
-      "sortid": 74,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "debugbuff_command_executed",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Debugbuff",
-      "type": "command",
-      "sortid": 74,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "debugbuff"
     }
   ],
   "variable_elements": [
-    {
-      "name": "slowness",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
-    },
     {
       "name": "headslow",
       "type": "number",

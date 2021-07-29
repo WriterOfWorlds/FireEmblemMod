@@ -12,6 +12,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.block.Blocks;
 
 import net.mcreator.fireemblem.FireEmblemModVariables;
 import net.mcreator.fireemblem.FireEmblemMod;
@@ -130,6 +131,50 @@ public class ArmorDebuffProcedure {
 				: ItemStack.EMPTY).getItem() == Items.DIAMOND_BOOTS)) {
 			{
 				double _setval = (double) 1;
+				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.footslow = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
+		if ((((entity instanceof LivingEntity)
+				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
+				: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+			{
+				double _setval = (double) 0;
+				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.footslow = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
+		if ((((entity instanceof LivingEntity)
+				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
+				: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+			{
+				double _setval = (double) 0;
+				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.chestslow = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
+		if ((((entity instanceof LivingEntity)
+				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
+				: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+			{
+				double _setval = (double) 0;
+				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.legslow = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
+		if ((((entity instanceof LivingEntity)
+				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
+				: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+			{
+				double _setval = (double) 0;
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.footslow = _setval;
 					capability.syncPlayerVariables(entity);
