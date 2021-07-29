@@ -10,6 +10,7 @@ import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.fireemblem.FireEmblemModVariables;
 import net.mcreator.fireemblem.FireEmblemMod;
 
 import java.util.Map;
@@ -19,13 +20,13 @@ public class StatHealthProcedure {
 	@Mod.EventBusSubscriber
 	private static class GlobalTrigger {
 		@SubscribeEvent
-		public static void onPlayerXPLevelChange(PlayerXpEvent.LevelChange event) {
+		public static void onPlayerXPChange(PlayerXpEvent.XpChange event) {
 			if (event != null && event.getEntity() != null) {
 				Entity entity = event.getEntity();
 				double i = entity.getPosX();
 				double j = entity.getPosY();
 				double k = entity.getPosZ();
-				int amount = event.getLevels();
+				int amount = event.getAmount();
 				World world = entity.world;
 				Map<String, Object> dependencies = new HashMap<>();
 				dependencies.put("x", i);
@@ -48,5 +49,12 @@ public class StatHealthProcedure {
 		Entity entity = (Entity) dependencies.get("entity");
 		((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH)
 				.setBaseValue((20 + ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0)));
+		{
+			double _setval = (double) (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) / 4);
+			entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.res = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 	}
 }

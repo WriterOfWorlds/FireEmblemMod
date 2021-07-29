@@ -1,0 +1,208 @@
+{
+  "_fv": 23,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "Sothis",
+          "onClick": {
+            "name": "ChooseSothis"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Sothis",
+          "x": 133,
+          "y": 45
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Yune",
+          "onClick": {
+            "name": "ChooseYune"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "Yune",
+          "x": 216,
+          "y": 91
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Ashera",
+          "onClick": {
+            "name": "ChooseAshera"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Ashera",
+          "x": 133,
+          "y": 91
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Mila",
+          "onClick": {
+            "name": "ChooseMila"
+          },
+          "width": 45,
+          "height": 20,
+          "name": "Mila",
+          "x": 134,
+          "y": 147
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Sothis is the progenitor",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Sothis is the progenitor",
+          "x": 132,
+          "y": 68
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "god of Fódlan, provides strength.",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "god of Fódlan, provides strength.",
+          "x": 132,
+          "y": 78
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Ashera is the",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Ashera is the",
+          "x": 133,
+          "y": 113
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "provides haste.",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "provides haste.",
+          "x": 133,
+          "y": 133
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "god of Order,",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "god of Order,",
+          "x": 133,
+          "y": 123
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Yune is the god",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Yune is the god",
+          "x": 215,
+          "y": 113
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "of chaos,",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "of chaos,",
+          "x": 215,
+          "y": 123
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "provides speed.",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "provides speed.",
+          "x": 215,
+          "y": 133
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Mila is the Earth Mother, ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Mila is the Earth Mother, ",
+          "x": 132,
+          "y": 170
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "provides resistance.",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "provides resistance.",
+          "x": 132,
+          "y": 180
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

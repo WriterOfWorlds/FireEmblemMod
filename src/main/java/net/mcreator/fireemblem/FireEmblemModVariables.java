@@ -71,6 +71,8 @@ public class FireEmblemModVariables {
 			nbt.putDouble("chestslow", instance.chestslow);
 			nbt.putDouble("legslow", instance.legslow);
 			nbt.putDouble("footslow", instance.footslow);
+			nbt.putDouble("res", instance.res);
+			nbt.putString("goddess", instance.goddess);
 			return nbt;
 		}
 
@@ -81,6 +83,8 @@ public class FireEmblemModVariables {
 			instance.chestslow = nbt.getDouble("chestslow");
 			instance.legslow = nbt.getDouble("legslow");
 			instance.footslow = nbt.getDouble("footslow");
+			instance.res = nbt.getDouble("res");
+			instance.goddess = nbt.getString("goddess");
 		}
 	}
 
@@ -89,6 +93,8 @@ public class FireEmblemModVariables {
 		public double chestslow = 0;
 		public double legslow = 0;
 		public double footslow = 0;
+		public double res = 0;
+		public String goddess = "";
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				FireEmblemMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -121,6 +127,8 @@ public class FireEmblemModVariables {
 		PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new PlayerVariables()));
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
+		clone.res = original.res;
+		clone.goddess = original.goddess;
 		if (!event.isWasDeath()) {
 			clone.headslow = original.headslow;
 			clone.chestslow = original.chestslow;
@@ -153,6 +161,8 @@ public class FireEmblemModVariables {
 					variables.chestslow = message.data.chestslow;
 					variables.legslow = message.data.legslow;
 					variables.footslow = message.data.footslow;
+					variables.res = message.data.res;
+					variables.goddess = message.data.goddess;
 				}
 			});
 			context.setPacketHandled(true);

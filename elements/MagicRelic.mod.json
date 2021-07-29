@@ -1,0 +1,30 @@
+{
+  "_fv": 23,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "magicrelic",
+    "customModelName": "Normal",
+    "name": "Crystalizer",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 2,
+    "efficiency": 6.0,
+    "attackSpeed": 2.3000000000000003,
+    "enchantability": 0,
+    "damageVsEntity": 9.5,
+    "usageCount": 300,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "MagicRelicLivingEntityIsHitWithTool"
+    }
+  }
+}
