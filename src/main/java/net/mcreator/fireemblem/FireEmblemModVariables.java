@@ -73,6 +73,12 @@ public class FireEmblemModVariables {
 			nbt.putDouble("footslow", instance.footslow);
 			nbt.putDouble("res", instance.res);
 			nbt.putString("goddess", instance.goddess);
+			nbt.putString("playerclass", instance.playerclass);
+			nbt.putDouble("bow", instance.bow);
+			nbt.putDouble("sword", instance.sword);
+			nbt.putDouble("axe", instance.axe);
+			nbt.putDouble("lance", instance.lance);
+			nbt.putDouble("magic", instance.magic);
 			return nbt;
 		}
 
@@ -85,6 +91,12 @@ public class FireEmblemModVariables {
 			instance.footslow = nbt.getDouble("footslow");
 			instance.res = nbt.getDouble("res");
 			instance.goddess = nbt.getString("goddess");
+			instance.playerclass = nbt.getString("playerclass");
+			instance.bow = nbt.getDouble("bow");
+			instance.sword = nbt.getDouble("sword");
+			instance.axe = nbt.getDouble("axe");
+			instance.lance = nbt.getDouble("lance");
+			instance.magic = nbt.getDouble("magic");
 		}
 	}
 
@@ -95,6 +107,12 @@ public class FireEmblemModVariables {
 		public double footslow = 0;
 		public double res = 0;
 		public String goddess = "";
+		public String playerclass = "Commoner";
+		public double bow = 0;
+		public double sword = 0;
+		public double axe = 0;
+		public double lance = 0;
+		public double magic = 0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				FireEmblemMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -129,6 +147,12 @@ public class FireEmblemModVariables {
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		clone.res = original.res;
 		clone.goddess = original.goddess;
+		clone.playerclass = original.playerclass;
+		clone.bow = original.bow;
+		clone.sword = original.sword;
+		clone.axe = original.axe;
+		clone.lance = original.lance;
+		clone.magic = original.magic;
 		if (!event.isWasDeath()) {
 			clone.headslow = original.headslow;
 			clone.chestslow = original.chestslow;
@@ -163,6 +187,12 @@ public class FireEmblemModVariables {
 					variables.footslow = message.data.footslow;
 					variables.res = message.data.res;
 					variables.goddess = message.data.goddess;
+					variables.playerclass = message.data.playerclass;
+					variables.bow = message.data.bow;
+					variables.sword = message.data.sword;
+					variables.axe = message.data.axe;
+					variables.lance = message.data.lance;
+					variables.magic = message.data.magic;
 				}
 			});
 			context.setPacketHandled(true);

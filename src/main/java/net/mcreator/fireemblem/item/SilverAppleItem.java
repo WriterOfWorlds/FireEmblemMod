@@ -35,7 +35,7 @@ public class SilverAppleItem extends FireEmblemModElements.ModElement {
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(64).rarity(Rarity.RARE)
-					.food((new Food.Builder()).hunger(4).saturation(0.3f).setAlwaysEdible().build()));
+					.food((new Food.Builder()).hunger(6).saturation(0.3f).setAlwaysEdible().build()));
 			setRegistryName("silver_apple");
 		}
 
