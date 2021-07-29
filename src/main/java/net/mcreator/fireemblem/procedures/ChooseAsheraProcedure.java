@@ -1,5 +1,6 @@
 package net.mcreator.fireemblem.procedures;
 
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.fireemblem.FireEmblemModVariables;
@@ -22,5 +23,7 @@ public class ChooseAsheraProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
+		if (entity instanceof PlayerEntity)
+			((PlayerEntity) entity).closeScreen();
 	}
 }

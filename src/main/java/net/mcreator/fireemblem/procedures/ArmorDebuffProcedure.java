@@ -236,14 +236,16 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+		if (((((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireEmblemModVariables.PlayerVariables())).headslow)
 				+ ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).chestslow))
 				+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).legslow)
 						+ ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new FireEmblemModVariables.PlayerVariables())).footslow))) >= 0)) {
+								.orElse(new FireEmblemModVariables.PlayerVariables())).footslow)))
+				- ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).res)) >= 0)) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20,
 						(int) (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)

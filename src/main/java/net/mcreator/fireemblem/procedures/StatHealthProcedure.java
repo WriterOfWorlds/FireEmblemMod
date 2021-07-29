@@ -50,7 +50,7 @@ public class StatHealthProcedure {
 		((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH)
 				.setBaseValue((20 + ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0)));
 		{
-			double _setval = (double) (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) / 4);
+			double _setval = (double) (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) / 8);
 			entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.res = _setval;
 				capability.syncPlayerVariables(entity);
