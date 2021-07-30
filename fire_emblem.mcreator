@@ -646,6 +646,36 @@
           }
         ]
       }
+    },
+    {
+      "name": "ClassCertifier",
+      "type": "item",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "class_certifier"
+    },
+    {
+      "name": "Respawn",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "respawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -742,6 +772,7 @@
       "item.fire_emblem.ice_relic_sword": "Hero\u0027s Icicle",
       "subtitles.lost-in-thoughts-all-alone": "True Credits",
       "item.fire_emblem.hammor": "Bloodbath",
+      "item.fire_emblem.class_certifier": "Class Certifier",
       "item.fire_emblem.relic_sword": "Flamebringer",
       "item.fire_emblem.silver_pickaxe": "Silver Pickaxe",
       "item.fire_emblem.magic_relic": "Crystalizer",

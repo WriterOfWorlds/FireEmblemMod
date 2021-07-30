@@ -22,9 +22,11 @@ public class HammorLivingEntityIsHitWithToolProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHealth() : -1) < 10)) {
+		if ((((sourceentity instanceof LivingEntity)
+				? ((LivingEntity) sourceentity).getHealth()
+				: -1) < (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getMaxHealth() : -1) / 2))) {
 			entity.setFire((int) 15);
-			entity.attackEntityFrom(DamageSource.ON_FIRE, (float) 3);
+			entity.attackEntityFrom(DamageSource.GENERIC, (float) 5);
 		}
 	}
 }

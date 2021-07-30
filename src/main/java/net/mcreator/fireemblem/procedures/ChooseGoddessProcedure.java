@@ -1,5 +1,6 @@
 package net.mcreator.fireemblem.procedures;
 
+import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -10,6 +11,7 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.network.PacketBuffer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.entity.player.ServerPlayerEntity;
@@ -17,6 +19,7 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.fireemblem.item.ClassCertifierItem;
 import net.mcreator.fireemblem.gui.GoddessGui;
 import net.mcreator.fireemblem.FireEmblemModVariables;
 import net.mcreator.fireemblem.FireEmblemMod;
@@ -91,6 +94,13 @@ public class ChooseGoddessProcedure {
 						}
 					}, _bpos);
 				}
+			}
+		}
+		if ((!((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ClassCertifierItem.block)) : false))) {
+			if (entity instanceof PlayerEntity) {
+				ItemStack _setstack = new ItemStack(ClassCertifierItem.block);
+				_setstack.setCount((int) 1);
+				ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 			}
 		}
 	}

@@ -37,6 +37,11 @@ public class GoddessGuiWindow extends ContainerScreen<GoddessGui.GuiContainerMod
 		this.xSize = 176;
 		this.ySize = 166;
 	}
+
+	@Override
+	public boolean isPauseScreen() {
+		return true;
+	}
 	private static final ResourceLocation texture = new ResourceLocation("fire_emblem:textures/goddess.png");
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
