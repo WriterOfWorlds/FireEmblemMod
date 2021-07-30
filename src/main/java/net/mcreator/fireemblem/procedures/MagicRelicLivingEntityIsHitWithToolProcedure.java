@@ -25,6 +25,6 @@ public class MagicRelicLivingEntityIsHitWithToolProcedure {
 		entity.setMotionMultiplier(null, new Vector3d(0.25D, (double) 0.05F, 0.25D));
 		entity.extinguish();
 		if (sourceentity instanceof PlayerEntity)
-			((PlayerEntity) sourceentity).giveExperiencePoints((int) 5);
+			((PlayerEntity) sourceentity).giveExperiencePoints((int) 10);
 	}
 }
