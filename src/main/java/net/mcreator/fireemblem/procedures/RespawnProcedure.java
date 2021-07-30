@@ -5,8 +5,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.world.GameRules;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
@@ -40,14 +38,8 @@ public class RespawnProcedure {
 				FireEmblemMod.LOGGER.warn("Failed to load dependency entity for procedure Respawn!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				FireEmblemMod.LOGGER.warn("Failed to load dependency world for procedure Respawn!");
-			return;
-		}
 		Entity entity = (Entity) dependencies.get("entity");
-		IWorld world = (IWorld) dependencies.get("world");
-		if ((!(world.getWorldInfo().getGameRulesInstance().getBoolean(GameRules.KEEP_INVENTORY)))) {
+		if ((!((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ClassCertifierItem.block)) : false))) {
 			if (entity instanceof PlayerEntity) {
 				ItemStack _setstack = new ItemStack(ClassCertifierItem.block);
 				_setstack.setCount((int) 1);
