@@ -96,7 +96,9 @@ public class ChooseGoddessProcedure {
 				}
 			}
 		}
-		if ((!((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ClassCertifierItem.block)) : false))) {
+		if (((!((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ClassCertifierItem.block)) : false))
+				&& ((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("")))) {
 			if (entity instanceof PlayerEntity) {
 				ItemStack _setstack = new ItemStack(ClassCertifierItem.block);
 				_setstack.setCount((int) 1);

@@ -7,6 +7,7 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.network.PacketBuffer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.entity.player.ServerPlayerEntity;
@@ -27,6 +28,11 @@ public class ClassCertifierRightClickedInAirProcedure {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
 				FireEmblemMod.LOGGER.warn("Failed to load dependency entity for procedure ClassCertifierRightClickedInAir!");
+			return;
+		}
+		if (dependencies.get("itemstack") == null) {
+			if (!dependencies.containsKey("itemstack"))
+				FireEmblemMod.LOGGER.warn("Failed to load dependency itemstack for procedure ClassCertifierRightClickedInAir!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
@@ -50,6 +56,7 @@ public class ClassCertifierRightClickedInAirProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
+		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
@@ -74,6 +81,7 @@ public class ClassCertifierRightClickedInAirProcedure {
 						}, _bpos);
 					}
 				}
+				((itemstack)).setCount((int) 0);
 			} else {
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You do not have enough levels to rank up."), (true));
