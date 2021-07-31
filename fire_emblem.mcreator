@@ -368,27 +368,6 @@
       }
     },
     {
-      "name": "StatAttack",
-      "type": "procedure",
-      "sortid": 72,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "stat_attack",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "ArmorDebuff",
       "type": "procedure",
       "sortid": 73,
@@ -883,6 +862,42 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "forcegui"
+    },
+    {
+      "name": "IntermediateSeal",
+      "type": "item",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "intermediate_seal"
+    },
+    {
+      "name": "IntermediateSealGUI",
+      "type": "gui",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "intermediate_seal_gui"
+    },
+    {
+      "name": "CertifyBrawler",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "certify_brawler",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -963,6 +978,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "heavyarmor",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -977,18 +998,19 @@
   ],
   "language_map": {
     "en_us": {
-      "item.fire_emblem.stone_relic": "Stone Relic",
-      "item.fire_emblem.silver_sword": "Silver Sword",
       "item.fire_emblem.alone": "Music Disc",
+      "item.fire_emblem.silver_sword": "Silver Sword",
+      "item.fire_emblem.stone_relic": "Stone Relic",
       "block.fire_emblem.silver_ore": "Silver Ore",
       "item.fire_emblem.silver_axe": "Silver Axe",
       "item.fire_emblem.ice_relic_sword": "Hero\u0027s Icicle",
       "subtitles.lost-in-thoughts-all-alone": "True Credits",
       "item.fire_emblem.hammor": "Bloodbath",
-      "item.fire_emblem.class_certifier": "Class Certifier",
+      "item.fire_emblem.class_certifier": "Beginner Seal",
       "item.fire_emblem.relic_sword": "Flamebringer",
       "item.fire_emblem.silver_pickaxe": "Silver Pickaxe",
       "item.fire_emblem.magic_relic": "Crystalizer",
+      "item.fire_emblem.intermediate_seal": "Beginner Seal",
       "item.fire_emblem.silver_hoe": "Silver Hoe",
       "item.fire_emblem.alone.desc": "FE Three Houses - Lost In Thoughts All Alone",
       "item.fire_emblem.silver_shovel": "Silver Shovel",

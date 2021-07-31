@@ -1,6 +1,5 @@
 package net.mcreator.fireemblem.procedures;
 
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.fireemblem.FireEmblemModVariables;
@@ -16,13 +15,12 @@ public class CertifyFighterProcedure {
 			return false;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).axe) >= 30)
+		if ((((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireEmblemModVariables.PlayerVariables())).axe) >= 45)
 				|| (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).bow) >= 100))
+						.orElse(new FireEmblemModVariables.PlayerVariables())).bow) >= 50))
 				|| (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).brawl) >= 30))
-				&& (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) >= 10))) {
+						.orElse(new FireEmblemModVariables.PlayerVariables())).brawl) >= 50))) {
 			return (true);
 		}
 		return (false);

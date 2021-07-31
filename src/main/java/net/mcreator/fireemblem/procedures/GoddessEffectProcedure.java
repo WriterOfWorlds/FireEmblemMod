@@ -48,20 +48,20 @@ public class GoddessEffectProcedure {
 		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireEmblemModVariables.PlayerVariables())).goddess)).equals("Sothis"))) {
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.STRENGTH, (int) 20, (int) 0));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.STRENGTH, (int) 20, (int) 0, (false), (false)));
 		} else if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireEmblemModVariables.PlayerVariables())).goddess)).equals("Ashera"))) {
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HASTE, (int) 20, (int) 0));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.HASTE, (int) 20, (int) 0, (false), (false)));
 		}
 		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireEmblemModVariables.PlayerVariables())).goddess)).equals("Yune"))) {
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SPEED, (int) 20, (int) 0));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SPEED, (int) 20, (int) 0, (false), (false)));
 		} else if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireEmblemModVariables.PlayerVariables())).goddess)).equals("Mila"))) {
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.RESISTANCE, (int) 20, (int) 0));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.RESISTANCE, (int) 20, (int) 0, (false), (false)));
 		}
 	}
 }

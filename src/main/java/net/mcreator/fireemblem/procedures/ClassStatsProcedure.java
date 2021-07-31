@@ -94,7 +94,7 @@ public class ClassStatsProcedure {
 			}
 			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Blocks.AIR
 					.asItem())) {
-				((LivingEntity) entity).getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(2);
+				((LivingEntity) entity).getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(1);
 			}
 		}
 	}

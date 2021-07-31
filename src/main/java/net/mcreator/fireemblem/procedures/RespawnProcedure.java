@@ -10,6 +10,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.fireemblem.item.ClassCertifierItem;
+import net.mcreator.fireemblem.FireEmblemModVariables;
 import net.mcreator.fireemblem.FireEmblemMod;
 
 import java.util.Map;
@@ -39,7 +40,9 @@ public class RespawnProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((!((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ClassCertifierItem.block)) : false))) {
+		if (((!((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ClassCertifierItem.block)) : false))
+				&& (!((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Commoner"))))) {
 			if (entity instanceof PlayerEntity) {
 				ItemStack _setstack = new ItemStack(ClassCertifierItem.block);
 				_setstack.setCount((int) 1);

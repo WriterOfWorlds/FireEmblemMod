@@ -80,6 +80,7 @@ public class FireEmblemModVariables {
 			nbt.putDouble("lance", instance.lance);
 			nbt.putDouble("magic", instance.magic);
 			nbt.putDouble("brawl", instance.brawl);
+			nbt.putDouble("heavyarmor", instance.heavyarmor);
 			return nbt;
 		}
 
@@ -99,6 +100,7 @@ public class FireEmblemModVariables {
 			instance.lance = nbt.getDouble("lance");
 			instance.magic = nbt.getDouble("magic");
 			instance.brawl = nbt.getDouble("brawl");
+			instance.heavyarmor = nbt.getDouble("heavyarmor");
 		}
 	}
 
@@ -116,6 +118,7 @@ public class FireEmblemModVariables {
 		public double lance = 0;
 		public double magic = 0;
 		public double brawl = 0;
+		public double heavyarmor = 0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				FireEmblemMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -157,6 +160,7 @@ public class FireEmblemModVariables {
 		clone.lance = original.lance;
 		clone.magic = original.magic;
 		clone.brawl = original.brawl;
+		clone.heavyarmor = original.heavyarmor;
 		if (!event.isWasDeath()) {
 			clone.headslow = original.headslow;
 			clone.chestslow = original.chestslow;
@@ -198,6 +202,7 @@ public class FireEmblemModVariables {
 					variables.lance = message.data.lance;
 					variables.magic = message.data.magic;
 					variables.brawl = message.data.brawl;
+					variables.heavyarmor = message.data.heavyarmor;
 				}
 			});
 			context.setPacketHandled(true);

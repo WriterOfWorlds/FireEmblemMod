@@ -31,25 +31,67 @@ public class CheckStatsCommandExecutedProcedure {
 		if (!world.isRemote()) {
 			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 			if (mcserv != null)
-				mcserv.getPlayerList().func_232641_a_(
-						new StringTextComponent(((((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new FireEmblemModVariables.PlayerVariables())).sword))
-								+ ""
-								+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-										.orElse(new FireEmblemModVariables.PlayerVariables())).axe))))
-								+ ""
-								+ (((((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-										.orElse(new FireEmblemModVariables.PlayerVariables())).bow))
-										+ ""
-										+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-												.orElse(new FireEmblemModVariables.PlayerVariables())).magic))))
-										+ ""
-										+ (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-												.orElse(new FireEmblemModVariables.PlayerVariables())).brawl))
-												+ ""
+				mcserv.getPlayerList()
+						.func_232641_a_(
+								new StringTextComponent(
+										(("Sword: ") + ""
 												+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-														.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)))))))),
-						ChatType.SYSTEM, Util.DUMMY_UUID);
+														.orElse(new FireEmblemModVariables.PlayerVariables())).sword)))),
+								ChatType.SYSTEM, Util.DUMMY_UUID);
+		}
+		if (!world.isRemote()) {
+			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (mcserv != null)
+				mcserv.getPlayerList()
+						.func_232641_a_(
+								new StringTextComponent(
+										(("Axe: ") + ""
+												+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+														.orElse(new FireEmblemModVariables.PlayerVariables())).axe)))),
+								ChatType.SYSTEM, Util.DUMMY_UUID);
+		}
+		if (!world.isRemote()) {
+			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (mcserv != null)
+				mcserv.getPlayerList()
+						.func_232641_a_(
+								new StringTextComponent(
+										(("Bow: ") + ""
+												+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+														.orElse(new FireEmblemModVariables.PlayerVariables())).bow)))),
+								ChatType.SYSTEM, Util.DUMMY_UUID);
+		}
+		if (!world.isRemote()) {
+			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (mcserv != null)
+				mcserv.getPlayerList()
+						.func_232641_a_(
+								new StringTextComponent(
+										(("Magic: ") + ""
+												+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+														.orElse(new FireEmblemModVariables.PlayerVariables())).magic)))),
+								ChatType.SYSTEM, Util.DUMMY_UUID);
+		}
+		if (!world.isRemote()) {
+			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (mcserv != null)
+				mcserv.getPlayerList()
+						.func_232641_a_(
+								new StringTextComponent(
+										(("Brawl: ") + ""
+												+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+														.orElse(new FireEmblemModVariables.PlayerVariables())).brawl)))),
+								ChatType.SYSTEM, Util.DUMMY_UUID);
+		}
+		if (!world.isRemote()) {
+			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (mcserv != null)
+				mcserv.getPlayerList()
+						.func_232641_a_(
+								new StringTextComponent((("Class: ") + ""
+										+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+												.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)))),
+								ChatType.SYSTEM, Util.DUMMY_UUID);
 		}
 	}
 }
