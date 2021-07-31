@@ -39,11 +39,14 @@ public class CheckStatsCommandExecutedProcedure {
 										+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 												.orElse(new FireEmblemModVariables.PlayerVariables())).axe))))
 										+ ""
-										+ (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										+ (((((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 												.orElse(new FireEmblemModVariables.PlayerVariables())).bow))
 												+ ""
 												+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-														.orElse(new FireEmblemModVariables.PlayerVariables())).magic)))))),
+														.orElse(new FireEmblemModVariables.PlayerVariables())).magic))))
+												+ ""
+												+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+														.orElse(new FireEmblemModVariables.PlayerVariables())).brawl)))))),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 		}
 	}
