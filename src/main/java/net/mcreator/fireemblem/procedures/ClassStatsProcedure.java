@@ -85,7 +85,6 @@ public class ClassStatsProcedure {
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == SilverAxeItem.block))) {
 				((LivingEntity) entity).getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(2);
-				((LivingEntity) entity).getAttribute(Attributes.ATTACK_SPEED).setBaseValue(2);
 			}
 			if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BOW)
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)

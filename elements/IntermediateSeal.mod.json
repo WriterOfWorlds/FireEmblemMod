@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "intermediateseal",
     "customModelName": "Normal",
-    "name": "Beginner Seal",
+    "name": "Intermediate Seal",
     "rarity": "RARE",
     "creativeTab": {
       "value": "MISC"
@@ -30,10 +30,10 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "ClassCertifierRightClickedInAir"
+      "name": "IntermediateSealUse"
     },
     "onRightClickedOnBlock": {
-      "name": "ClassCertifierRightClickedInAir"
+      "name": "IntermediateSealUse"
     },
     "hasDispenseBehavior": false
   }

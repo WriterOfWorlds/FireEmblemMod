@@ -822,48 +822,6 @@
       }
     },
     {
-      "name": "ForceguiCommandExecuted",
-      "type": "procedure",
-      "sortid": 98,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "forcegui_command_executed",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Forcegui",
-      "type": "command",
-      "sortid": 98,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "forcegui"
-    },
-    {
       "name": "IntermediateSeal",
       "type": "item",
       "sortid": 99,
@@ -1195,7 +1153,7 @@
       "item.fire_emblem.relic_sword": "Flamebringer",
       "item.fire_emblem.silver_pickaxe": "Silver Pickaxe",
       "item.fire_emblem.magic_relic": "Crystalizer",
-      "item.fire_emblem.intermediate_seal": "Beginner Seal",
+      "item.fire_emblem.intermediate_seal": "Intermediate Seal",
       "item.fire_emblem.silver_hoe": "Silver Hoe",
       "item.fire_emblem.alone.desc": "FE Three Houses - Lost In Thoughts All Alone",
       "item.fire_emblem.silver_shovel": "Silver Shovel",

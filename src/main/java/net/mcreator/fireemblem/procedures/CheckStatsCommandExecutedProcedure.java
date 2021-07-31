@@ -7,6 +7,8 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ChatType;
 import net.minecraft.util.Util;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.fireemblem.FireEmblemModVariables;
@@ -82,6 +84,29 @@ public class CheckStatsCommandExecutedProcedure {
 												+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 														.orElse(new FireEmblemModVariables.PlayerVariables())).brawl)))),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
+		}
+		if (!world.isRemote()) {
+			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (mcserv != null)
+				mcserv.getPlayerList().func_232641_a_(
+						new StringTextComponent((("Health: ") + "" + (((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH).getBaseValue()))),
+						ChatType.SYSTEM, Util.DUMMY_UUID);
+		}
+		if (!world.isRemote()) {
+			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (mcserv != null)
+				mcserv.getPlayerList().func_232641_a_(
+						new StringTextComponent(
+								(("Attack: ") + "" + (((LivingEntity) entity).getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue()))),
+						ChatType.SYSTEM, Util.DUMMY_UUID);
+		}
+		if (!world.isRemote()) {
+			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (mcserv != null)
+				mcserv.getPlayerList().func_232641_a_(
+						new StringTextComponent(
+								(("Attack Speed: ") + "" + (((LivingEntity) entity).getAttribute(Attributes.ATTACK_SPEED).getBaseValue()))),
+						ChatType.SYSTEM, Util.DUMMY_UUID);
 		}
 		if (!world.isRemote()) {
 			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();

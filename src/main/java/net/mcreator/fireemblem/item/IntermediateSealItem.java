@@ -17,7 +17,7 @@ import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.BlockState;
 
-import net.mcreator.fireemblem.procedures.ClassCertifierRightClickedInAirProcedure;
+import net.mcreator.fireemblem.procedures.IntermediateSealUseProcedure;
 import net.mcreator.fireemblem.FireEmblemModElements;
 
 import java.util.Map;
@@ -71,7 +71,7 @@ public class IntermediateSealItem extends FireEmblemModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ClassCertifierRightClickedInAirProcedure.executeProcedure($_dependencies);
+				IntermediateSealUseProcedure.executeProcedure($_dependencies);
 			}
 			return ar;
 		}
@@ -96,7 +96,7 @@ public class IntermediateSealItem extends FireEmblemModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ClassCertifierRightClickedInAirProcedure.executeProcedure($_dependencies);
+				IntermediateSealUseProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
 		}
