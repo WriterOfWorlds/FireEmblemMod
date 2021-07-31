@@ -15,6 +15,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.fireemblem.gui.CertifyClassGui;
+import net.mcreator.fireemblem.FireEmblemModVariables;
 import net.mcreator.fireemblem.FireEmblemMod;
 
 import java.util.Map;
@@ -53,27 +54,30 @@ public class ClassCertifierRightClickedInAirProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) >= 10)) {
-			{
-				Entity _ent = entity;
-				if (_ent instanceof ServerPlayerEntity) {
-					BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
-					NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
-						@Override
-						public ITextComponent getDisplayName() {
-							return new StringTextComponent("CertifyClass");
-						}
+		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals(""))) {
+			if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) >= 10)) {
+				{
+					Entity _ent = entity;
+					if (_ent instanceof ServerPlayerEntity) {
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
+						NetworkHooks.openGui((ServerPlayerEntity) _ent, new INamedContainerProvider() {
+							@Override
+							public ITextComponent getDisplayName() {
+								return new StringTextComponent("CertifyClass");
+							}
 
-						@Override
-						public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-							return new CertifyClassGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
-						}
-					}, _bpos);
+							@Override
+							public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
+								return new CertifyClassGui.GuiContainerMod(id, inventory, new PacketBuffer(Unpooled.buffer()).writeBlockPos(_bpos));
+							}
+						}, _bpos);
+					}
 				}
-			}
-		} else {
-			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You do not have enough levels to rank up."), (true));
+			} else {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You do not have enough levels to rank up."), (true));
+				}
 			}
 		}
 	}
