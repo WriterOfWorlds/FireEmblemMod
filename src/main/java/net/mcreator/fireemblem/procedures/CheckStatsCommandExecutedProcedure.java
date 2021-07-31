@@ -31,23 +31,25 @@ public class CheckStatsCommandExecutedProcedure {
 		if (!world.isRemote()) {
 			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 			if (mcserv != null)
-				mcserv.getPlayerList()
-						.func_232641_a_(
-								new StringTextComponent(((((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-										.orElse(new FireEmblemModVariables.PlayerVariables())).sword))
+				mcserv.getPlayerList().func_232641_a_(
+						new StringTextComponent(((((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new FireEmblemModVariables.PlayerVariables())).sword))
+								+ ""
+								+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new FireEmblemModVariables.PlayerVariables())).axe))))
+								+ ""
+								+ (((((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new FireEmblemModVariables.PlayerVariables())).bow))
 										+ ""
 										+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-												.orElse(new FireEmblemModVariables.PlayerVariables())).axe))))
+												.orElse(new FireEmblemModVariables.PlayerVariables())).magic))))
 										+ ""
-										+ (((((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-												.orElse(new FireEmblemModVariables.PlayerVariables())).bow))
+										+ (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+												.orElse(new FireEmblemModVariables.PlayerVariables())).brawl))
 												+ ""
 												+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-														.orElse(new FireEmblemModVariables.PlayerVariables())).magic))))
-												+ ""
-												+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-														.orElse(new FireEmblemModVariables.PlayerVariables())).brawl)))))),
-								ChatType.SYSTEM, Util.DUMMY_UUID);
+														.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)))))))),
+						ChatType.SYSTEM, Util.DUMMY_UUID);
 		}
 	}
 }
