@@ -14,8 +14,8 @@ import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.fireemblem.procedures.ClassSelectProcedure;
-import net.mcreator.fireemblem.procedures.CertifyFighterProcedure;
+import net.mcreator.fireemblem.procedures.CertifyThiefProcedure;
+import net.mcreator.fireemblem.procedures.CertifyMercenaryProcedure;
 import net.mcreator.fireemblem.FireEmblemMod;
 
 import java.util.HashMap;
@@ -26,12 +26,12 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 import com.google.common.collect.ImmutableMap;
 
 @OnlyIn(Dist.CLIENT)
-public class CertifyClassGuiWindow extends ContainerScreen<CertifyClassGui.GuiContainerMod> {
+public class IntermediateSealMyrmidonGuiWindow extends ContainerScreen<IntermediateSealMyrmidonGui.GuiContainerMod> {
 	private World world;
 	private int x, y, z;
 	private PlayerEntity entity;
-	private final static HashMap guistate = CertifyClassGui.guistate;
-	public CertifyClassGuiWindow(CertifyClassGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
+	private final static HashMap guistate = IntermediateSealMyrmidonGui.guistate;
+	public IntermediateSealMyrmidonGuiWindow(IntermediateSealMyrmidonGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
@@ -39,14 +39,14 @@ public class CertifyClassGuiWindow extends ContainerScreen<CertifyClassGui.GuiCo
 		this.z = container.z;
 		this.entity = container.entity;
 		this.xSize = 182;
-		this.ySize = 166;
+		this.ySize = 134;
 	}
 
 	@Override
 	public boolean isPauseScreen() {
 		return true;
 	}
-	private static final ResourceLocation texture = new ResourceLocation("fire_emblem:textures/certify_class.png");
+	private static final ResourceLocation texture = new ResourceLocation("fire_emblem:textures/intermediate_seal_myrmidon.png");
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
@@ -82,17 +82,14 @@ public class CertifyClassGuiWindow extends ContainerScreen<CertifyClassGui.GuiCo
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Myrmidon", 10, 11, -12829636);
-		this.font.drawString(ms, "Fighter", 97, 11, -12829636);
-		this.font.drawString(ms, ".", 6, 24, -12829636);
-		this.font.drawString(ms, "Sword D+", 11, 26, -12829636);
-		this.font.drawString(ms, ".", 92, 25, -12829636);
-		this.font.drawString(ms, "Axe D+ or", 98, 27, -12829636);
-		this.font.drawString(ms, ".", 92, 35, -12829636);
-		this.font.drawString(ms, "Bow D+ or", 98, 38, -12829636);
-		this.font.drawString(ms, ".", 92, 47, -12829636);
-		this.font.drawString(ms, "Brawl D+", 98, 49, -12829636);
-		this.font.drawString(ms, "Beginner Classes ", 46, 123, -12829636);
+		this.font.drawString(ms, "Mercenary", 13, 13, -12829636);
+		this.font.drawString(ms, "Thief", 97, 14, -12829636);
+		this.font.drawString(ms, ".", 10, 28, -12829636);
+		this.font.drawString(ms, "Sword C+", 15, 30, -12829636);
+		this.font.drawString(ms, ".", 92, 28, -12829636);
+		this.font.drawString(ms, "Sword C+", 98, 30, -12829636);
+		this.font.drawString(ms, "Intermediate Classes ", 35, 94, -12829636);
+		this.font.drawString(ms, "Myrmidon Path", 53, 105, -12829636);
 	}
 
 	@Override
@@ -105,27 +102,27 @@ public class CertifyClassGuiWindow extends ContainerScreen<CertifyClassGui.GuiCo
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 9, this.guiTop + 62, 60, 20, new StringTextComponent("Certify"), e -> {
-			if (ClassSelectProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
-				FireEmblemMod.PACKET_HANDLER.sendToServer(new CertifyClassGui.ButtonPressedMessage(0, x, y, z));
-				CertifyClassGui.handleButtonAction(entity, 0, x, y, z);
+		this.addButton(new Button(this.guiLeft + 10, this.guiTop + 50, 60, 20, new StringTextComponent("Certify"), e -> {
+			if (CertifyMercenaryProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+				FireEmblemMod.PACKET_HANDLER.sendToServer(new IntermediateSealMyrmidonGui.ButtonPressedMessage(0, x, y, z));
+				IntermediateSealMyrmidonGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(MatrixStack ms, int gx, int gy, float ticks) {
-				if (ClassSelectProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+				if (CertifyMercenaryProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addButton(new Button(this.guiLeft + 95, this.guiTop + 62, 60, 20, new StringTextComponent("Certify"), e -> {
-			if (CertifyFighterProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
-				FireEmblemMod.PACKET_HANDLER.sendToServer(new CertifyClassGui.ButtonPressedMessage(1, x, y, z));
-				CertifyClassGui.handleButtonAction(entity, 1, x, y, z);
+		this.addButton(new Button(this.guiLeft + 96, this.guiTop + 50, 60, 20, new StringTextComponent("Certify"), e -> {
+			if (CertifyThiefProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+				FireEmblemMod.PACKET_HANDLER.sendToServer(new IntermediateSealMyrmidonGui.ButtonPressedMessage(1, x, y, z));
+				IntermediateSealMyrmidonGui.handleButtonAction(entity, 1, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(MatrixStack ms, int gx, int gy, float ticks) {
-				if (CertifyFighterProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+				if (CertifyThiefProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
 					super.render(ms, gx, gy, ticks);
 			}
 		});

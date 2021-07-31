@@ -31,7 +31,7 @@
             "name": "SetClassMyrmidon"
           },
           "displayCondition": {
-            "name": "ClassSelect"
+            "name": "CertifyBrawler"
           },
           "width": 60,
           "height": 20,
@@ -61,7 +61,7 @@
             "name": "SetClassFighter"
           },
           "displayCondition": {
-            "name": "CertifyFighter"
+            "name": "CertifyAK"
           },
           "width": 60,
           "height": 20,
@@ -86,12 +86,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Brawl C(+)",
+          "text": "Brawl C+",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Brawl C(+)",
+          "name": "Brawl C+",
           "x": 134,
           "y": 65
         }
@@ -112,12 +112,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Axe C(+) or",
+          "text": "Axe C+ and",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Axe C(+) or",
+          "name": "Axe C+ and",
           "x": 221,
           "y": 64
         }
@@ -138,12 +138,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Res 2(+)",
+          "text": "Res 2+",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Res 2(+)",
+          "name": "Res 2+",
           "x": 221,
           "y": 75
         }
@@ -158,7 +158,129 @@
           },
           "name": "Intermediate Classes ",
           "x": 159,
-          "y": 179
+          "y": 175
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Brigand",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Brigand",
+          "x": 132,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": ".",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": ".",
+          "x": 129,
+          "y": 130
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Axe C+",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Axe C+",
+          "x": 134,
+          "y": 132
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Certify",
+          "displayCondition": {
+            "name": "CertifyBrigand"
+          },
+          "width": 60,
+          "height": 20,
+          "name": "Certify",
+          "x": 132,
+          "y": 149
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Archer",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Archer",
+          "x": 220,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": ".",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": ".",
+          "x": 214,
+          "y": 130
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Bow C+",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Bow C+",
+          "x": 220,
+          "y": 132
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Certify",
+          "onClick": {
+            "name": "SetClassArcher"
+          },
+          "displayCondition": {
+            "name": "CertifyArcher"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Certify",
+          "x": 216,
+          "y": 149
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Fighter Path",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Fighter Path",
+          "x": 175,
+          "y": 186
         }
       }
     ],

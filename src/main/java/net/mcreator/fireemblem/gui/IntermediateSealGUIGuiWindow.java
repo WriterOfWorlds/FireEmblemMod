@@ -14,8 +14,10 @@ import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.fireemblem.procedures.ClassSelectProcedure;
-import net.mcreator.fireemblem.procedures.CertifyFighterProcedure;
+import net.mcreator.fireemblem.procedures.CertifyBrigandProcedure;
+import net.mcreator.fireemblem.procedures.CertifyBrawlerProcedure;
+import net.mcreator.fireemblem.procedures.CertifyArcherProcedure;
+import net.mcreator.fireemblem.procedures.CertifyAKProcedure;
 import net.mcreator.fireemblem.FireEmblemMod;
 
 import java.util.HashMap;
@@ -85,12 +87,19 @@ public class IntermediateSealGUIGuiWindow extends ContainerScreen<IntermediateSe
 		this.font.drawString(ms, "Brawler", 9, 11, -12829636);
 		this.font.drawString(ms, "Armored Knight", 97, 11, -12829636);
 		this.font.drawString(ms, ".", 6, 26, -12829636);
-		this.font.drawString(ms, "Brawl C(+)", 11, 28, -12829636);
+		this.font.drawString(ms, "Brawl C+", 11, 28, -12829636);
 		this.font.drawString(ms, ".", 92, 25, -12829636);
-		this.font.drawString(ms, "Axe C(+) or", 98, 27, -12829636);
+		this.font.drawString(ms, "Axe C+ and", 98, 27, -12829636);
 		this.font.drawString(ms, ".", 92, 35, -12829636);
-		this.font.drawString(ms, "Res 2(+)", 98, 38, -12829636);
-		this.font.drawString(ms, "Intermediate Classes ", 36, 142, -12829636);
+		this.font.drawString(ms, "Res 2+", 98, 38, -12829636);
+		this.font.drawString(ms, "Intermediate Classes ", 36, 138, -12829636);
+		this.font.drawString(ms, "Brigand", 9, 79, -12829636);
+		this.font.drawString(ms, ".", 6, 93, -12829636);
+		this.font.drawString(ms, "Axe C+", 11, 95, -12829636);
+		this.font.drawString(ms, "Archer", 97, 79, -12829636);
+		this.font.drawString(ms, ".", 91, 93, -12829636);
+		this.font.drawString(ms, "Bow C+", 97, 95, -12829636);
+		this.font.drawString(ms, "Fighter Path", 52, 149, -12829636);
 	}
 
 	@Override
@@ -104,26 +113,50 @@ public class IntermediateSealGUIGuiWindow extends ContainerScreen<IntermediateSe
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
 		this.addButton(new Button(this.guiLeft + 9, this.guiTop + 50, 60, 20, new StringTextComponent("Certify"), e -> {
-			if (ClassSelectProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+			if (CertifyBrawlerProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new IntermediateSealGUIGui.ButtonPressedMessage(0, x, y, z));
 				IntermediateSealGUIGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(MatrixStack ms, int gx, int gy, float ticks) {
-				if (ClassSelectProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+				if (CertifyBrawlerProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
 					super.render(ms, gx, gy, ticks);
 			}
 		});
 		this.addButton(new Button(this.guiLeft + 95, this.guiTop + 50, 60, 20, new StringTextComponent("Certify"), e -> {
-			if (CertifyFighterProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+			if (CertifyAKProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new IntermediateSealGUIGui.ButtonPressedMessage(1, x, y, z));
 				IntermediateSealGUIGui.handleButtonAction(entity, 1, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(MatrixStack ms, int gx, int gy, float ticks) {
-				if (CertifyFighterProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+				if (CertifyAKProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+					super.render(ms, gx, gy, ticks);
+			}
+		});
+		this.addButton(new Button(this.guiLeft + 9, this.guiTop + 112, 60, 20, new StringTextComponent("Certify"), e -> {
+			if (CertifyBrigandProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+				FireEmblemMod.PACKET_HANDLER.sendToServer(new IntermediateSealGUIGui.ButtonPressedMessage(2, x, y, z));
+				IntermediateSealGUIGui.handleButtonAction(entity, 2, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(MatrixStack ms, int gx, int gy, float ticks) {
+				if (CertifyBrigandProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+					super.render(ms, gx, gy, ticks);
+			}
+		});
+		this.addButton(new Button(this.guiLeft + 93, this.guiTop + 112, 55, 20, new StringTextComponent("Certify"), e -> {
+			if (CertifyArcherProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+				FireEmblemMod.PACKET_HANDLER.sendToServer(new IntermediateSealGUIGui.ButtonPressedMessage(3, x, y, z));
+				IntermediateSealGUIGui.handleButtonAction(entity, 3, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(MatrixStack ms, int gx, int gy, float ticks) {
+				if (CertifyArcherProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
 					super.render(ms, gx, gy, ticks);
 			}
 		});

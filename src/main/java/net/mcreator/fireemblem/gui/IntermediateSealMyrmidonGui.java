@@ -22,9 +22,8 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.ScreenManager;
 
-import net.mcreator.fireemblem.procedures.SetClassMyrmidonProcedure;
-import net.mcreator.fireemblem.procedures.SetClassFighterProcedure;
-import net.mcreator.fireemblem.procedures.SetClassArcherProcedure;
+import net.mcreator.fireemblem.procedures.SetClassThiefProcedure;
+import net.mcreator.fireemblem.procedures.SetClassMercenaryProcedure;
 import net.mcreator.fireemblem.FireEmblemModElements;
 
 import java.util.function.Supplier;
@@ -32,11 +31,11 @@ import java.util.Map;
 import java.util.HashMap;
 
 @FireEmblemModElements.ModElement.Tag
-public class IntermediateSealGUIGui extends FireEmblemModElements.ModElement {
+public class IntermediateSealMyrmidonGui extends FireEmblemModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
-	public IntermediateSealGUIGui(FireEmblemModElements instance) {
-		super(instance, 100);
+	public IntermediateSealMyrmidonGui(FireEmblemModElements instance) {
+		super(instance, 107);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -47,12 +46,12 @@ public class IntermediateSealGUIGui extends FireEmblemModElements.ModElement {
 	private static class ContainerRegisterHandler {
 		@SubscribeEvent
 		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-			event.getRegistry().register(containerType.setRegistryName("intermediate_seal_gui"));
+			event.getRegistry().register(containerType.setRegistryName("intermediate_seal_myrmidon"));
 		}
 	}
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, IntermediateSealGUIGuiWindow::new));
+		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, IntermediateSealMyrmidonGuiWindow::new));
 	}
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
@@ -181,21 +180,14 @@ public class IntermediateSealGUIGui extends FireEmblemModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				SetClassMyrmidonProcedure.executeProcedure($_dependencies);
+				SetClassMercenaryProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 1) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				SetClassFighterProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 3) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				SetClassArcherProcedure.executeProcedure($_dependencies);
+				SetClassThiefProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

@@ -4,7 +4,7 @@
   "definition": {
     "type": 0,
     "width": 182,
-    "height": 166,
+    "height": 134,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -13,44 +13,44 @@
       {
         "type": "label",
         "data": {
-          "text": "Myrmidon",
+          "text": "Mercenary",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Myrmidon",
+          "name": "Mercenary",
+          "x": 136,
+          "y": 66
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Certify",
+          "onClick": {
+            "name": "SetClassMercenary"
+          },
+          "displayCondition": {
+            "name": "CertifyMercenary"
+          },
+          "width": 60,
+          "height": 20,
+          "name": "Certify",
           "x": 133,
-          "y": 48
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "Certify",
-          "onClick": {
-            "name": "SetClassMyrmidon"
-          },
-          "displayCondition": {
-            "name": "ClassSelect"
-          },
-          "width": 60,
-          "height": 20,
-          "name": "Certify",
-          "x": 132,
-          "y": 99
+          "y": 103
         }
       },
       {
         "type": "label",
         "data": {
-          "text": "Fighter",
+          "text": "Thief",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Fighter",
+          "name": "Thief",
           "x": 220,
-          "y": 48
+          "y": 67
         }
       },
       {
@@ -58,16 +58,16 @@
         "data": {
           "text": "Certify",
           "onClick": {
-            "name": "SetClassFighter"
+            "name": "SetClassThief"
           },
           "displayCondition": {
-            "name": "CertifyFighter"
+            "name": "CertifyThief"
           },
           "width": 60,
           "height": 20,
           "name": "Certify",
-          "x": 218,
-          "y": 99
+          "x": 219,
+          "y": 103
         }
       },
       {
@@ -79,47 +79,21 @@
             "falpha": 0.0
           },
           "name": ".",
-          "x": 129,
-          "y": 61
+          "x": 133,
+          "y": 81
         }
       },
       {
         "type": "label",
         "data": {
-          "text": "Sword D+",
+          "text": "Sword C+",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Sword D+",
-          "x": 134,
-          "y": 63
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": ".",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "name": ".",
-          "x": 215,
-          "y": 62
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": "Axe D+ or",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "name": "Axe D+ or",
-          "x": 221,
-          "y": 64
+          "name": "Sword C+",
+          "x": 138,
+          "y": 83
         }
       },
       {
@@ -132,59 +106,46 @@
           },
           "name": ".",
           "x": 215,
-          "y": 72
+          "y": 81
         }
       },
       {
         "type": "label",
         "data": {
-          "text": "Bow D+ or",
+          "text": "Sword C+",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Bow D+ or",
+          "name": "Sword C+",
           "x": 221,
-          "y": 75
+          "y": 83
         }
       },
       {
         "type": "label",
         "data": {
-          "text": ".",
+          "text": "Intermediate Classes ",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": ".",
-          "x": 215,
-          "y": 84
+          "name": "Intermediate Classes ",
+          "x": 158,
+          "y": 147
         }
       },
       {
         "type": "label",
         "data": {
-          "text": "Brawl D+",
+          "text": "Myrmidon Path",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Brawl D+",
-          "x": 221,
-          "y": 86
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": "Beginner Classes ",
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "name": "Beginner Classes ",
-          "x": 169,
-          "y": 160
+          "name": "Myrmidon Path",
+          "x": 176,
+          "y": 158
         }
       }
     ],
