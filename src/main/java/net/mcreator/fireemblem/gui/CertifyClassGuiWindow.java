@@ -15,8 +15,7 @@ import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.fireemblem.procedures.ClassSelectProcedure;
-import net.mcreator.fireemblem.procedures.CertifyThiefProcedure;
-import net.mcreator.fireemblem.procedures.CertifyArcherProcedure;
+import net.mcreator.fireemblem.procedures.CertifyFighterProcedure;
 import net.mcreator.fireemblem.FireEmblemMod;
 
 import java.util.HashMap;
@@ -39,7 +38,7 @@ public class CertifyClassGuiWindow extends ContainerScreen<CertifyClassGui.GuiCo
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.xSize = 176;
+		this.xSize = 182;
 		this.ySize = 166;
 	}
 
@@ -83,9 +82,17 @@ public class CertifyClassGuiWindow extends ContainerScreen<CertifyClassGui.GuiCo
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Swordsman", 7, 11, -12829636);
-		this.font.drawString(ms, "Archer", 95, 11, -12829636);
-		this.font.drawString(ms, "Thief", 8, 57, -12829636);
+		this.font.drawString(ms, "Myrmidon", 10, 11, -12829636);
+		this.font.drawString(ms, "Fighter", 97, 11, -12829636);
+		this.font.drawString(ms, ".", 6, 24, -12829636);
+		this.font.drawString(ms, "Sword D(+)", 11, 26, -12829636);
+		this.font.drawString(ms, ".", 92, 25, -12829636);
+		this.font.drawString(ms, "Axe D(+) or", 98, 27, -12829636);
+		this.font.drawString(ms, ".", 92, 35, -12829636);
+		this.font.drawString(ms, "Bow D(+) or", 98, 38, -12829636);
+		this.font.drawString(ms, ".", 92, 47, -12829636);
+		this.font.drawString(ms, "Brawl D(+)", 98, 49, -12829636);
+		this.font.drawString(ms, "Beginner Classes ", 46, 123, -12829636);
 	}
 
 	@Override
@@ -98,7 +105,7 @@ public class CertifyClassGuiWindow extends ContainerScreen<CertifyClassGui.GuiCo
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 6, this.guiTop + 24, 60, 20, new StringTextComponent("Certify"), e -> {
+		this.addButton(new Button(this.guiLeft + 9, this.guiTop + 62, 60, 20, new StringTextComponent("Certify"), e -> {
 			if (ClassSelectProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new CertifyClassGui.ButtonPressedMessage(0, x, y, z));
 				CertifyClassGui.handleButtonAction(entity, 0, x, y, z);
@@ -110,27 +117,15 @@ public class CertifyClassGuiWindow extends ContainerScreen<CertifyClassGui.GuiCo
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addButton(new Button(this.guiLeft + 93, this.guiTop + 24, 60, 20, new StringTextComponent("Certify"), e -> {
-			if (CertifyArcherProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+		this.addButton(new Button(this.guiLeft + 95, this.guiTop + 62, 60, 20, new StringTextComponent("Certify"), e -> {
+			if (CertifyFighterProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new CertifyClassGui.ButtonPressedMessage(1, x, y, z));
 				CertifyClassGui.handleButtonAction(entity, 1, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(MatrixStack ms, int gx, int gy, float ticks) {
-				if (CertifyArcherProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
-					super.render(ms, gx, gy, ticks);
-			}
-		});
-		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 73, 60, 20, new StringTextComponent("Certify"), e -> {
-			if (CertifyThiefProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
-				FireEmblemMod.PACKET_HANDLER.sendToServer(new CertifyClassGui.ButtonPressedMessage(2, x, y, z));
-				CertifyClassGui.handleButtonAction(entity, 2, x, y, z);
-			}
-		}) {
-			@Override
-			public void render(MatrixStack ms, int gx, int gy, float ticks) {
-				if (CertifyThiefProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+				if (CertifyFighterProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
 					super.render(ms, gx, gy, ticks);
 			}
 		});

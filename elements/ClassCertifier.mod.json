@@ -29,6 +29,12 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "ClassCertifierRightClickedInAir"
+    },
+    "onRightClickedOnBlock": {
+      "name": "ClassCertifierRightClickedInAir"
+    },
     "hasDispenseBehavior": false
   }
 }

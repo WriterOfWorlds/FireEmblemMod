@@ -3,7 +3,7 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 176,
+    "width": 182,
     "height": 166,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Swordsman",
+          "text": "Myrmidon",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Swordsman",
+          "name": "Myrmidon",
           "x": 133,
           "y": 48
         }
@@ -27,6 +27,9 @@
         "type": "button",
         "data": {
           "text": "Certify",
+          "onClick": {
+            "name": "SetClassMyrmidon"
+          },
           "displayCondition": {
             "name": "ClassSelect"
           },
@@ -34,19 +37,19 @@
           "height": 20,
           "name": "Certify",
           "x": 132,
-          "y": 61
+          "y": 99
         }
       },
       {
         "type": "label",
         "data": {
-          "text": "Archer",
+          "text": "Fighter",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Archer",
-          "x": 221,
+          "name": "Fighter",
+          "x": 220,
           "y": 48
         }
       },
@@ -54,41 +57,134 @@
         "type": "button",
         "data": {
           "text": "Certify",
+          "onClick": {
+            "name": "SetClassFighter"
+          },
           "displayCondition": {
-            "name": "CertifyArcher"
+            "name": "CertifyFighter"
           },
           "width": 60,
           "height": 20,
           "name": "Certify",
-          "x": 219,
+          "x": 218,
+          "y": 99
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": ".",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": ".",
+          "x": 129,
           "y": 61
         }
       },
       {
         "type": "label",
         "data": {
-          "text": "Thief",
+          "text": "Sword D(+)",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Thief",
+          "name": "Sword D(+)",
           "x": 134,
-          "y": 94
+          "y": 63
         }
       },
       {
-        "type": "button",
+        "type": "label",
         "data": {
-          "text": "Certify",
-          "displayCondition": {
-            "name": "CertifyThief"
+          "text": ".",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
           },
-          "width": 60,
-          "height": 20,
-          "name": "Certify",
-          "x": 133,
-          "y": 110
+          "name": ".",
+          "x": 215,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Axe D(+) or",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Axe D(+) or",
+          "x": 221,
+          "y": 64
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": ".",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": ".",
+          "x": 215,
+          "y": 72
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Bow D(+) or",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Bow D(+) or",
+          "x": 221,
+          "y": 75
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": ".",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": ".",
+          "x": 215,
+          "y": 84
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Brawl D(+)",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Brawl D(+)",
+          "x": 221,
+          "y": 86
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Beginner Classes ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Beginner Classes ",
+          "x": 169,
+          "y": 160
         }
       }
     ],

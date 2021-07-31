@@ -86,5 +86,16 @@ public class WeaponStatProcedure {
 			}
 			entity.getPersistentData().putDouble("magic", 0);
 		}
+		if (((entity.getPersistentData().getDouble("brawl")) > 0)) {
+			{
+				double _setval = (double) (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).brawl) + (entity.getPersistentData().getDouble("brawl")));
+				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.brawl = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			entity.getPersistentData().putDouble("brawl", 0);
+		}
 	}
 }
