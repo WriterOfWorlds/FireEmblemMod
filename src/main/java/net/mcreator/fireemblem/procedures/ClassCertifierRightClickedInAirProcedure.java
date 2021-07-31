@@ -62,8 +62,9 @@ public class ClassCertifierRightClickedInAirProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals(""))) {
+				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Commoner"))) {
 			if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) >= 10)) {
+				((itemstack)).setCount((int) 0);
 				{
 					Entity _ent = entity;
 					if (_ent instanceof ServerPlayerEntity) {
@@ -81,11 +82,17 @@ public class ClassCertifierRightClickedInAirProcedure {
 						}, _bpos);
 					}
 				}
-				((itemstack)).setCount((int) 0);
 			} else {
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You do not have enough levels to rank up."), (true));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Not enough XP to certify."), (true));
 				}
+			}
+		} else if ((((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Myrmidon"))
+				|| ((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Fighter")))) {
+			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Not yet implemented."), (true));
 			}
 		}
 	}

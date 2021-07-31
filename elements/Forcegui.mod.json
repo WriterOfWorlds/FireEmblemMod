@@ -1,0 +1,11 @@
+{
+  "_fv": 23,
+  "_type": "command",
+  "definition": {
+    "commandName": "forcegui",
+    "permissionLevel": "No requirement",
+    "onCommandExecuted": {
+      "name": "ForceguiCommandExecuted"
+    }
+  }
+}
