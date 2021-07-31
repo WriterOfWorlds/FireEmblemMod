@@ -1041,6 +1041,32 @@
           }
         ]
       }
+    },
+    {
+      "name": "InterSeal",
+      "type": "recipe",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "inter_seal"
+    },
+    {
+      "name": "DropThing",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "drop_thing",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
