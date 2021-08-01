@@ -22,8 +22,8 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.ScreenManager;
 
-import net.mcreator.fireemblem.procedures.SetClassMyrmidonProcedure;
 import net.mcreator.fireemblem.procedures.SetClassFighterProcedure;
+import net.mcreator.fireemblem.procedures.SetClassBrawlerProcedure;
 import net.mcreator.fireemblem.procedures.SetClassArcherProcedure;
 import net.mcreator.fireemblem.FireEmblemModElements;
 
@@ -181,7 +181,7 @@ public class IntermediateSealGUIGui extends FireEmblemModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				SetClassMyrmidonProcedure.executeProcedure($_dependencies);
+				SetClassBrawlerProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 1) {

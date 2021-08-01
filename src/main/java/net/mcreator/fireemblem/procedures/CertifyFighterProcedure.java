@@ -18,7 +18,7 @@ public class CertifyFighterProcedure {
 		if ((((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireEmblemModVariables.PlayerVariables())).axe) >= 45)
 				|| (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).bow) >= 50))
+						.orElse(new FireEmblemModVariables.PlayerVariables())).bow) >= 100))
 				|| (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).brawl) >= 50))) {
 			return (true);

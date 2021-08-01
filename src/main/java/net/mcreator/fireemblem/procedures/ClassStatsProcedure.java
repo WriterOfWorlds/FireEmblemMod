@@ -7,7 +7,6 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraft.world.World;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
@@ -65,7 +64,13 @@ public class ClassStatsProcedure {
 							.getItem() == Items.NETHERITE_SWORD))
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == SilverSwordItem.block))) {
-				((LivingEntity) entity).getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(2);
+				{
+					double _setval = (double) 1;
+					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.atk = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		}
 		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
@@ -84,16 +89,255 @@ public class ClassStatsProcedure {
 							.getItem() == Items.NETHERITE_AXE))
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == SilverAxeItem.block))) {
-				((LivingEntity) entity).getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(2);
+				{
+					double _setval = (double) 1;
+					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.atk = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BOW)
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.CROSSBOW))) {
-				((LivingEntity) entity).getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(2);
+				{
+					double _setval = (double) 1;
+					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.atk = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Blocks.AIR
 					.asItem())) {
-				((LivingEntity) entity).getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(1);
+				{
+					double _setval = (double) 1;
+					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.atk = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+		}
+		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Mercenary"))) {
+			if ((((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == Items.WOODEN_SWORD)
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.STONE_SWORD))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.IRON_SWORD))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.GOLDEN_SWORD))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.DIAMOND_SWORD))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.NETHERITE_SWORD))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == SilverSwordItem.block))) {
+				{
+					double _setval = (double) 3;
+					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.atk = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if ((((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == Items.WOODEN_AXE)
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.STONE_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.IRON_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.GOLDEN_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.DIAMOND_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.NETHERITE_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == SilverAxeItem.block))) {
+				{
+					double _setval = (double) 1;
+					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.atk = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+		}
+		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Thief"))) {
+			if ((((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == Items.WOODEN_SWORD)
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.STONE_SWORD))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.IRON_SWORD))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.GOLDEN_SWORD))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.DIAMOND_SWORD))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.NETHERITE_SWORD))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == SilverSwordItem.block))) {
+				{
+					double _setval = (double) 3;
+					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.atk = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BOW)
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.CROSSBOW))) {
+				{
+					double _setval = (double) 1;
+					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.atk = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+		}
+		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Brigand"))) {
+			if ((((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == Items.WOODEN_AXE)
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.STONE_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.IRON_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.GOLDEN_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.DIAMOND_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.NETHERITE_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == SilverAxeItem.block))) {
+				{
+					double _setval = (double) 3;
+					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.atk = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Blocks.AIR
+					.asItem())) {
+				{
+					double _setval = (double) 2;
+					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.atk = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+		}
+		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("AK"))) {
+			{
+				double _setval = (double) 2;
+				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.heavyarmor = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			if ((((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == Items.WOODEN_AXE)
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.STONE_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.IRON_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.GOLDEN_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.DIAMOND_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.NETHERITE_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == SilverAxeItem.block))) {
+				{
+					double _setval = (double) 3;
+					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.atk = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+		}
+		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Archer"))) {
+			if ((((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == Items.WOODEN_SWORD)
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.STONE_SWORD))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.IRON_SWORD))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.GOLDEN_SWORD))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.DIAMOND_SWORD))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.NETHERITE_SWORD))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == SilverSwordItem.block))) {
+				{
+					double _setval = (double) 1;
+					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.atk = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BOW)
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.CROSSBOW))) {
+				{
+					double _setval = (double) 3;
+					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.atk = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+		}
+		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Brawler"))) {
+			if ((((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == Items.WOODEN_AXE)
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.STONE_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.IRON_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.GOLDEN_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.DIAMOND_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.NETHERITE_AXE))
+					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == SilverAxeItem.block))) {
+				{
+					double _setval = (double) 2;
+					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.atk = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Blocks.AIR
+					.asItem())) {
+				{
+					double _setval = (double) 3;
+					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.atk = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		}
 	}

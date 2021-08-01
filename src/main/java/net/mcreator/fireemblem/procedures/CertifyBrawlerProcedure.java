@@ -16,7 +16,7 @@ public class CertifyBrawlerProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).brawl) >= 110)) {
+				.orElse(new FireEmblemModVariables.PlayerVariables())).brawl) >= 210)) {
 			return (true);
 		}
 		return (false);

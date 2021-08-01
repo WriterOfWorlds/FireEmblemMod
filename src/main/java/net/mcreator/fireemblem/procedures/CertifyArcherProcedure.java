@@ -16,7 +16,7 @@ public class CertifyArcherProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if ((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).bow) >= 110)) {
+				.orElse(new FireEmblemModVariables.PlayerVariables())).bow) >= 130)) {
 			return (true);
 		}
 		return (false);

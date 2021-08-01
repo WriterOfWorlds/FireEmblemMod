@@ -28,7 +28,7 @@
         "data": {
           "text": "Certify",
           "onClick": {
-            "name": "SetClassMyrmidon"
+            "name": "SetClassBrawler"
           },
           "displayCondition": {
             "name": "CertifyBrawler"
