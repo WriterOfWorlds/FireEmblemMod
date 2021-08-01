@@ -283,7 +283,7 @@
         "data": {
           "text": "Sothis",
           "onClick": {
-            "name": "ChooseSothis"
+            "name": "ChangeGUI"
           },
           "displayCondition": {
             "name": "CheckPage1"

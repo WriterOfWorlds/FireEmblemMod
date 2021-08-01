@@ -1,0 +1,116 @@
+{
+  "_fv": 23,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 84,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Sothis is the progenitor god of ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Sothis is the progenitor god of ",
+          "x": 131,
+          "y": 83
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "god of Fódlan, also known as The",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "god of Fódlan, also known as The",
+          "x": 131,
+          "y": 93
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Beginning. Provides a strength",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Beginning. Provides a strength",
+          "x": 131,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "blessing to her followers.",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "blessing to her followers.",
+          "x": 131,
+          "y": 113
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "<",
+          "onClick": {
+            "name": "SetPageMila"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "<",
+          "x": 136,
+          "y": 128
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": ">",
+          "onClick": {
+            "name": "SetPageAshera"
+          },
+          "width": 30,
+          "height": 20,
+          "name": ">",
+          "x": 261,
+          "y": 128
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Sothis",
+          "onClick": {
+            "name": "ChangeGUI"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Sothis",
+          "x": 186,
+          "y": 128
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 10,
+      "sy": 10,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

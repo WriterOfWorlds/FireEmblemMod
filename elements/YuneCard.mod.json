@@ -1,0 +1,116 @@
+{
+  "_fv": 23,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 84,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Yune is the Tellius godess of",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Yune is the Tellius godess of",
+          "x": 131,
+          "y": 83
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "of chaos, one half of the",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "of chaos, one half of the",
+          "x": 131,
+          "y": 93
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "goddess Ashunera, provides a",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "goddess Ashunera, provides a",
+          "x": 131,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "speed blessing to her followers.",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "speed blessing to her followers.",
+          "x": 131,
+          "y": 113
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "<",
+          "onClick": {
+            "name": "SetPageAshera"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "<",
+          "x": 136,
+          "y": 128
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": ">",
+          "onClick": {
+            "name": "SetPageMila"
+          },
+          "width": 30,
+          "height": 20,
+          "name": ">",
+          "x": 261,
+          "y": 128
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Yune",
+          "onClick": {
+            "name": "ChooseYune"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Yune",
+          "x": 186,
+          "y": 128
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 10,
+      "sy": 10,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

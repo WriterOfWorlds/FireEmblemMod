@@ -1,0 +1,116 @@
+{
+  "_fv": 23,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 84,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Mila is the Earth Mother, and",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Mila is the Earth Mother, and",
+          "x": 131,
+          "y": 83
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "the goddess of Valentia. She",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "the goddess of Valentia. She",
+          "x": 131,
+          "y": 93
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "provides a resistance blessing",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "provides a resistance blessing",
+          "x": 131,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "to her followers.",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "to her followers.",
+          "x": 131,
+          "y": 113
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "<",
+          "onClick": {
+            "name": "SetPageYune"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "<",
+          "x": 136,
+          "y": 128
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": ">",
+          "onClick": {
+            "name": "SetPageSothis"
+          },
+          "width": 30,
+          "height": 20,
+          "name": ">",
+          "x": 261,
+          "y": 128
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Mila",
+          "onClick": {
+            "name": "ChooseMila"
+          },
+          "width": 55,
+          "height": 20,
+          "name": "Mila",
+          "x": 186,
+          "y": 128
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 10,
+      "sy": 10,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

@@ -22,11 +22,8 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.ScreenManager;
 
-import net.mcreator.fireemblem.procedures.ChooseYuneProcedure;
-import net.mcreator.fireemblem.procedures.ChooseMilaProcedure;
-import net.mcreator.fireemblem.procedures.ChooseAsheraProcedure;
-import net.mcreator.fireemblem.procedures.ChangePageRightProcedure;
-import net.mcreator.fireemblem.procedures.ChangePageLeftProcedure;
+import net.mcreator.fireemblem.procedures.SetPageMilaProcedure;
+import net.mcreator.fireemblem.procedures.SetPageAsheraProcedure;
 import net.mcreator.fireemblem.procedures.ChangeGUIProcedure;
 import net.mcreator.fireemblem.FireEmblemModElements;
 
@@ -35,11 +32,11 @@ import java.util.Map;
 import java.util.HashMap;
 
 @FireEmblemModElements.ModElement.Tag
-public class GoddessGui extends FireEmblemModElements.ModElement {
+public class SothisCardGui extends FireEmblemModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
-	public GoddessGui(FireEmblemModElements instance) {
-		super(instance, 77);
+	public SothisCardGui(FireEmblemModElements instance) {
+		super(instance, 125);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -50,12 +47,12 @@ public class GoddessGui extends FireEmblemModElements.ModElement {
 	private static class ContainerRegisterHandler {
 		@SubscribeEvent
 		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-			event.getRegistry().register(containerType.setRegistryName("goddess"));
+			event.getRegistry().register(containerType.setRegistryName("sothis_card"));
 		}
 	}
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GoddessGuiWindow::new));
+		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, SothisCardGuiWindow::new));
 	}
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
@@ -184,14 +181,22 @@ public class GoddessGui extends FireEmblemModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				ChangePageLeftProcedure.executeProcedure($_dependencies);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				SetPageMilaProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 1) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				ChangePageRightProcedure.executeProcedure($_dependencies);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				SetPageAsheraProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 2) {
@@ -203,27 +208,6 @@ public class GoddessGui extends FireEmblemModElements.ModElement {
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				ChangeGUIProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 3) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				ChooseAsheraProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 4) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				ChooseYuneProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if (buttonID == 5) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				ChooseMilaProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}
