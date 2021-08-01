@@ -14,12 +14,18 @@ import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.fireemblem.procedures.CheckPage4Procedure;
+import net.mcreator.fireemblem.procedures.CheckPage3Procedure;
+import net.mcreator.fireemblem.procedures.CheckPage2Procedure;
+import net.mcreator.fireemblem.procedures.CheckPage1Procedure;
 import net.mcreator.fireemblem.FireEmblemMod;
 
 import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.matrix.MatrixStack;
+
+import com.google.common.collect.ImmutableMap;
 
 @OnlyIn(Dist.CLIENT)
 public class GoddessGuiWindow extends ContainerScreen<GoddessGui.GuiContainerMod> {
@@ -35,7 +41,7 @@ public class GoddessGuiWindow extends ContainerScreen<GoddessGui.GuiContainerMod
 		this.z = container.z;
 		this.entity = container.entity;
 		this.xSize = 176;
-		this.ySize = 166;
+		this.ySize = 84;
 	}
 
 	@Override
@@ -78,16 +84,36 @@ public class GoddessGuiWindow extends ContainerScreen<GoddessGui.GuiContainerMod
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Sothis is the progenitor", 6, 31, -12829636);
-		this.font.drawString(ms, "god of F\u00F3dlan, provides strength.", 6, 41, -12829636);
-		this.font.drawString(ms, "Ashera is the", 7, 76, -12829636);
-		this.font.drawString(ms, "provides haste.", 7, 96, -12829636);
-		this.font.drawString(ms, "god of Order,", 7, 86, -12829636);
-		this.font.drawString(ms, "Yune is the god", 89, 76, -12829636);
-		this.font.drawString(ms, "of chaos,", 89, 86, -12829636);
-		this.font.drawString(ms, "provides speed.", 89, 96, -12829636);
-		this.font.drawString(ms, "Mila is the Earth Mother, ", 6, 133, -12829636);
-		this.font.drawString(ms, "provides resistance.", 6, 143, -12829636);
+		if (CheckPage1Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "Sothis is the progenitor god of ", 5, 5, -12829636);
+		if (CheckPage1Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "god of F\u00F3dlan, also known as The", 5, 15, -12829636);
+		if (CheckPage1Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "Beginning. Provides a strength", 5, 25, -12829636);
+		if (CheckPage1Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "blessing to her followers.", 5, 35, -12829636);
+		if (CheckPage2Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "Ashera is the god of Order, she", 5, 5, -12829636);
+		if (CheckPage2Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "provides a haste blessing to her", 5, 15, -12829636);
+		if (CheckPage2Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "followers.", 5, 25, -12829636);
+		if (CheckPage3Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "Yune is the Tellius godess of", 5, 5, -12829636);
+		if (CheckPage3Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "of chaos, one half of the", 5, 15, -12829636);
+		if (CheckPage3Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "goddess Ashunera, provides a", 5, 25, -12829636);
+		if (CheckPage3Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "speed blessing to her followers.", 5, 35, -12829636);
+		if (CheckPage4Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "Mila is the Earth Mother, and", 5, 5, -12829636);
+		if (CheckPage4Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "the goddess of Valentia. She", 5, 15, -12829636);
+		if (CheckPage4Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "provides a resistance blessing", 5, 25, -12829636);
+		if (CheckPage4Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "to her followers.", 5, 35, -12829636);
 	}
 
 	@Override
@@ -100,29 +126,65 @@ public class GoddessGuiWindow extends ContainerScreen<GoddessGui.GuiContainerMod
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 8, 55, 20, new StringTextComponent("Sothis"), e -> {
+		this.addButton(new Button(this.guiLeft + 10, this.guiTop + 50, 30, 20, new StringTextComponent("<"), e -> {
 			if (true) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new GoddessGui.ButtonPressedMessage(0, x, y, z));
 				GoddessGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 90, this.guiTop + 54, 45, 20, new StringTextComponent("Yune"), e -> {
+		this.addButton(new Button(this.guiLeft + 135, this.guiTop + 50, 30, 20, new StringTextComponent(">"), e -> {
 			if (true) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new GoddessGui.ButtonPressedMessage(1, x, y, z));
 				GoddessGui.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 7, this.guiTop + 54, 55, 20, new StringTextComponent("Ashera"), e -> {
-			if (true) {
+		this.addButton(new Button(this.guiLeft + 60, this.guiTop + 50, 55, 20, new StringTextComponent("Choose"), e -> {
+			if (CheckPage1Procedure.executeProcedure(ImmutableMap.of("entity", entity))) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new GoddessGui.ButtonPressedMessage(2, x, y, z));
 				GoddessGui.handleButtonAction(entity, 2, x, y, z);
 			}
-		}));
-		this.addButton(new Button(this.guiLeft + 8, this.guiTop + 110, 45, 20, new StringTextComponent("Mila"), e -> {
-			if (true) {
+		}) {
+			@Override
+			public void render(MatrixStack ms, int gx, int gy, float ticks) {
+				if (CheckPage1Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+					super.render(ms, gx, gy, ticks);
+			}
+		});
+		this.addButton(new Button(this.guiLeft + 60, this.guiTop + 50, 55, 20, new StringTextComponent("Choose"), e -> {
+			if (CheckPage2Procedure.executeProcedure(ImmutableMap.of("entity", entity))) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new GoddessGui.ButtonPressedMessage(3, x, y, z));
 				GoddessGui.handleButtonAction(entity, 3, x, y, z);
 			}
-		}));
+		}) {
+			@Override
+			public void render(MatrixStack ms, int gx, int gy, float ticks) {
+				if (CheckPage2Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+					super.render(ms, gx, gy, ticks);
+			}
+		});
+		this.addButton(new Button(this.guiLeft + 60, this.guiTop + 50, 55, 20, new StringTextComponent("Choose"), e -> {
+			if (CheckPage3Procedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+				FireEmblemMod.PACKET_HANDLER.sendToServer(new GoddessGui.ButtonPressedMessage(4, x, y, z));
+				GoddessGui.handleButtonAction(entity, 4, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(MatrixStack ms, int gx, int gy, float ticks) {
+				if (CheckPage3Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+					super.render(ms, gx, gy, ticks);
+			}
+		});
+		this.addButton(new Button(this.guiLeft + 60, this.guiTop + 50, 55, 20, new StringTextComponent("Choose"), e -> {
+			if (CheckPage4Procedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+				FireEmblemMod.PACKET_HANDLER.sendToServer(new GoddessGui.ButtonPressedMessage(5, x, y, z));
+				GoddessGui.handleButtonAction(entity, 5, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(MatrixStack ms, int gx, int gy, float ticks) {
+				if (CheckPage4Procedure.executeProcedure(ImmutableMap.of("entity", entity)))
+					super.render(ms, gx, gy, ticks);
+			}
+		});
 	}
 }

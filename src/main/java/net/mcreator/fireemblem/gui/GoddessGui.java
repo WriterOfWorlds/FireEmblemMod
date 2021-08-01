@@ -26,6 +26,8 @@ import net.mcreator.fireemblem.procedures.ChooseYuneProcedure;
 import net.mcreator.fireemblem.procedures.ChooseSothisProcedure;
 import net.mcreator.fireemblem.procedures.ChooseMilaProcedure;
 import net.mcreator.fireemblem.procedures.ChooseAsheraProcedure;
+import net.mcreator.fireemblem.procedures.ChangePageRightProcedure;
+import net.mcreator.fireemblem.procedures.ChangePageLeftProcedure;
 import net.mcreator.fireemblem.FireEmblemModElements;
 
 import java.util.function.Supplier;
@@ -182,24 +184,38 @@ public class GoddessGui extends FireEmblemModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				ChooseSothisProcedure.executeProcedure($_dependencies);
+				ChangePageLeftProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 1) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				ChooseYuneProcedure.executeProcedure($_dependencies);
+				ChangePageRightProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 2) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				ChooseAsheraProcedure.executeProcedure($_dependencies);
+				ChooseSothisProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (buttonID == 3) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				ChooseAsheraProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 4) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				ChooseYuneProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 5) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
