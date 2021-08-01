@@ -138,7 +138,7 @@ public class GoddessGuiWindow extends ContainerScreen<GoddessGui.GuiContainerMod
 				GoddessGui.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 60, this.guiTop + 50, 55, 20, new StringTextComponent("Choose"), e -> {
+		this.addButton(new Button(this.guiLeft + 60, this.guiTop + 50, 55, 20, new StringTextComponent("Sothis"), e -> {
 			if (CheckPage1Procedure.executeProcedure(ImmutableMap.of("entity", entity))) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new GoddessGui.ButtonPressedMessage(2, x, y, z));
 				GoddessGui.handleButtonAction(entity, 2, x, y, z);
@@ -150,7 +150,7 @@ public class GoddessGuiWindow extends ContainerScreen<GoddessGui.GuiContainerMod
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addButton(new Button(this.guiLeft + 60, this.guiTop + 50, 55, 20, new StringTextComponent("Choose"), e -> {
+		this.addButton(new Button(this.guiLeft + 60, this.guiTop + 50, 55, 20, new StringTextComponent("Ashera"), e -> {
 			if (CheckPage2Procedure.executeProcedure(ImmutableMap.of("entity", entity))) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new GoddessGui.ButtonPressedMessage(3, x, y, z));
 				GoddessGui.handleButtonAction(entity, 3, x, y, z);
@@ -162,7 +162,7 @@ public class GoddessGuiWindow extends ContainerScreen<GoddessGui.GuiContainerMod
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addButton(new Button(this.guiLeft + 60, this.guiTop + 50, 55, 20, new StringTextComponent("Choose"), e -> {
+		this.addButton(new Button(this.guiLeft + 60, this.guiTop + 50, 55, 20, new StringTextComponent("Yune"), e -> {
 			if (CheckPage3Procedure.executeProcedure(ImmutableMap.of("entity", entity))) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new GoddessGui.ButtonPressedMessage(4, x, y, z));
 				GoddessGui.handleButtonAction(entity, 4, x, y, z);
@@ -174,7 +174,7 @@ public class GoddessGuiWindow extends ContainerScreen<GoddessGui.GuiContainerMod
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addButton(new Button(this.guiLeft + 60, this.guiTop + 50, 55, 20, new StringTextComponent("Choose"), e -> {
+		this.addButton(new Button(this.guiLeft + 60, this.guiTop + 50, 55, 20, new StringTextComponent("Mila"), e -> {
 			if (CheckPage4Procedure.executeProcedure(ImmutableMap.of("entity", entity))) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new GoddessGui.ButtonPressedMessage(5, x, y, z));
 				GoddessGui.handleButtonAction(entity, 5, x, y, z);
