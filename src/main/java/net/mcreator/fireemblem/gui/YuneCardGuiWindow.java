@@ -34,7 +34,7 @@ public class YuneCardGuiWindow extends ContainerScreen<YuneCardGui.GuiContainerM
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.xSize = 176;
+		this.xSize = 180;
 		this.ySize = 84;
 	}
 
@@ -78,10 +78,10 @@ public class YuneCardGuiWindow extends ContainerScreen<YuneCardGui.GuiContainerM
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Yune is the Tellius godess of", 5, 5, -12829636);
-		this.font.drawString(ms, "of chaos, one half of the", 5, 15, -12829636);
-		this.font.drawString(ms, "goddess Ashunera, provides a", 5, 25, -12829636);
-		this.font.drawString(ms, "speed blessing to her followers.", 5, 35, -12829636);
+		this.font.drawString(ms, "Yune is the Tellius godess of", 7, 5, -12829636);
+		this.font.drawString(ms, "of chaos, one half of the", 7, 15, -12829636);
+		this.font.drawString(ms, "goddess Ashunera, provides a", 7, 25, -12829636);
+		this.font.drawString(ms, "speed blessing to her followers.", 7, 35, -12829636);
 	}
 
 	@Override
@@ -94,19 +94,19 @@ public class YuneCardGuiWindow extends ContainerScreen<YuneCardGui.GuiContainerM
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 10, this.guiTop + 50, 30, 20, new StringTextComponent("<"), e -> {
+		this.addButton(new Button(this.guiLeft + 12, this.guiTop + 50, 30, 20, new StringTextComponent("<"), e -> {
 			if (true) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new YuneCardGui.ButtonPressedMessage(0, x, y, z));
 				YuneCardGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 135, this.guiTop + 50, 30, 20, new StringTextComponent(">"), e -> {
+		this.addButton(new Button(this.guiLeft + 137, this.guiTop + 50, 30, 20, new StringTextComponent(">"), e -> {
 			if (true) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new YuneCardGui.ButtonPressedMessage(1, x, y, z));
 				YuneCardGui.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 60, this.guiTop + 50, 55, 20, new StringTextComponent("Yune"), e -> {
+		this.addButton(new Button(this.guiLeft + 62, this.guiTop + 50, 55, 20, new StringTextComponent("Yune"), e -> {
 			if (true) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new YuneCardGui.ButtonPressedMessage(2, x, y, z));
 				YuneCardGui.handleButtonAction(entity, 2, x, y, z);

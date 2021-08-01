@@ -1,0 +1,12 @@
+{
+  "_fv": 23,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "R",
+    "keyBindingName": "Open Unit Stats",
+    "keyBindingCategoryKey": "ui",
+    "onKeyPressed": {
+      "name": "OpenCheckMenu"
+    }
+  }
+}

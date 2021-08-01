@@ -34,7 +34,7 @@ public class AsheraCardGuiWindow extends ContainerScreen<AsheraCardGui.GuiContai
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.xSize = 176;
+		this.xSize = 180;
 		this.ySize = 84;
 	}
 
@@ -78,9 +78,9 @@ public class AsheraCardGuiWindow extends ContainerScreen<AsheraCardGui.GuiContai
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Ashera is the god of Order, she", 5, 5, -12829636);
-		this.font.drawString(ms, "provides a haste blessing to her", 5, 15, -12829636);
-		this.font.drawString(ms, "followers.", 5, 25, -12829636);
+		this.font.drawString(ms, "Ashera is the god of Order, she", 7, 5, -12829636);
+		this.font.drawString(ms, "provides a haste blessing to her", 7, 15, -12829636);
+		this.font.drawString(ms, "followers.", 7, 25, -12829636);
 	}
 
 	@Override
@@ -93,19 +93,19 @@ public class AsheraCardGuiWindow extends ContainerScreen<AsheraCardGui.GuiContai
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 10, this.guiTop + 50, 30, 20, new StringTextComponent("<"), e -> {
+		this.addButton(new Button(this.guiLeft + 12, this.guiTop + 50, 30, 20, new StringTextComponent("<"), e -> {
 			if (true) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new AsheraCardGui.ButtonPressedMessage(0, x, y, z));
 				AsheraCardGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 135, this.guiTop + 50, 30, 20, new StringTextComponent(">"), e -> {
+		this.addButton(new Button(this.guiLeft + 137, this.guiTop + 50, 30, 20, new StringTextComponent(">"), e -> {
 			if (true) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new AsheraCardGui.ButtonPressedMessage(1, x, y, z));
 				AsheraCardGui.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 60, this.guiTop + 50, 55, 20, new StringTextComponent("Ashera"), e -> {
+		this.addButton(new Button(this.guiLeft + 62, this.guiTop + 50, 55, 20, new StringTextComponent("Ashera"), e -> {
 			if (true) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new AsheraCardGui.ButtonPressedMessage(2, x, y, z));
 				AsheraCardGui.handleButtonAction(entity, 2, x, y, z);

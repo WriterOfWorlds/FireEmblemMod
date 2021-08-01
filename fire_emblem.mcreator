@@ -1387,6 +1387,57 @@
           }
         ]
       }
+    },
+    {
+      "name": "CheckGUI",
+      "type": "gui",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "check_gui"
+    },
+    {
+      "name": "OpenCheckMenu",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "open_check_menu",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OpenGUI",
+      "type": "keybind",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "open_gui"
     }
   ],
   "variable_elements": [
@@ -1515,6 +1566,7 @@
       "item.fire_emblem.silver_hoe": "Silver Hoe",
       "item.fire_emblem.alone.desc": "FE Three Houses - Lost In Thoughts All Alone",
       "item.fire_emblem.silver_shovel": "Silver Shovel",
+      "key.fire_emblem.open_gui": "Open Unit Stats",
       "item.fire_emblem.silver_ingot": "Silver Ingot",
       "block.fire_emblem.silver_block": "Block of Silver",
       "item.fire_emblem.crushed_dust": "Dehydrating Dust",
