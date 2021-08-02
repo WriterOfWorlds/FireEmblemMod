@@ -1,8 +1,10 @@
 package net.mcreator.fireemblem.procedures;
 
+import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.fireemblem.item.IntermediateSealItem;
 import net.mcreator.fireemblem.FireEmblemModVariables;
 import net.mcreator.fireemblem.FireEmblemMod;
 
@@ -25,5 +27,10 @@ public class SetClassMercenaryProcedure {
 		}
 		if (entity instanceof PlayerEntity)
 			((PlayerEntity) entity).closeScreen();
+		if (entity instanceof PlayerEntity) {
+			ItemStack _stktoremove = new ItemStack(IntermediateSealItem.block);
+			((PlayerEntity) entity).inventory.func_234564_a_(p -> _stktoremove.getItem() == p.getItem(), (int) 1,
+					((PlayerEntity) entity).container.func_234641_j_());
+		}
 	}
 }

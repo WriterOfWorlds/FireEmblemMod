@@ -10,16 +10,16 @@ import net.mcreator.fireemblem.FireEmblemMod;
 
 import java.util.Map;
 
-public class SetClassBrawlerProcedure {
+public class SetClassBrigandProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				FireEmblemMod.LOGGER.warn("Failed to load dependency entity for procedure SetClassBrawler!");
+				FireEmblemMod.LOGGER.warn("Failed to load dependency entity for procedure SetClassBrigand!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		{
-			String _setval = (String) "Brawler";
+			String _setval = (String) "Brigand";
 			entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.playerclass = _setval;
 				capability.syncPlayerVariables(entity);

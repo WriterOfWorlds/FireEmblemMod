@@ -148,7 +148,7 @@ public class IntermediateSealGUIGuiWindow extends ContainerScreen<IntermediateSe
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addButton(new Button(this.guiLeft + 93, this.guiTop + 112, 55, 20, new StringTextComponent("Certify"), e -> {
+		this.addButton(new Button(this.guiLeft + 95, this.guiTop + 113, 55, 20, new StringTextComponent("Certify"), e -> {
 			if (CertifyArcherProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new IntermediateSealGUIGui.ButtonPressedMessage(3, x, y, z));
 				IntermediateSealGUIGui.handleButtonAction(entity, 3, x, y, z);

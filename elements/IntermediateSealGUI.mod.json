@@ -58,7 +58,7 @@
         "data": {
           "text": "Certify",
           "onClick": {
-            "name": "SetClassFighter"
+            "name": "SetClassAK"
           },
           "displayCondition": {
             "name": "CertifyAK"
@@ -204,6 +204,9 @@
         "type": "button",
         "data": {
           "text": "Certify",
+          "onClick": {
+            "name": "SetClassBrigand"
+          },
           "displayCondition": {
             "name": "CertifyBrigand"
           },
@@ -266,8 +269,8 @@
           "width": 55,
           "height": 20,
           "name": "Certify",
-          "x": 216,
-          "y": 149
+          "x": 218,
+          "y": 150
         }
       },
       {
