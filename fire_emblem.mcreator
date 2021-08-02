@@ -208,24 +208,6 @@
       "registry_name": "silver_ore_smelting"
     },
     {
-      "name": "SilverPickaxe",
-      "type": "tool",
-      "sortid": 55,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "silver_pickaxe"
-    },
-    {
-      "name": "SilverAxe",
-      "type": "tool",
-      "sortid": 56,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "silver_axe"
-    },
-    {
       "name": "SilverSword",
       "type": "tool",
       "sortid": 57,
@@ -235,42 +217,6 @@
       "registry_name": "silver_sword"
     },
     {
-      "name": "SilverShovel",
-      "type": "tool",
-      "sortid": 58,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "silver_shovel"
-    },
-    {
-      "name": "SilverHoe",
-      "type": "tool",
-      "sortid": 59,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "silver_hoe"
-    },
-    {
-      "name": "SilverPickaxeRecipe",
-      "type": "recipe",
-      "sortid": 60,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "silver_pickaxe_recipe"
-    },
-    {
-      "name": "SilverAxeRecipe",
-      "type": "recipe",
-      "sortid": 61,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "silver_axe_recipe"
-    },
-    {
       "name": "SilverSwordRecipe",
       "type": "recipe",
       "sortid": 62,
@@ -278,24 +224,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "silver_sword_recipe"
-    },
-    {
-      "name": "SilverShovelRecipe",
-      "type": "recipe",
-      "sortid": 63,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "silver_shovel_recipe"
-    },
-    {
-      "name": "SilverHoeRecipe",
-      "type": "recipe",
-      "sortid": 64,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "silver_hoe_recipe"
     },
     {
       "name": "SilverAppleFoodEaten",
@@ -1554,18 +1482,14 @@
       "item.fire_emblem.silver_sword": "Silver Sword",
       "item.fire_emblem.alone": "Music Disc",
       "block.fire_emblem.silver_ore": "Silver Ore",
-      "item.fire_emblem.silver_axe": "Silver Axe",
       "item.fire_emblem.ice_relic_sword": "Hero\u0027s Icicle",
       "subtitles.lost-in-thoughts-all-alone": "True Credits",
       "item.fire_emblem.hammor": "Bloodbath",
       "item.fire_emblem.class_certifier": "Beginner Seal",
       "item.fire_emblem.relic_sword": "Flamebringer",
-      "item.fire_emblem.silver_pickaxe": "Silver Pickaxe",
       "item.fire_emblem.magic_relic": "Crystalizer",
       "item.fire_emblem.intermediate_seal": "Intermediate Seal",
-      "item.fire_emblem.silver_hoe": "Silver Hoe",
       "item.fire_emblem.alone.desc": "FE Three Houses - Lost In Thoughts All Alone",
-      "item.fire_emblem.silver_shovel": "Silver Shovel",
       "key.fire_emblem.open_gui": "Open Unit Stats",
       "item.fire_emblem.silver_ingot": "Silver Ingot",
       "block.fire_emblem.silver_block": "Block of Silver",

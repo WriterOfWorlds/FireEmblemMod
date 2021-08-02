@@ -13,7 +13,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
 import net.mcreator.fireemblem.item.SilverSwordItem;
-import net.mcreator.fireemblem.item.SilverAxeItem;
 import net.mcreator.fireemblem.item.RelicSwordItem;
 import net.mcreator.fireemblem.item.MagicRelicItem;
 import net.mcreator.fireemblem.item.HammorItem;
@@ -74,7 +73,7 @@ public class StatIncBCProcedure {
 							.getItem() == SilverSwordItem.block))) {
 				sourceentity.getPersistentData().putDouble("sword", 1);
 			}
-			if ((((((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+			if (((((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == Items.WOODEN_AXE)
 					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.STONE_AXE))
@@ -85,9 +84,7 @@ public class StatIncBCProcedure {
 					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.DIAMOND_AXE))
 					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.NETHERITE_AXE))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == SilverAxeItem.block))) {
+							.getItem() == Items.NETHERITE_AXE))) {
 				sourceentity.getPersistentData().putDouble("axe", 1);
 			}
 			if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)

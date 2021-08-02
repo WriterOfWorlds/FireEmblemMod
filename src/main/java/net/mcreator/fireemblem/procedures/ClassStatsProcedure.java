@@ -12,7 +12,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
 import net.mcreator.fireemblem.item.SilverSwordItem;
-import net.mcreator.fireemblem.item.SilverAxeItem;
 import net.mcreator.fireemblem.FireEmblemModVariables;
 import net.mcreator.fireemblem.FireEmblemMod;
 
@@ -75,7 +74,7 @@ public class ClassStatsProcedure {
 		}
 		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Fighter"))) {
-			if ((((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+			if (((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == Items.WOODEN_AXE)
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.STONE_AXE))
@@ -86,9 +85,7 @@ public class ClassStatsProcedure {
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.DIAMOND_AXE))
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.NETHERITE_AXE))
-					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == SilverAxeItem.block))) {
+							.getItem() == Items.NETHERITE_AXE))) {
 				{
 					double _setval = (double) 1;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -143,7 +140,7 @@ public class ClassStatsProcedure {
 					});
 				}
 			}
-			if ((((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+			if (((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == Items.WOODEN_AXE)
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.STONE_AXE))
@@ -154,9 +151,7 @@ public class ClassStatsProcedure {
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.DIAMOND_AXE))
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.NETHERITE_AXE))
-					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == SilverAxeItem.block))) {
+							.getItem() == Items.NETHERITE_AXE))) {
 				{
 					double _setval = (double) 1;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -204,7 +199,7 @@ public class ClassStatsProcedure {
 		}
 		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Brigand"))) {
-			if ((((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+			if (((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == Items.WOODEN_AXE)
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.STONE_AXE))
@@ -215,9 +210,7 @@ public class ClassStatsProcedure {
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.DIAMOND_AXE))
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.NETHERITE_AXE))
-					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == SilverAxeItem.block))) {
+							.getItem() == Items.NETHERITE_AXE))) {
 				{
 					double _setval = (double) 3;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -246,7 +239,7 @@ public class ClassStatsProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			if ((((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+			if (((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == Items.WOODEN_AXE)
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.STONE_AXE))
@@ -257,9 +250,7 @@ public class ClassStatsProcedure {
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.DIAMOND_AXE))
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.NETHERITE_AXE))
-					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == SilverAxeItem.block))) {
+							.getItem() == Items.NETHERITE_AXE))) {
 				{
 					double _setval = (double) 3;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -307,7 +298,7 @@ public class ClassStatsProcedure {
 		}
 		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Brawler"))) {
-			if ((((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+			if (((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == Items.WOODEN_AXE)
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.STONE_AXE))
@@ -318,9 +309,7 @@ public class ClassStatsProcedure {
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.DIAMOND_AXE))
 					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.NETHERITE_AXE))
-					|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == SilverAxeItem.block))) {
+							.getItem() == Items.NETHERITE_AXE))) {
 				{
 					double _setval = (double) 2;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
