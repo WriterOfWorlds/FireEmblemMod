@@ -1528,7 +1528,6 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "just_enough_items",
       "hlcl_core",
       "curios",
       "patchouli"
