@@ -1440,9 +1440,9 @@
   ],
   "language_map": {
     "en_us": {
-      "item.fire_emblem.stone_relic": "Stone Relic",
-      "item.fire_emblem.silver_sword": "Silver Sword",
       "item.fire_emblem.alone": "Music Disc",
+      "item.fire_emblem.silver_sword": "Silver Sword",
+      "item.fire_emblem.stone_relic": "Stone Relic",
       "block.fire_emblem.silver_ore": "Silver Ore",
       "item.fire_emblem.ice_relic_sword": "Hero\u0027s Icicle",
       "subtitles.lost-in-thoughts-all-alone": "True Credits",
