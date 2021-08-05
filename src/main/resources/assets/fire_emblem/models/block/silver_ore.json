@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "fire_emblem:blocks/silverore",
-    "particle": "fire_emblem:blocks/silverore"
+    "all": "fire_emblem:blocks/stone",
+    "particle": "fire_emblem:blocks/stone"
   }
 }

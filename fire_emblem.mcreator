@@ -54,15 +54,6 @@
       "registry_name": "stone_relic"
     },
     {
-      "name": "AffectTable",
-      "type": "block",
-      "sortid": 39,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "affect_table"
-    },
-    {
       "name": "RelicSwordToolInHandTick",
       "type": "procedure",
       "sortid": 40,
@@ -78,54 +69,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "RelicForge",
-      "type": "gui",
-      "sortid": 41,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "relic_forge"
-    },
-    {
-      "name": "ChangeSlotContent",
-      "type": "procedure",
-      "sortid": 42,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "change_slot_content",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
-          }
-        ]
-      }
-    },
-    {
-      "name": "CrushedDust",
-      "type": "item",
-      "sortid": 44,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "crushed_dust"
-    },
-    {
-      "name": "BrewDust",
-      "type": "recipe",
-      "sortid": 45,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "brew_dust"
     },
     {
       "name": "IceRelicSword",
@@ -1476,7 +1419,13 @@
       "name": "page",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "1.0"
+      "value": "0.0"
+    },
+    {
+      "name": "crest",
+      "type": "string",
+      "scope": "map",
+      "value": ""
     }
   ],
   "sound_elements": [
@@ -1506,8 +1455,6 @@
       "key.fire_emblem.open_gui": "Open Unit Stats",
       "item.fire_emblem.silver_ingot": "Silver Ingot",
       "block.fire_emblem.silver_block": "Block of Silver",
-      "item.fire_emblem.crushed_dust": "Dehydrating Dust",
-      "block.fire_emblem.affect_table": "Relic Table",
       "item.fire_emblem.silver_apple": "Silver Apple"
     }
   },
