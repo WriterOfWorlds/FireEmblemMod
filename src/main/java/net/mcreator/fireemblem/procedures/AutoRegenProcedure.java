@@ -52,7 +52,7 @@ public class AutoRegenProcedure {
 					(int) (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getDamage())
 							- 30));
 			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You feel well rested. The Flamebringer was repaired."), (false));
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You feel well rested. The Areadbhar was repaired."), (false));
 			}
 		} else if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == HammorItem.block)) {

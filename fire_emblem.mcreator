@@ -1117,6 +1117,18 @@
           }
         ]
       }
+    },
+    {
+      "name": "GiveCrest",
+      "type": "procedure",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "give_crest",
+      "metadata": {
+        "dependencies": []
+      }
     }
   ],
   "variable_elements": [
@@ -1219,7 +1231,7 @@
     {
       "name": "crest",
       "type": "string",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": ""
     }
   ],
@@ -1240,7 +1252,7 @@
       "subtitles.lost-in-thoughts-all-alone": "True Credits",
       "item.fire_emblem.hammor": "Bloodbath",
       "item.fire_emblem.class_certifier": "Beginner Seal",
-      "item.fire_emblem.relic_sword": "Flamebringer",
+      "item.fire_emblem.relic_sword": "Areadbhar",
       "item.fire_emblem.magic_relic": "Crystalizer",
       "item.fire_emblem.intermediate_seal": "Intermediate Seal",
       "key.fire_emblem.open_gui": "Open Unit Stats",
