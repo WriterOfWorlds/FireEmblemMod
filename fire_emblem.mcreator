@@ -507,23 +507,6 @@
       "registry_name": "class_certifier"
     },
     {
-      "name": "Respawn",
-      "type": "procedure",
-      "sortid": 89,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "respawn",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "ClassSelect",
       "type": "procedure",
       "sortid": 90,
