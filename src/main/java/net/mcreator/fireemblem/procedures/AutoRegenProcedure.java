@@ -13,7 +13,6 @@ import net.minecraft.entity.Entity;
 
 import net.mcreator.fireemblem.item.RelicSwordItem;
 import net.mcreator.fireemblem.item.MagicRelicItem;
-import net.mcreator.fireemblem.item.IceRelicSwordItem;
 import net.mcreator.fireemblem.item.HammorItem;
 import net.mcreator.fireemblem.FireEmblemMod;
 
@@ -71,14 +70,6 @@ public class AutoRegenProcedure {
 							- 30));
 			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You feel well rested. The Crystalizer was repaired."), (false));
-			}
-		} else if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-				.getItem() == IceRelicSwordItem.block)) {
-			(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).setDamage(
-					(int) (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getDamage())
-							- 55));
-			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You feel well rested. The Hero's Icicle was repaired."), (false));
 			}
 		}
 		if (entity instanceof PlayerEntity)

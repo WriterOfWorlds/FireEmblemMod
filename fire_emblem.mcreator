@@ -45,15 +45,6 @@
       }
     },
     {
-      "name": "StoneRelic",
-      "type": "item",
-      "sortid": 36,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "stone_relic"
-    },
-    {
       "name": "RelicSwordToolInHandTick",
       "type": "procedure",
       "sortid": 40,
@@ -61,32 +52,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "relic_sword_tool_in_hand_tick",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "IceRelicSword",
-      "type": "tool",
-      "sortid": 47,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ice_relic_sword"
-    },
-    {
-      "name": "IceRelicSwordLivingEntityIsHitWithTool",
-      "type": "procedure",
-      "sortid": 48,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ice_relic_sword_living_entity_is_hit_with_tool",
       "metadata": {
         "dependencies": [
           {
@@ -211,15 +176,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "hammor"
-    },
-    {
-      "name": "Alone",
-      "type": "musicdisc",
-      "sortid": 70,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "alone"
     },
     {
       "name": "StatHealth",
@@ -893,99 +849,6 @@
       "registry_name": "inter_seal"
     },
     {
-      "name": "DropThing",
-      "type": "procedure",
-      "sortid": 113,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "drop_thing",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      }
-    },
-    {
-      "name": "CheckPage1",
-      "type": "procedure",
-      "sortid": 114,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "check_page_1",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "CheckPage2",
-      "type": "procedure",
-      "sortid": 115,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "check_page_2",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "CheckPage3",
-      "type": "procedure",
-      "sortid": 116,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "check_page_3",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "CheckPage4",
-      "type": "procedure",
-      "sortid": 117,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "check_page_4",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "ChangePageLeft",
       "type": "procedure",
       "sortid": 118,
@@ -1372,18 +1235,14 @@
   ],
   "language_map": {
     "en_us": {
-      "item.fire_emblem.stone_relic": "Stone Relic",
       "item.fire_emblem.silver_sword": "Silver Sword",
-      "item.fire_emblem.alone": "Music Disc",
       "block.fire_emblem.silver_ore": "Silver Ore",
-      "item.fire_emblem.ice_relic_sword": "Hero\u0027s Icicle",
       "subtitles.lost-in-thoughts-all-alone": "True Credits",
       "item.fire_emblem.hammor": "Bloodbath",
       "item.fire_emblem.class_certifier": "Beginner Seal",
       "item.fire_emblem.relic_sword": "Flamebringer",
       "item.fire_emblem.magic_relic": "Crystalizer",
       "item.fire_emblem.intermediate_seal": "Intermediate Seal",
-      "item.fire_emblem.alone.desc": "FE Three Houses - Lost In Thoughts All Alone",
       "key.fire_emblem.open_gui": "Open Unit Stats",
       "item.fire_emblem.silver_ingot": "Silver Ingot",
       "block.fire_emblem.silver_block": "Block of Silver",
