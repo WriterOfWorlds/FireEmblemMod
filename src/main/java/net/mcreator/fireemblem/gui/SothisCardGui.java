@@ -24,7 +24,7 @@ import net.minecraft.client.gui.ScreenManager;
 
 import net.mcreator.fireemblem.procedures.SetPageMilaProcedure;
 import net.mcreator.fireemblem.procedures.SetPageAsheraProcedure;
-import net.mcreator.fireemblem.procedures.ChangeGUIProcedure;
+import net.mcreator.fireemblem.procedures.ChooseSothisProcedure;
 import net.mcreator.fireemblem.FireEmblemModElements;
 
 import java.util.function.Supplier;
@@ -203,11 +203,7 @@ public class SothisCardGui extends FireEmblemModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				ChangeGUIProcedure.executeProcedure($_dependencies);
+				ChooseSothisProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

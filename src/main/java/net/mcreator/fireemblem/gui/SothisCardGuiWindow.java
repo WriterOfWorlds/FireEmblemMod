@@ -34,7 +34,7 @@ public class SothisCardGuiWindow extends ContainerScreen<SothisCardGui.GuiContai
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.xSize = 180;
+		this.xSize = 185;
 		this.ySize = 84;
 	}
 
@@ -78,10 +78,10 @@ public class SothisCardGuiWindow extends ContainerScreen<SothisCardGui.GuiContai
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Sothis is the progenitor god of ", 7, 5, -12829636);
-		this.font.drawString(ms, "god of F\u00F3dlan, also known as The", 7, 15, -12829636);
-		this.font.drawString(ms, "Beginning. Provides a strength", 7, 25, -12829636);
-		this.font.drawString(ms, "blessing to her followers.", 7, 35, -12829636);
+		this.font.drawString(ms, "Sothis is the progenitor god of ", 10, 5, -12829636);
+		this.font.drawString(ms, "god of F\u00F3dlan, also known as The", 10, 15, -12829636);
+		this.font.drawString(ms, "Beginning. Provides a strength", 10, 25, -12829636);
+		this.font.drawString(ms, "blessing to her followers.", 10, 35, -12829636);
 	}
 
 	@Override
@@ -94,19 +94,19 @@ public class SothisCardGuiWindow extends ContainerScreen<SothisCardGui.GuiContai
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 12, this.guiTop + 50, 30, 20, new StringTextComponent("<"), e -> {
+		this.addButton(new Button(this.guiLeft + 15, this.guiTop + 50, 30, 20, new StringTextComponent("<"), e -> {
 			if (true) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new SothisCardGui.ButtonPressedMessage(0, x, y, z));
 				SothisCardGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 137, this.guiTop + 50, 30, 20, new StringTextComponent(">"), e -> {
+		this.addButton(new Button(this.guiLeft + 140, this.guiTop + 50, 30, 20, new StringTextComponent(">"), e -> {
 			if (true) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new SothisCardGui.ButtonPressedMessage(1, x, y, z));
 				SothisCardGui.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 62, this.guiTop + 50, 55, 20, new StringTextComponent("Sothis"), e -> {
+		this.addButton(new Button(this.guiLeft + 65, this.guiTop + 50, 55, 20, new StringTextComponent("Sothis"), e -> {
 			if (true) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new SothisCardGui.ButtonPressedMessage(2, x, y, z));
 				SothisCardGui.handleButtonAction(entity, 2, x, y, z);

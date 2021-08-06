@@ -307,15 +307,6 @@
       }
     },
     {
-      "name": "Goddess",
-      "type": "gui",
-      "sortid": 77,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "goddess"
-    },
-    {
       "name": "ChooseGoddess",
       "type": "procedure",
       "sortid": 78,
@@ -1029,48 +1020,6 @@
       }
     },
     {
-      "name": "ChangeGUI",
-      "type": "procedure",
-      "sortid": 120,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "change_gui",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "O",
-      "type": "gui",
-      "sortid": 121,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "o"
-    },
-    {
       "name": "AsheraCard",
       "type": "gui",
       "sortid": 122,
@@ -1423,9 +1372,9 @@
   ],
   "language_map": {
     "en_us": {
-      "item.fire_emblem.alone": "Music Disc",
-      "item.fire_emblem.silver_sword": "Silver Sword",
       "item.fire_emblem.stone_relic": "Stone Relic",
+      "item.fire_emblem.silver_sword": "Silver Sword",
+      "item.fire_emblem.alone": "Music Disc",
       "block.fire_emblem.silver_ore": "Silver Ore",
       "item.fire_emblem.ice_relic_sword": "Hero\u0027s Icicle",
       "subtitles.lost-in-thoughts-all-alone": "True Credits",

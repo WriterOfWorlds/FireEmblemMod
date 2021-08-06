@@ -3,7 +3,7 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 180,
+    "width": 185,
     "height": 84,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
@@ -95,7 +95,7 @@
         "data": {
           "text": "Sothis",
           "onClick": {
-            "name": "ChangeGUI"
+            "name": "ChooseSothis"
           },
           "width": 55,
           "height": 20,

@@ -32,8 +32,8 @@ public class CheckGUIGuiWindow extends ContainerScreen<CheckGUIGui.GuiContainerM
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.xSize = 176;
-		this.ySize = 108;
+		this.xSize = 180;
+		this.ySize = 115;
 	}
 	private static final ResourceLocation texture = new ResourceLocation("fire_emblem:textures/check_gui.png");
 	@Override
@@ -72,22 +72,22 @@ public class CheckGUIGuiWindow extends ContainerScreen<CheckGUIGui.GuiContainerM
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		this.font.drawString(ms, "Sword: " + ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).sword) + "", 6, 7, -12829636);
+				.orElse(new FireEmblemModVariables.PlayerVariables())).sword) + "", 8, 10, -12829636);
 		this.font.drawString(ms, "Axe: " + ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).axe) + "", 6, 17, -12829636);
+				.orElse(new FireEmblemModVariables.PlayerVariables())).axe) + "", 8, 20, -12829636);
 		this.font.drawString(ms, "Magic: " + ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).magic) + "", 6, 27, -12829636);
+				.orElse(new FireEmblemModVariables.PlayerVariables())).magic) + "", 8, 30, -12829636);
 		this.font.drawString(ms, "Bow: " + ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).bow) + "", 6, 37, -12829636);
+				.orElse(new FireEmblemModVariables.PlayerVariables())).bow) + "", 8, 40, -12829636);
 		this.font.drawString(ms, "Brawl: " + ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).brawl) + "", 6, 48, -12829636);
+				.orElse(new FireEmblemModVariables.PlayerVariables())).brawl) + "", 8, 51, -12829636);
 		this.font.drawString(ms, "Heavy Armor: " + ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).heavyarmor) + "", 6, 59, -12829636);
+				.orElse(new FireEmblemModVariables.PlayerVariables())).heavyarmor) + "", 8, 62, -12829636);
 		this.font.drawString(ms, "Attack: " + ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).atk) + "", 6, 70, -12829636);
-		this.font.drawString(ms, "Player Stats", 106, 15, -12829636);
+				.orElse(new FireEmblemModVariables.PlayerVariables())).atk) + "", 8, 73, -12829636);
+		this.font.drawString(ms, "Player Stats", 106, 13, -12829636);
 		this.font.drawString(ms, "Class: " + ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass) + "", 5, 88, -12829636);
+				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass) + "", 7, 91, -12829636);
 	}
 
 	@Override

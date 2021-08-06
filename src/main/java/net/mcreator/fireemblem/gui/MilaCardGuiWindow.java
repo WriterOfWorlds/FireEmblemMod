@@ -34,7 +34,7 @@ public class MilaCardGuiWindow extends ContainerScreen<MilaCardGui.GuiContainerM
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.xSize = 180;
+		this.xSize = 185;
 		this.ySize = 84;
 	}
 
@@ -78,10 +78,10 @@ public class MilaCardGuiWindow extends ContainerScreen<MilaCardGui.GuiContainerM
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Mila is the Earth Mother, and", 7, 5, -12829636);
-		this.font.drawString(ms, "the goddess of Valentia. She", 7, 15, -12829636);
-		this.font.drawString(ms, "provides a resistance blessing", 7, 25, -12829636);
-		this.font.drawString(ms, "to her followers.", 7, 35, -12829636);
+		this.font.drawString(ms, "Mila is the Earth Mother, and", 10, 5, -12829636);
+		this.font.drawString(ms, "the goddess of Valentia. She", 10, 15, -12829636);
+		this.font.drawString(ms, "provides a resistance blessing", 10, 25, -12829636);
+		this.font.drawString(ms, "to her followers.", 10, 35, -12829636);
 	}
 
 	@Override
@@ -94,19 +94,19 @@ public class MilaCardGuiWindow extends ContainerScreen<MilaCardGui.GuiContainerM
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 12, this.guiTop + 50, 30, 20, new StringTextComponent("<"), e -> {
+		this.addButton(new Button(this.guiLeft + 15, this.guiTop + 50, 30, 20, new StringTextComponent("<"), e -> {
 			if (true) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new MilaCardGui.ButtonPressedMessage(0, x, y, z));
 				MilaCardGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 137, this.guiTop + 50, 30, 20, new StringTextComponent(">"), e -> {
+		this.addButton(new Button(this.guiLeft + 140, this.guiTop + 50, 30, 20, new StringTextComponent(">"), e -> {
 			if (true) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new MilaCardGui.ButtonPressedMessage(1, x, y, z));
 				MilaCardGui.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addButton(new Button(this.guiLeft + 62, this.guiTop + 50, 55, 20, new StringTextComponent("Mila"), e -> {
+		this.addButton(new Button(this.guiLeft + 65, this.guiTop + 50, 55, 20, new StringTextComponent("Mila"), e -> {
 			if (true) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new MilaCardGui.ButtonPressedMessage(2, x, y, z));
 				MilaCardGui.handleButtonAction(entity, 2, x, y, z);

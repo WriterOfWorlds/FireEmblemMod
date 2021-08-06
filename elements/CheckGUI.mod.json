@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 176,
-    "height": 108,
+    "width": 180,
+    "height": 115,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -110,8 +110,8 @@
             "falpha": 0.0
           },
           "name": "Player Stats",
-          "x": 232,
-          "y": 81
+          "x": 230,
+          "y": 76
         }
       },
       {
