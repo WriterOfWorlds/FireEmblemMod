@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "thunderbrand",
     "customModelName": "Normal",
-    "name": "Bloodbath",
+    "name": "Thunderbrand",
     "specialInfo": [],
     "creativeTab": {
       "value": "COMBAT"
@@ -22,9 +22,6 @@
     "repairItems": [],
     "immuneToFire": true,
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false,
-    "onEntityHitWith": {
-      "name": "HammorLivingEntityIsHitWithTool"
-    }
+    "damageOnCrafting": false
   }
 }
