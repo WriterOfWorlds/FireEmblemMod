@@ -16,7 +16,7 @@ public class BlaiddydCommandExecutedProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		{
-			String _setval = (String) "Blaiddyd";
+			String _setval = (String) "Blaiddyd M";
 			entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.crest = _setval;
 				capability.syncPlayerVariables(entity);

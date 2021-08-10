@@ -1127,7 +1127,12 @@
       "ids": {},
       "registry_name": "give_crest",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       }
     },
     {
@@ -1164,15 +1169,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "Blaiddyd",
-      "type": "command",
-      "sortid": 136,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "blaiddyd"
     }
   ],
   "variable_elements": [

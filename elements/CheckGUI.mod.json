@@ -110,8 +110,8 @@
             "falpha": 0.0
           },
           "name": "Player Stats",
-          "x": 230,
-          "y": 76
+          "x": 232,
+          "y": 79
         }
       },
       {
@@ -123,8 +123,21 @@
             "falpha": 0.0
           },
           "name": "Class: <VAR:playerclass>",
-          "x": 131,
-          "y": 154
+          "x": 132,
+          "y": 161
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Crest: <VAR:crest>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Crest: <VAR:crest>",
+          "x": 132,
+          "y": 151
         }
       }
     ],

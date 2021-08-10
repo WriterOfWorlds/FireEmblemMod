@@ -15,8 +15,10 @@ public class RelicSwordMakeItemGlowProcedure {
 			return false;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd"))) {
+		if ((((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd M"))
+				|| ((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd m")))) {
 			return (true);
 		}
 		return (false);
