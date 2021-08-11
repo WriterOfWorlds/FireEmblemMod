@@ -18,7 +18,10 @@
     "damageVsEntity": 9.5,
     "usageCount": 300,
     "blocksAffected": [],
-    "hasGlow": false,
+    "hasGlow": true,
+    "glowCondition": {
+      "name": "LuinGlow"
+    },
     "repairItems": [],
     "immuneToFire": true,
     "stayInGridWhenCrafting": false,

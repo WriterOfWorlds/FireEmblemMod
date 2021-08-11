@@ -18,7 +18,10 @@
     "damageVsEntity": 10.5,
     "usageCount": 225,
     "blocksAffected": [],
-    "hasGlow": false,
+    "hasGlow": true,
+    "glowCondition": {
+      "name": "ThunderBrandGlow"
+    },
     "repairItems": [],
     "immuneToFire": true,
     "stayInGridWhenCrafting": false,

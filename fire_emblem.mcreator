@@ -1154,14 +1154,33 @@
       }
     },
     {
-      "name": "BlaiddydCommandExecuted",
+      "name": "ThunderBrandGlow",
       "type": "procedure",
       "sortid": 136,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "blaiddyd_command_executed",
+      "registry_name": "thunder_brand_glow",
       "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LuinGlow",
+      "type": "procedure",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "luin_glow",
+      "metadata": {
+        "return_type": "logic",
         "dependencies": [
           {
             "name": "entity",
