@@ -88,8 +88,8 @@ public class StatIncBCProcedure {
 						if (entity instanceof LivingEntity) {
 							((LivingEntity) entity).attackEntityFrom(new DamageSource("crest").setDamageBypassesArmor(), (float) 2);
 						}
-						if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-							((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Crest CRIT"), (false));
+						if (sourceentity instanceof PlayerEntity && !sourceentity.world.isRemote()) {
+							((PlayerEntity) sourceentity).sendStatusMessage(new StringTextComponent("Crest CRIT"), (false));
 						}
 					}
 				} else if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
@@ -98,8 +98,8 @@ public class StatIncBCProcedure {
 						if (entity instanceof LivingEntity) {
 							((LivingEntity) entity).attackEntityFrom(new DamageSource("crest").setDamageBypassesArmor(), (float) 1);
 						}
-						if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-							((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Crest CRIT"), (false));
+						if (sourceentity instanceof PlayerEntity && !sourceentity.world.isRemote()) {
+							((PlayerEntity) sourceentity).sendStatusMessage(new StringTextComponent("Crest CRIT"), (false));
 						}
 					}
 				}
