@@ -48,9 +48,6 @@ public class ClassStatsProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		double general = 0;
-		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd M"))) {
-		}
 		if ((((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == Items.WOODEN_SWORD)
 				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
