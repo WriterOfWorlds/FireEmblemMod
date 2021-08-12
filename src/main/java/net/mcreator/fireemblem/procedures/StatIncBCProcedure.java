@@ -5,10 +5,12 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 import net.minecraft.world.World;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.DamageSource;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
@@ -86,12 +88,18 @@ public class StatIncBCProcedure {
 						if (entity instanceof LivingEntity) {
 							((LivingEntity) entity).attackEntityFrom(new DamageSource("crest").setDamageBypassesArmor(), (float) 2);
 						}
+						if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+							((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Crest CRIT"), (false));
+						}
 					}
 				} else if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd m"))) {
 					if ((((new Random()).nextInt((int) 99 + 1)) <= 9)) {
 						if (entity instanceof LivingEntity) {
 							((LivingEntity) entity).attackEntityFrom(new DamageSource("crest").setDamageBypassesArmor(), (float) 1);
+						}
+						if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
+							((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Crest CRIT"), (false));
 						}
 					}
 				}
