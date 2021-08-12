@@ -2,9 +2,10 @@ package net.mcreator.fireemblem.procedures;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 import net.minecraft.world.World;
+import net.minecraft.util.DamageSource;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
@@ -16,8 +17,10 @@ import net.mcreator.fireemblem.item.SilverSwordItem;
 import net.mcreator.fireemblem.item.RelicSwordItem;
 import net.mcreator.fireemblem.item.MagicRelicItem;
 import net.mcreator.fireemblem.item.HammorItem;
+import net.mcreator.fireemblem.FireEmblemModVariables;
 import net.mcreator.fireemblem.FireEmblemMod;
 
+import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -25,11 +28,10 @@ public class StatIncBCProcedure {
 	@Mod.EventBusSubscriber
 	private static class GlobalTrigger {
 		@SubscribeEvent
-		public static void onEntityAttacked(LivingAttackEvent event) {
+		public static void onEntityAttacked(LivingHurtEvent event) {
 			if (event != null && event.getEntity() != null) {
 				Entity entity = event.getEntity();
 				Entity sourceentity = event.getSource().getTrueSource();
-				Entity imediatesourceentity = event.getSource().getImmediateSource();
 				double i = entity.getPosX();
 				double j = entity.getPosY();
 				double k = entity.getPosZ();
@@ -43,19 +45,25 @@ public class StatIncBCProcedure {
 				dependencies.put("world", world);
 				dependencies.put("entity", entity);
 				dependencies.put("sourceentity", sourceentity);
-				dependencies.put("imediatesourceentity", imediatesourceentity);
 				dependencies.put("event", event);
 				executeProcedure(dependencies);
 			}
 		}
 	}
 	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				FireEmblemMod.LOGGER.warn("Failed to load dependency entity for procedure StatIncBC!");
+			return;
+		}
 		if (dependencies.get("sourceentity") == null) {
 			if (!dependencies.containsKey("sourceentity"))
 				FireEmblemMod.LOGGER.warn("Failed to load dependency sourceentity for procedure StatIncBC!");
 			return;
 		}
+		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
+		double rand = 0;
 		if ((sourceentity instanceof ServerPlayerEntity)) {
 			if ((((((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == Items.WOODEN_SWORD)
@@ -72,6 +80,21 @@ public class StatIncBCProcedure {
 					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == SilverSwordItem.block))) {
 				sourceentity.getPersistentData().putDouble("sword", 1);
+				if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd M"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 19)) {
+						if (entity instanceof LivingEntity) {
+							((LivingEntity) entity).attackEntityFrom(new DamageSource("crest").setDamageBypassesArmor(), (float) 2);
+						}
+					}
+				} else if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd m"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 9)) {
+						if (entity instanceof LivingEntity) {
+							((LivingEntity) entity).attackEntityFrom(new DamageSource("crest").setDamageBypassesArmor(), (float) 1);
+						}
+					}
+				}
 			}
 			if (((((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == Items.WOODEN_AXE)
