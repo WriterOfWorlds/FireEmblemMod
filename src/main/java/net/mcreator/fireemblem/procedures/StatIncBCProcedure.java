@@ -1,13 +1,21 @@
 package net.mcreator.fireemblem.procedures;
 
+import net.minecraftforge.fml.server.ServerLifecycleHooks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ChatType;
+import net.minecraft.util.Util;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
@@ -16,8 +24,10 @@ import net.mcreator.fireemblem.item.SilverSwordItem;
 import net.mcreator.fireemblem.item.RelicSwordItem;
 import net.mcreator.fireemblem.item.MagicRelicItem;
 import net.mcreator.fireemblem.item.HammorItem;
+import net.mcreator.fireemblem.FireEmblemModVariables;
 import net.mcreator.fireemblem.FireEmblemMod;
 
+import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -48,12 +58,24 @@ public class StatIncBCProcedure {
 		}
 	}
 	public static void executeProcedure(Map<String, Object> dependencies) {
+		if (dependencies.get("entity") == null) {
+			if (!dependencies.containsKey("entity"))
+				FireEmblemMod.LOGGER.warn("Failed to load dependency entity for procedure StatIncBC!");
+			return;
+		}
 		if (dependencies.get("sourceentity") == null) {
 			if (!dependencies.containsKey("sourceentity"))
 				FireEmblemMod.LOGGER.warn("Failed to load dependency sourceentity for procedure StatIncBC!");
 			return;
 		}
+		if (dependencies.get("world") == null) {
+			if (!dependencies.containsKey("world"))
+				FireEmblemMod.LOGGER.warn("Failed to load dependency world for procedure StatIncBC!");
+			return;
+		}
+		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
+		IWorld world = (IWorld) dependencies.get("world");
 		double rand = 0;
 		if ((sourceentity instanceof ServerPlayerEntity)) {
 			if ((((((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
@@ -71,6 +93,33 @@ public class StatIncBCProcedure {
 					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == SilverSwordItem.block))) {
 				sourceentity.getPersistentData().putDouble("sword", 1);
+				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd M"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 19)) {
+						((LivingEntity) sourceentity).getAttribute(Attributes.ATTACK_DAMAGE)
+								.setBaseValue((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new FireEmblemModVariables.PlayerVariables())).atk)
+										+ (5 + (((sourceentity instanceof PlayerEntity) ? ((PlayerEntity) sourceentity).experienceLevel : 0) / 2))));
+						if (!world.isRemote()) {
+							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+							if (mcserv != null)
+								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest CRIT"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						}
+					}
+				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd m"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 9)) {
+						((LivingEntity) sourceentity).getAttribute(Attributes.ATTACK_DAMAGE)
+								.setBaseValue((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new FireEmblemModVariables.PlayerVariables())).atk)
+										+ (3 + (((sourceentity instanceof PlayerEntity) ? ((PlayerEntity) sourceentity).experienceLevel : 0) / 2))));
+						if (!world.isRemote()) {
+							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+							if (mcserv != null)
+								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest CRIT"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						}
+					}
+				}
 			}
 			if (((((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == Items.WOODEN_AXE)

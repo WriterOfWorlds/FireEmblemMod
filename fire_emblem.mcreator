@@ -421,8 +421,16 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -1431,5 +1439,5 @@
     "modElementsPackage": "net.mcreator.fireemblem",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100231709
+  "mcreatorVersion": 202100233614
 }
