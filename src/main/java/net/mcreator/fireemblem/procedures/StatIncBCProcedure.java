@@ -95,7 +95,7 @@ public class StatIncBCProcedure {
 				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd M"))) {
 					if ((((new Random()).nextInt((int) 99 + 1)) <= 19)) {
-						entity.attackEntityFrom(DamageSource.GENERIC, (float) 400);
+						entity.attackEntityFrom(DamageSource.GENERIC, (float) 6);
 						if (!world.isRemote()) {
 							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 							if (mcserv != null)
@@ -105,7 +105,7 @@ public class StatIncBCProcedure {
 				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd m"))) {
 					if ((((new Random()).nextInt((int) 99 + 1)) <= 9)) {
-						entity.attackEntityFrom(DamageSource.GENERIC, (float) 200);
+						entity.attackEntityFrom(DamageSource.GENERIC, (float) 3);
 						if (!world.isRemote()) {
 							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 							if (mcserv != null)
@@ -141,6 +141,33 @@ public class StatIncBCProcedure {
 					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == MagicRelicItem.block))) {
 				sourceentity.getPersistentData().putDouble("magic", 1);
+				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Dominic M"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 19)) {
+						(((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
+								.setDamage((int) (((((sourceentity instanceof LivingEntity)
+										? ((LivingEntity) sourceentity).getHeldItemMainhand()
+										: ItemStack.EMPTY)).getDamage()) + 12));
+						if (!world.isRemote()) {
+							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+							if (mcserv != null)
+								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest FIX"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						}
+					}
+				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Dominic m"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 9)) {
+						(((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
+								.setDamage((int) (((((sourceentity instanceof LivingEntity)
+										? ((LivingEntity) sourceentity).getHeldItemMainhand()
+										: ItemStack.EMPTY)).getDamage()) + 6));
+						if (!world.isRemote()) {
+							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+							if (mcserv != null)
+								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest FIX"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						}
+					}
+				}
 			}
 			if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == Blocks.AIR.asItem())) {
