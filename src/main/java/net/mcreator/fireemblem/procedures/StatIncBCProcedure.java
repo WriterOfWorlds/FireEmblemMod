@@ -10,12 +10,11 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ChatType;
 import net.minecraft.util.Util;
+import net.minecraft.util.DamageSource;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
@@ -96,11 +95,7 @@ public class StatIncBCProcedure {
 				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd M"))) {
 					if ((((new Random()).nextInt((int) 99 + 1)) <= 19)) {
-						((LivingEntity) sourceentity).getAttribute(Attributes.ATTACK_DAMAGE)
-								.setBaseValue((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-										.orElse(new FireEmblemModVariables.PlayerVariables())).atk)
-										+ (5000 + (((sourceentity instanceof PlayerEntity) ? ((PlayerEntity) sourceentity).experienceLevel : 0)
-												/ 2))));
+						entity.attackEntityFrom(DamageSource.GENERIC, (float) 400);
 						if (!world.isRemote()) {
 							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 							if (mcserv != null)
@@ -110,11 +105,7 @@ public class StatIncBCProcedure {
 				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd m"))) {
 					if ((((new Random()).nextInt((int) 99 + 1)) <= 9)) {
-						((LivingEntity) sourceentity).getAttribute(Attributes.ATTACK_DAMAGE)
-								.setBaseValue((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-										.orElse(new FireEmblemModVariables.PlayerVariables())).atk)
-										+ (3000 + (((sourceentity instanceof PlayerEntity) ? ((PlayerEntity) sourceentity).experienceLevel : 0)
-												/ 2))));
+						entity.attackEntityFrom(DamageSource.GENERIC, (float) 200);
 						if (!world.isRemote()) {
 							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 							if (mcserv != null)

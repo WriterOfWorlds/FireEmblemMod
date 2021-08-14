@@ -1281,6 +1281,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "open_change_gui"
+    },
+    {
+      "name": "SilverBow",
+      "type": "rangeditem",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_bow"
     }
   ],
   "variable_elements": [
@@ -1408,6 +1417,7 @@
       "item.fire_emblem.magic_relic": "Lúin",
       "item.fire_emblem.intermediate_seal": "Intermediate Seal",
       "key.fire_emblem.open_gui": "Open Unit Stats",
+      "item.fire_emblem.silver_bow": "Silver Bow",
       "item.fire_emblem.silver_ingot": "Silver Ingot",
       "block.fire_emblem.silver_block": "Block of Silver",
       "item.fire_emblem.silver_apple": "Silver Apple"
