@@ -99,7 +99,8 @@ public class StatIncBCProcedure {
 						((LivingEntity) sourceentity).getAttribute(Attributes.ATTACK_DAMAGE)
 								.setBaseValue((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 										.orElse(new FireEmblemModVariables.PlayerVariables())).atk)
-										+ (5 + (((sourceentity instanceof PlayerEntity) ? ((PlayerEntity) sourceentity).experienceLevel : 0) / 2))));
+										+ (5000 + (((sourceentity instanceof PlayerEntity) ? ((PlayerEntity) sourceentity).experienceLevel : 0)
+												/ 2))));
 						if (!world.isRemote()) {
 							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 							if (mcserv != null)
@@ -112,7 +113,8 @@ public class StatIncBCProcedure {
 						((LivingEntity) sourceentity).getAttribute(Attributes.ATTACK_DAMAGE)
 								.setBaseValue((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 										.orElse(new FireEmblemModVariables.PlayerVariables())).atk)
-										+ (3 + (((sourceentity instanceof PlayerEntity) ? ((PlayerEntity) sourceentity).experienceLevel : 0) / 2))));
+										+ (3000 + (((sourceentity instanceof PlayerEntity) ? ((PlayerEntity) sourceentity).experienceLevel : 0)
+												/ 2))));
 						if (!world.isRemote()) {
 							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 							if (mcserv != null)
