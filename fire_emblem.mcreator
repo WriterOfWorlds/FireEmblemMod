@@ -1281,6 +1281,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "open_change_gui"
+    },
+    {
+      "name": "Pegasus",
+      "type": "livingentity",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pegasus"
     }
   ],
   "variable_elements": [
@@ -1400,8 +1409,10 @@
   "language_map": {
     "en_us": {
       "item.fire_emblem.silver_sword": "Silver Sword",
+      "item.fire_emblem.pegasus_spawn_egg": "Pegasus Spawn Egg",
       "block.fire_emblem.silver_ore": "Silver Ore",
       "subtitles.lost-in-thoughts-all-alone": "True Credits",
+      "entity.fire_emblem.pegasus": "Pegasus",
       "item.fire_emblem.hammor": "Thunderbrand",
       "item.fire_emblem.class_certifier": "Beginner Seal",
       "item.fire_emblem.relic_sword": "Areadbhar",
