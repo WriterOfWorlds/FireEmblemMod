@@ -1,16 +1,5 @@
 repositories {
   maven {
-    url = "https://maven.hypherionmc.me"
-  }
-}
-
-dependencies {
-  implementation 'net.hypherionmc:HyperLightingCore-1.16.3:1.0.3:api'
-  runtimeOnly 'net.hypherionmc:HyperLightingCore-1.16.3:1.0.3'
-}
-
-repositories {
-  maven {
     url = "https://maven.theillusivec4.top/"
   }
 }

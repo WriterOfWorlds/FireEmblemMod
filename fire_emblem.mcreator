@@ -1430,7 +1430,6 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "hlcl_core",
       "curios",
       "patchouli"
     ],
