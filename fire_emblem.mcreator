@@ -1290,6 +1290,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "forged_silver_sword"
+    },
+    {
+      "name": "SilverSForge",
+      "type": "recipe",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silver_s_forge"
     }
   ],
   "variable_elements": [

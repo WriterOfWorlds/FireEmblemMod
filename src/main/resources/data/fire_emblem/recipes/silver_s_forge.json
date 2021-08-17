@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "fire_emblem:silver_sword"
+  },
+  "addition": {
+    "item": "fire_emblem:silver_sword"
+  },
+  "result": {
+    "item": "fire_emblem:forged_silver_sword"
+  }
+}
