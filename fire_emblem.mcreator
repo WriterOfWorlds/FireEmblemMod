@@ -1281,6 +1281,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "open_change_gui"
+    },
+    {
+      "name": "ForgedSilverSword",
+      "type": "tool",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forged_silver_sword"
     }
   ],
   "variable_elements": [
@@ -1400,6 +1409,7 @@
   "language_map": {
     "en_us": {
       "item.fire_emblem.silver_sword": "Silver Sword",
+      "item.fire_emblem.forged_silver_sword": "Silver Sword+",
       "block.fire_emblem.silver_ore": "Silver Ore",
       "subtitles.lost-in-thoughts-all-alone": "True Credits",
       "item.fire_emblem.hammor": "Thunderbrand",
