@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:golden_axe"
+  },
+  "addition": {
+    "item": "minecraft:golden_axe"
+  },
+  "result": {
+    "item": "fire_emblem:forged_gold_axe"
+  }
+}

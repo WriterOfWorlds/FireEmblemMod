@@ -1299,6 +1299,150 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "silver_s_forge"
+    },
+    {
+      "name": "ForgedIronSword",
+      "type": "tool",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forged_iron_sword"
+    },
+    {
+      "name": "ForgedIronAxe",
+      "type": "tool",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forged_iron_axe"
+    },
+    {
+      "name": "ForgedGoldSword",
+      "type": "tool",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forged_gold_sword"
+    },
+    {
+      "name": "ForgedGoldAxe",
+      "type": "tool",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forged_gold_axe"
+    },
+    {
+      "name": "ForgedDiamondSword",
+      "type": "tool",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forged_diamond_sword"
+    },
+    {
+      "name": "ForgedDiamondAxe",
+      "type": "tool",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forged_diamond_axe"
+    },
+    {
+      "name": "ForgedNetherSword",
+      "type": "tool",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forged_nether_sword"
+    },
+    {
+      "name": "ForgedNetherAxe",
+      "type": "tool",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forged_nether_axe"
+    },
+    {
+      "name": "IronSForge",
+      "type": "recipe",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_s_forge"
+    },
+    {
+      "name": "IronAForge",
+      "type": "recipe",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iron_a_forge"
+    },
+    {
+      "name": "GoldSForge",
+      "type": "recipe",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gold_s_forge"
+    },
+    {
+      "name": "GoldAForge",
+      "type": "recipe",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gold_a_forge"
+    },
+    {
+      "name": "DiamondSForge",
+      "type": "recipe",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_s_forge"
+    },
+    {
+      "name": "DiamondAForge",
+      "type": "recipe",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_a_forge"
+    },
+    {
+      "name": "NetherSForge",
+      "type": "recipe",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nether_s_forge"
+    },
+    {
+      "name": "NetherAForge",
+      "type": "recipe",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nether_a_forge"
     }
   ],
   "variable_elements": [
@@ -1418,15 +1562,23 @@
   "language_map": {
     "en_us": {
       "item.fire_emblem.silver_sword": "Silver Sword",
+      "item.fire_emblem.forged_diamond_axe": "Diamond Axe+",
       "item.fire_emblem.forged_silver_sword": "Silver Sword+",
+      "item.fire_emblem.forged_iron_sword": "Iron Sword+",
+      "item.fire_emblem.forged_gold_sword": "Gold Sword+",
       "block.fire_emblem.silver_ore": "Silver Ore",
       "subtitles.lost-in-thoughts-all-alone": "True Credits",
+      "item.fire_emblem.forged_iron_axe": "Iron Axe+",
       "item.fire_emblem.hammor": "Thunderbrand",
+      "item.fire_emblem.forged_diamond_sword": "Diamond Sword+",
       "item.fire_emblem.class_certifier": "Beginner Seal",
       "item.fire_emblem.relic_sword": "Areadbhar",
       "item.fire_emblem.magic_relic": "Lúin",
       "item.fire_emblem.intermediate_seal": "Intermediate Seal",
+      "item.fire_emblem.forged_gold_axe": "Gold Axe+",
       "key.fire_emblem.open_gui": "Open Unit Stats",
+      "item.fire_emblem.forged_nether_axe": "Netherite Axe+",
+      "item.fire_emblem.forged_nether_sword": "Netherite Sword+",
       "item.fire_emblem.silver_ingot": "Silver Ingot",
       "block.fire_emblem.silver_block": "Block of Silver",
       "item.fire_emblem.silver_apple": "Silver Apple"
