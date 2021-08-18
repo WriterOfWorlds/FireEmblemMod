@@ -1591,10 +1591,10 @@
   "workspaceSettings": {
     "modid": "fire_emblem",
     "modName": "Fire Emblem",
-    "version": "1.0.0",
-    "author": "Lore, MCreator",
+    "version": "1.0.2",
+    "author": "Bounccake",
     "websiteURL": "https://mcreator.net",
-    "license": "Academic Free License v3.0",
+    "license": "GNU General Public License version 3 (GPLv3)",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
@@ -1602,10 +1602,11 @@
     "dependants": [],
     "mcreatorDependencies": [
       "curios",
-      "patchouli"
+      "patchouli",
+      "geckolib"
     ],
     "currentGenerator": "forge-1.16.5",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "credits": "Made with MCreator lol",
     "modElementsPackage": "net.mcreator.fireemblem",
     "lockBaseModFiles": false
   },

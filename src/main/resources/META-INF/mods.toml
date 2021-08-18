@@ -1,14 +1,14 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="Academic Free License v3.0"
+license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="fire_emblem"
-version="1.0.0"
+version="1.0.2"
 displayName="Fire Emblem"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
+credits="Made with MCreator lol"
 displayURL="https://mcreator.net"
-authors="Lore, MCreator"
+authors="Bounccake"
 
 [[dependencies.fire_emblem]]
     modId="minecraft"
@@ -27,6 +27,12 @@ authors="Lore, MCreator"
     side="BOTH"
 [[dependencies.fire_emblem]]
     modId="patchouli"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.fire_emblem]]
+    modId="geckolib"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
