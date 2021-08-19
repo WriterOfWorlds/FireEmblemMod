@@ -1547,6 +1547,24 @@
       "type": "string",
       "scope": "player_persistent",
       "value": ""
+    },
+    {
+      "name": "day",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "month",
+      "type": "string",
+      "scope": "map",
+      "value": "Guardian Moon"
+    },
+    {
+      "name": "year",
+      "type": "number",
+      "scope": "map",
+      "value": "1180.0"
     }
   ],
   "sound_elements": [
@@ -1561,8 +1579,8 @@
   ],
   "language_map": {
     "en_us": {
-      "item.fire_emblem.silver_sword": "Silver Sword",
       "item.fire_emblem.forged_diamond_axe": "Diamond Axe+",
+      "item.fire_emblem.silver_sword": "Silver Sword",
       "item.fire_emblem.forged_silver_sword": "Silver Sword+",
       "item.fire_emblem.forged_iron_sword": "Iron Sword+",
       "item.fire_emblem.forged_gold_sword": "Gold Sword+",
