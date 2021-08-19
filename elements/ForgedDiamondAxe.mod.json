@@ -26,9 +26,6 @@
     ],
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false,
-    "onEntityHitWith": {
-      "name": "ShieldBreakerSkill"
-    }
+    "damageOnCrafting": false
   }
 }
