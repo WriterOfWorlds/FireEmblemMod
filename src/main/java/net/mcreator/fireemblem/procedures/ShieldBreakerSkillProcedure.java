@@ -19,6 +19,7 @@ import net.mcreator.fireemblem.item.ForgedDiamondAxeItem;
 import net.mcreator.fireemblem.FireEmblemModVariables;
 import net.mcreator.fireemblem.FireEmblemMod;
 
+import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -84,6 +85,25 @@ public class ShieldBreakerSkillProcedure {
 					if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new FireEmblemModVariables.PlayerVariables())).hasSB)) {
 						((PlayerEntity) entity).disableShield((true));
+						if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+								.getItem() == Items.SHIELD)) {
+							{
+								ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
+								if (_ist.attemptDamageItem((int) 5, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamage(0);
+								}
+							}
+						} else if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+								.getItem() == Items.SHIELD)) {
+							{
+								ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY);
+								if (_ist.attemptDamageItem((int) 5, new Random(), null)) {
+									_ist.shrink(1);
+									_ist.setDamage(0);
+								}
+							}
+						}
 					}
 				}
 			}

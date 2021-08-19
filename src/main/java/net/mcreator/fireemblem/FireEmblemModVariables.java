@@ -227,6 +227,7 @@ public class FireEmblemModVariables {
 			nbt.putDouble("page", instance.page);
 			nbt.putString("crest", instance.crest);
 			nbt.putBoolean("hasSB", instance.hasSB);
+			nbt.putDouble("atkmod", instance.atkmod);
 			return nbt;
 		}
 
@@ -251,6 +252,7 @@ public class FireEmblemModVariables {
 			instance.page = nbt.getDouble("page");
 			instance.crest = nbt.getString("crest");
 			instance.hasSB = nbt.getBoolean("hasSB");
+			instance.atkmod = nbt.getDouble("atkmod");
 		}
 	}
 
@@ -263,7 +265,7 @@ public class FireEmblemModVariables {
 		public String goddess = "";
 		public String playerclass = "Commoner";
 		public double bow = 0;
-		public double sword = 0;
+		public double sword = 0.0;
 		public double axe = 0;
 		public double lance = 0;
 		public double magic = 0;
@@ -273,6 +275,7 @@ public class FireEmblemModVariables {
 		public double page = 0.0;
 		public String crest = "";
 		public boolean hasSB = false;
+		public double atkmod = 0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				FireEmblemMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -324,6 +327,7 @@ public class FireEmblemModVariables {
 			clone.legslow = original.legslow;
 			clone.footslow = original.footslow;
 			clone.page = original.page;
+			clone.atkmod = original.atkmod;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -365,6 +369,7 @@ public class FireEmblemModVariables {
 					variables.page = message.data.page;
 					variables.crest = message.data.crest;
 					variables.hasSB = message.data.hasSB;
+					variables.atkmod = message.data.atkmod;
 				}
 			});
 			context.setPacketHandled(true);
