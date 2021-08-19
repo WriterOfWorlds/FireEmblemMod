@@ -1443,6 +1443,53 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "nether_a_forge"
+    },
+    {
+      "name": "ShieldBreakerSkill",
+      "type": "procedure",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shield_breaker_skill",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetSBCommandExecuted",
+      "type": "procedure",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "set_sb_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetSB",
+      "type": "command",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "set_sb"
     }
   ],
   "variable_elements": [
@@ -1565,6 +1612,12 @@
       "type": "number",
       "scope": "map",
       "value": "1180.0"
+    },
+    {
+      "name": "hasSB",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [

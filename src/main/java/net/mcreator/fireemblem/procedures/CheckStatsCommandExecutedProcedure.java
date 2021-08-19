@@ -118,5 +118,16 @@ public class CheckStatsCommandExecutedProcedure {
 												.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)))),
 								ChatType.SYSTEM, Util.DUMMY_UUID);
 		}
+		if (!world.isRemote()) {
+			MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+			if (mcserv != null)
+				mcserv.getPlayerList()
+						.func_232641_a_(
+								new StringTextComponent(
+										(("Has SB: ") + ""
+												+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+														.orElse(new FireEmblemModVariables.PlayerVariables())).hasSB)))),
+								ChatType.SYSTEM, Util.DUMMY_UUID);
+		}
 	}
 }
