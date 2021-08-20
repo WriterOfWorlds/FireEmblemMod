@@ -227,6 +227,99 @@ public class StatIncBCProcedure {
 						}.start(world, (int) 100);
 					}
 				}
+				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel M"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 69)) {
+						{
+							double _setval = (double) 5;
+							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.atkmod = _setval;
+								capability.syncPlayerVariables(sourceentity);
+							});
+						}
+						if (!world.isRemote()) {
+							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+							if (mcserv != null)
+								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest ACT"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						}
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								{
+									double _setval = (double) 0;
+									sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.atkmod = _setval;
+										capability.syncPlayerVariables(sourceentity);
+									});
+								}
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 100);
+					}
+				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel m"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 39)) {
+						{
+							double _setval = (double) 5;
+							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.atkmod = _setval;
+								capability.syncPlayerVariables(sourceentity);
+							});
+						}
+						if (!world.isRemote()) {
+							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+							if (mcserv != null)
+								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest ACT"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						}
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								{
+									double _setval = (double) 0;
+									sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.atkmod = _setval;
+										capability.syncPlayerVariables(sourceentity);
+									});
+								}
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 100);
+					}
+				}
 			}
 			if (((((((((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == Items.WOODEN_AXE)
@@ -297,6 +390,99 @@ public class StatIncBCProcedure {
 					}
 				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon m"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 39)) {
+						{
+							double _setval = (double) 5;
+							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.atkmod = _setval;
+								capability.syncPlayerVariables(sourceentity);
+							});
+						}
+						if (!world.isRemote()) {
+							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+							if (mcserv != null)
+								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest ACT"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						}
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								{
+									double _setval = (double) 0;
+									sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.atkmod = _setval;
+										capability.syncPlayerVariables(sourceentity);
+									});
+								}
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 100);
+					}
+				}
+				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel M"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 69)) {
+						{
+							double _setval = (double) 5;
+							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.atkmod = _setval;
+								capability.syncPlayerVariables(sourceentity);
+							});
+						}
+						if (!world.isRemote()) {
+							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+							if (mcserv != null)
+								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest ACT"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						}
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								{
+									double _setval = (double) 0;
+									sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.atkmod = _setval;
+										capability.syncPlayerVariables(sourceentity);
+									});
+								}
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 100);
+					}
+				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel m"))) {
 					if ((((new Random()).nextInt((int) 99 + 1)) <= 39)) {
 						{
 							double _setval = (double) 5;
@@ -431,6 +617,99 @@ public class StatIncBCProcedure {
 					}
 				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon m"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 39)) {
+						{
+							double _setval = (double) 5;
+							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.atkmod = _setval;
+								capability.syncPlayerVariables(sourceentity);
+							});
+						}
+						if (!world.isRemote()) {
+							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+							if (mcserv != null)
+								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest ACT"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						}
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								{
+									double _setval = (double) 0;
+									sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.atkmod = _setval;
+										capability.syncPlayerVariables(sourceentity);
+									});
+								}
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 100);
+					}
+				}
+				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel M"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 69)) {
+						{
+							double _setval = (double) 5;
+							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.atkmod = _setval;
+								capability.syncPlayerVariables(sourceentity);
+							});
+						}
+						if (!world.isRemote()) {
+							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+							if (mcserv != null)
+								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest ACT"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						}
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								{
+									double _setval = (double) 0;
+									sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.atkmod = _setval;
+										capability.syncPlayerVariables(sourceentity);
+									});
+								}
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 100);
+					}
+				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel m"))) {
 					if ((((new Random()).nextInt((int) 99 + 1)) <= 39)) {
 						{
 							double _setval = (double) 5;
