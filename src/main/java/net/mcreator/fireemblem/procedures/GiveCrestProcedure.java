@@ -49,7 +49,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Blaiddyd M");
 				} else {
 					{
 						String _setval = (String) "Blaiddyd m";
@@ -58,7 +57,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Blaiddyd m");
 				}
 			} else if ((rand == 1)) {
 				if ((((new Random()).nextBoolean()) == (true))) {
@@ -69,7 +67,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Charon M");
 				} else {
 					{
 						String _setval = (String) "Charon m";
@@ -78,7 +75,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Charon m");
 				}
 			}
 			if ((rand == 2)) {
@@ -90,7 +86,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Daphnel M");
 				} else {
 					{
 						String _setval = (String) "Daphnel m";
@@ -99,7 +94,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Daphnel m");
 				}
 			} else if ((rand == 3)) {
 				if ((((new Random()).nextBoolean()) == (true))) {
@@ -110,7 +104,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Dominic M");
 				} else {
 					{
 						String _setval = (String) "Dominic m";
@@ -119,7 +112,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Dominic m");
 				}
 			}
 			if ((rand == 4)) {
@@ -131,7 +123,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Fraldarius M");
 				} else {
 					{
 						String _setval = (String) "Fraldarius m";
@@ -140,7 +131,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Fraldarius m");
 				}
 			} else if ((rand == 5)) {
 				if ((((new Random()).nextBoolean()) == (true))) {
@@ -151,7 +141,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Gautier M");
 				} else {
 					{
 						String _setval = (String) "Gautier m";
@@ -160,7 +149,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Gautier m");
 				}
 			}
 			if ((rand == 6)) {
@@ -172,7 +160,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Gloucester M");
 				} else {
 					{
 						String _setval = (String) "Gloucester m";
@@ -181,7 +168,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Gloucester m");
 				}
 			} else if ((rand == 7)) {
 				if ((((new Random()).nextBoolean()) == (true))) {
@@ -192,7 +178,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Goneril M");
 				} else {
 					{
 						String _setval = (String) "Goneril m";
@@ -201,7 +186,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Goneril m");
 				}
 			}
 			if ((rand == 8)) {
@@ -213,7 +197,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Lamine M");
 				} else {
 					{
 						String _setval = (String) "Lamine m";
@@ -222,7 +205,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Lamine m");
 				}
 			} else if ((rand == 9)) {
 				if ((((new Random()).nextBoolean()) == (true))) {
@@ -233,7 +215,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Riegan M");
 				} else {
 					{
 						String _setval = (String) "Riegan m";
@@ -242,7 +223,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Riegan m");
 				}
 			}
 			if ((rand == 10)) {
@@ -254,7 +234,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Maurice M");
 				} else {
 					{
 						String _setval = (String) "Maurice m";
@@ -263,7 +242,6 @@ public class GiveCrestProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-					entity.getPersistentData().putString("crest", "Maurice m");
 				}
 			} else if ((rand >= 11)) {
 				{
@@ -273,7 +251,6 @@ public class GiveCrestProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				entity.getPersistentData().putString("crest", "None");
 			}
 		}
 	}

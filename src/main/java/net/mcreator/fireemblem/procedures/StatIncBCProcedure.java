@@ -4,6 +4,8 @@ import net.minecraftforge.fml.server.ServerLifecycleHooks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
@@ -23,6 +25,15 @@ import net.mcreator.fireemblem.item.SilverSwordItem;
 import net.mcreator.fireemblem.item.RelicSwordItem;
 import net.mcreator.fireemblem.item.MagicRelicItem;
 import net.mcreator.fireemblem.item.HammorItem;
+import net.mcreator.fireemblem.item.ForgedSilverSwordItem;
+import net.mcreator.fireemblem.item.ForgedNetherSwordItem;
+import net.mcreator.fireemblem.item.ForgedNetherAxeItem;
+import net.mcreator.fireemblem.item.ForgedIronSwordItem;
+import net.mcreator.fireemblem.item.ForgedIronAxeItem;
+import net.mcreator.fireemblem.item.ForgedGoldSwordItem;
+import net.mcreator.fireemblem.item.ForgedGoldAxeItem;
+import net.mcreator.fireemblem.item.ForgedDiamondSwordItem;
+import net.mcreator.fireemblem.item.ForgedDiamondAxeItem;
 import net.mcreator.fireemblem.FireEmblemModVariables;
 import net.mcreator.fireemblem.FireEmblemMod;
 
@@ -77,7 +88,7 @@ public class StatIncBCProcedure {
 		IWorld world = (IWorld) dependencies.get("world");
 		double rand = 0;
 		if ((sourceentity instanceof ServerPlayerEntity)) {
-			if ((((((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+			if (((((((((((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == Items.WOODEN_SWORD)
 					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.STONE_SWORD))
@@ -90,7 +101,17 @@ public class StatIncBCProcedure {
 					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.NETHERITE_SWORD))
 					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == SilverSwordItem.block))) {
+							.getItem() == SilverSwordItem.block))
+					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedSilverSwordItem.block))
+					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedIronSwordItem.block))
+					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedGoldSwordItem.block))
+					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedDiamondSwordItem.block))
+					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedNetherSwordItem.block))) {
 				sourceentity.getPersistentData().putDouble("sword", 1);
 				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd M"))) {
@@ -113,8 +134,101 @@ public class StatIncBCProcedure {
 						}
 					}
 				}
+				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon M"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 69)) {
+						{
+							double _setval = (double) 5;
+							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.atkmod = _setval;
+								capability.syncPlayerVariables(sourceentity);
+							});
+						}
+						if (!world.isRemote()) {
+							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+							if (mcserv != null)
+								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest ACT"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						}
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								{
+									double _setval = (double) 0;
+									sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.atkmod = _setval;
+										capability.syncPlayerVariables(sourceentity);
+									});
+								}
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 100);
+					}
+				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon m"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 39)) {
+						{
+							double _setval = (double) 5;
+							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.atkmod = _setval;
+								capability.syncPlayerVariables(sourceentity);
+							});
+						}
+						if (!world.isRemote()) {
+							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+							if (mcserv != null)
+								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest ACT"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						}
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								{
+									double _setval = (double) 0;
+									sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.atkmod = _setval;
+										capability.syncPlayerVariables(sourceentity);
+									});
+								}
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 100);
+					}
+				}
 			}
-			if (((((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+			if (((((((((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == Items.WOODEN_AXE)
 					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.STONE_AXE))
@@ -125,8 +239,109 @@ public class StatIncBCProcedure {
 					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 							.getItem() == Items.DIAMOND_AXE))
 					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.NETHERITE_AXE))) {
+							.getItem() == Items.NETHERITE_AXE))
+					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedIronAxeItem.block))
+					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedGoldAxeItem.block))
+					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedDiamondAxeItem.block))
+					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedNetherAxeItem.block))) {
 				sourceentity.getPersistentData().putDouble("axe", 1);
+				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon M"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 69)) {
+						{
+							double _setval = (double) 5;
+							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.atkmod = _setval;
+								capability.syncPlayerVariables(sourceentity);
+							});
+						}
+						if (!world.isRemote()) {
+							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+							if (mcserv != null)
+								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest ACT"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						}
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								{
+									double _setval = (double) 0;
+									sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.atkmod = _setval;
+										capability.syncPlayerVariables(sourceentity);
+									});
+								}
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 100);
+					}
+				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon m"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 39)) {
+						{
+							double _setval = (double) 5;
+							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.atkmod = _setval;
+								capability.syncPlayerVariables(sourceentity);
+							});
+						}
+						if (!world.isRemote()) {
+							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+							if (mcserv != null)
+								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest ACT"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						}
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								{
+									double _setval = (double) 0;
+									sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.atkmod = _setval;
+										capability.syncPlayerVariables(sourceentity);
+									});
+								}
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 100);
+					}
+				}
 			}
 			if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
 					.getItem() == Items.BOW)
@@ -166,6 +381,99 @@ public class StatIncBCProcedure {
 							if (mcserv != null)
 								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest FIX"), ChatType.SYSTEM, Util.DUMMY_UUID);
 						}
+					}
+				}
+				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon M"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 69)) {
+						{
+							double _setval = (double) 5;
+							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.atkmod = _setval;
+								capability.syncPlayerVariables(sourceentity);
+							});
+						}
+						if (!world.isRemote()) {
+							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+							if (mcserv != null)
+								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest ACT"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						}
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								{
+									double _setval = (double) 0;
+									sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.atkmod = _setval;
+										capability.syncPlayerVariables(sourceentity);
+									});
+								}
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 100);
+					}
+				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon m"))) {
+					if ((((new Random()).nextInt((int) 99 + 1)) <= 39)) {
+						{
+							double _setval = (double) 5;
+							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.atkmod = _setval;
+								capability.syncPlayerVariables(sourceentity);
+							});
+						}
+						if (!world.isRemote()) {
+							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+							if (mcserv != null)
+								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest ACT"), ChatType.SYSTEM, Util.DUMMY_UUID);
+						}
+						new Object() {
+							private int ticks = 0;
+							private float waitTicks;
+							private IWorld world;
+							public void start(IWorld world, int waitTicks) {
+								this.waitTicks = waitTicks;
+								MinecraftForge.EVENT_BUS.register(this);
+								this.world = world;
+							}
+
+							@SubscribeEvent
+							public void tick(TickEvent.ServerTickEvent event) {
+								if (event.phase == TickEvent.Phase.END) {
+									this.ticks += 1;
+									if (this.ticks >= this.waitTicks)
+										run();
+								}
+							}
+
+							private void run() {
+								{
+									double _setval = (double) 0;
+									sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.atkmod = _setval;
+										capability.syncPlayerVariables(sourceentity);
+									});
+								}
+								MinecraftForge.EVENT_BUS.unregister(this);
+							}
+						}.start(world, (int) 100);
 					}
 				}
 			}
