@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Ashera is the god of Order, she",
+          "text": "Ashera is the godess of Order,",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Ashera is the god of Order, she",
+          "name": "Ashera is the godess of Order,",
           "x": 131,
           "y": 83
         }
@@ -26,12 +26,12 @@
       {
         "type": "label",
         "data": {
-          "text": "provides a haste blessing to her",
+          "text": "she lends a haste blessing to her",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "provides a haste blessing to her",
+          "name": "she lends a haste blessing to her",
           "x": 131,
           "y": 93
         }
@@ -39,12 +39,12 @@
       {
         "type": "label",
         "data": {
-          "text": "followers.",
+          "text": "followers, half of the Tellius",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "followers.",
+          "name": "followers, half of the Tellius",
           "x": 131,
           "y": 103
         }
@@ -89,6 +89,19 @@
           "name": "Ashera",
           "x": 186,
           "y": 128
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "goddess Asheruna.",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "goddess Asheruna.",
+          "x": 131,
+          "y": 113
         }
       }
     ],

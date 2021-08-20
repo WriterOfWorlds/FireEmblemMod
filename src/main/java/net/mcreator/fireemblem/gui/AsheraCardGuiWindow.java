@@ -78,9 +78,10 @@ public class AsheraCardGuiWindow extends ContainerScreen<AsheraCardGui.GuiContai
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Ashera is the god of Order, she", 10, 5, -12829636);
-		this.font.drawString(ms, "provides a haste blessing to her", 10, 15, -12829636);
-		this.font.drawString(ms, "followers.", 10, 25, -12829636);
+		this.font.drawString(ms, "Ashera is the godess of Order,", 10, 5, -12829636);
+		this.font.drawString(ms, "she lends a haste blessing to her", 10, 15, -12829636);
+		this.font.drawString(ms, "followers, half of the Tellius", 10, 25, -12829636);
+		this.font.drawString(ms, "goddess Asheruna.", 10, 35, -12829636);
 	}
 
 	@Override

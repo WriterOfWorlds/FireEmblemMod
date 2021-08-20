@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "texture_1"
+        "0": "goddessbase"
       },
       "name": "default"
     }

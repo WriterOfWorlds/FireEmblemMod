@@ -1,0 +1,8 @@
+{
+  "parent": "fire_emblem:custom/goddessbase",
+  "textures": {
+    "all": "fire_emblem:blocks/goddessbase",
+    "particle": "fire_emblem:blocks/goddessbase",
+    "0": "fire_emblem:blocks/goddessbase"
+  }
+}

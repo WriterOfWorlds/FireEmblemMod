@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "fire_emblem:block/goddess_sothis"
+    },
+    "facing=east": {
+      "model": "fire_emblem:block/goddess_sothis",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "fire_emblem:block/goddess_sothis",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "fire_emblem:block/goddess_sothis",
+      "y": 270
+    }
+  }
+}

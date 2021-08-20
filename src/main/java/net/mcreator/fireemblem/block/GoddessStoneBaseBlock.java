@@ -43,11 +43,11 @@ import java.util.List;
 import java.util.Collections;
 
 @FireEmblemModElements.ModElement.Tag
-public class GoddessBaseBlock extends FireEmblemModElements.ModElement {
-	@ObjectHolder("fire_emblem:goddess_base")
+public class GoddessStoneBaseBlock extends FireEmblemModElements.ModElement {
+	@ObjectHolder("fire_emblem:goddess_stone_base")
 	public static final Block block = null;
-	public GoddessBaseBlock(FireEmblemModElements instance) {
-		super(instance, 161);
+	public GoddessStoneBaseBlock(FireEmblemModElements instance) {
+		super(instance, 162);
 	}
 
 	@Override
@@ -68,7 +68,7 @@ public class GoddessBaseBlock extends FireEmblemModElements.ModElement {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).notSolid()
 					.setOpaque((bs, br, bp) -> false));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(WATERLOGGED, false));
-			setRegistryName("goddess_base");
+			setRegistryName("goddess_stone_base");
 		}
 
 		@Override
@@ -87,13 +87,13 @@ public class GoddessBaseBlock extends FireEmblemModElements.ModElement {
 			switch ((Direction) state.get(FACING)) {
 				case SOUTH :
 				default :
-					return VoxelShapes.or(makeCuboidShape(16, 0, 16, 0, 4, 0)).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(15, 0, 15, 1, 3.9999999999999996, 1)).withOffset(offset.x, offset.y, offset.z);
 				case NORTH :
-					return VoxelShapes.or(makeCuboidShape(0, 0, 0, 16, 4, 16)).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(1, 0, 1, 15, 3.9999999999999996, 15)).withOffset(offset.x, offset.y, offset.z);
 				case EAST :
-					return VoxelShapes.or(makeCuboidShape(16, 0, 0, 0, 4, 16)).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(15, 0, 1, 1, 3.9999999999999996, 15)).withOffset(offset.x, offset.y, offset.z);
 				case WEST :
-					return VoxelShapes.or(makeCuboidShape(0, 0, 16, 16, 4, 0)).withOffset(offset.x, offset.y, offset.z);
+					return VoxelShapes.or(makeCuboidShape(1, 0, 15, 15, 3.9999999999999996, 1)).withOffset(offset.x, offset.y, offset.z);
 			}
 		}
 

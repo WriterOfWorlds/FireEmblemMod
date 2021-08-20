@@ -5,6 +5,7 @@
   "item.fire_emblem.forged_iron_sword": "Iron Sword+",
   "item.fire_emblem.forged_gold_sword": "Gold Sword+",
   "block.fire_emblem.silver_ore": "Silver Ore",
+  "block.fire_emblem.goddess_sothis": "Goddess Statue",
   "subtitles.lost-in-thoughts-all-alone": "True Credits",
   "item.fire_emblem.forged_iron_axe": "Iron Axe+",
   "item.fire_emblem.hammor": "Thunderbrand",
@@ -16,9 +17,9 @@
   "item.fire_emblem.forged_gold_axe": "Gold Axe+",
   "key.fire_emblem.open_gui": "Open Unit Stats",
   "item.fire_emblem.forged_nether_axe": "Netherite Axe+",
+  "block.fire_emblem.goddess_stone_base": "Goddess Base",
   "item.fire_emblem.forged_nether_sword": "Netherite Sword+",
   "item.fire_emblem.silver_ingot": "Silver Ingot",
   "block.fire_emblem.silver_block": "Block of Silver",
-  "block.fire_emblem.goddess_base": "Goddess Base",
   "item.fire_emblem.silver_apple": "Silver Apple"
 }

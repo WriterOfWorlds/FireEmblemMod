@@ -1,5 +1,5 @@
 {
-  "parent": "fire_emblem:block/goddess_base",
+  "parent": "fire_emblem:block/goddess_sothis",
   "display": {
     "thirdperson": {
       "rotation": [
