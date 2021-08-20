@@ -87,16 +87,16 @@ public class GoddessSothisBlock extends FireEmblemModElements.ModElement {
 			switch ((Direction) state.get(FACING)) {
 				case SOUTH :
 				default :
-					return VoxelShapes.or(makeCuboidShape(15, 0, 15, 1, 4, 1), makeCuboidShape(13, 4.5, 9, 3, 14, 7)).withOffset(offset.x, offset.y,
+					return VoxelShapes.or(makeCuboidShape(15, 0, 15, 1, 4, 1), makeCuboidShape(13, 3.5, 9, 3, 14, 7)).withOffset(offset.x, offset.y,
 							offset.z);
 				case NORTH :
-					return VoxelShapes.or(makeCuboidShape(1, 0, 1, 15, 4, 15), makeCuboidShape(3, 4.5, 7, 13, 14, 9)).withOffset(offset.x, offset.y,
+					return VoxelShapes.or(makeCuboidShape(1, 0, 1, 15, 4, 15), makeCuboidShape(3, 3.5, 7, 13, 14, 9)).withOffset(offset.x, offset.y,
 							offset.z);
 				case EAST :
-					return VoxelShapes.or(makeCuboidShape(15, 0, 1, 1, 4, 15), makeCuboidShape(9, 4.5, 3, 7, 14, 13)).withOffset(offset.x, offset.y,
+					return VoxelShapes.or(makeCuboidShape(15, 0, 1, 1, 4, 15), makeCuboidShape(9, 3.5, 3, 7, 14, 13)).withOffset(offset.x, offset.y,
 							offset.z);
 				case WEST :
-					return VoxelShapes.or(makeCuboidShape(1, 0, 15, 15, 4, 1), makeCuboidShape(7, 4.5, 13, 9, 14, 3)).withOffset(offset.x, offset.y,
+					return VoxelShapes.or(makeCuboidShape(1, 0, 15, 15, 4, 1), makeCuboidShape(7, 3.5, 13, 9, 14, 3)).withOffset(offset.x, offset.y,
 							offset.z);
 			}
 		}

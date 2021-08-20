@@ -54,6 +54,17 @@ public class StatHealthProcedure {
 						+ ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 								.orElse(new FireEmblemModVariables.PlayerVariables())).atkmod)));
 		{
+			double _setval = (double) ((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireEmblemModVariables.PlayerVariables())).atk)
+					+ (1 + (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) / 2)))
+					+ ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new FireEmblemModVariables.PlayerVariables())).atkmod));
+			entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.atkformula = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
 			double _setval = (double) ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) / 8)
 					+ ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new FireEmblemModVariables.PlayerVariables())).heavyarmor));

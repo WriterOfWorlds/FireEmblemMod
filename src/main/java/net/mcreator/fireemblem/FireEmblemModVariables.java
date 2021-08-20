@@ -228,6 +228,7 @@ public class FireEmblemModVariables {
 			nbt.putString("crest", instance.crest);
 			nbt.putBoolean("hasSB", instance.hasSB);
 			nbt.putDouble("atkmod", instance.atkmod);
+			nbt.putDouble("atkformula", instance.atkformula);
 			return nbt;
 		}
 
@@ -253,6 +254,7 @@ public class FireEmblemModVariables {
 			instance.crest = nbt.getString("crest");
 			instance.hasSB = nbt.getBoolean("hasSB");
 			instance.atkmod = nbt.getDouble("atkmod");
+			instance.atkformula = nbt.getDouble("atkformula");
 		}
 	}
 
@@ -276,6 +278,7 @@ public class FireEmblemModVariables {
 		public String crest = "";
 		public boolean hasSB = false;
 		public double atkmod = 0;
+		public double atkformula = 0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				FireEmblemMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -328,6 +331,7 @@ public class FireEmblemModVariables {
 			clone.footslow = original.footslow;
 			clone.page = original.page;
 			clone.atkmod = original.atkmod;
+			clone.atkformula = original.atkformula;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -370,6 +374,7 @@ public class FireEmblemModVariables {
 					variables.crest = message.data.crest;
 					variables.hasSB = message.data.hasSB;
 					variables.atkmod = message.data.atkmod;
+					variables.atkformula = message.data.atkformula;
 				}
 			});
 			context.setPacketHandled(true);

@@ -60,7 +60,7 @@ public class AutoRegenProcedure {
 					(int) (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getDamage())
 							- 55));
 			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You feel well rested. The Bloodbath was repaired."), (false));
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You feel well rested. The Thunderbrand was repaired."), (false));
 			}
 		}
 		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
@@ -69,7 +69,7 @@ public class AutoRegenProcedure {
 					(int) (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).getDamage())
 							- 30));
 			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You feel well rested. The Crystalizer was repaired."), (false));
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You feel well rested. The Luin was repaired."), (false));
 			}
 		}
 		if (entity instanceof PlayerEntity)

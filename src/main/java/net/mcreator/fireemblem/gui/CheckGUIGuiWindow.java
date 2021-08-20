@@ -84,7 +84,7 @@ public class CheckGUIGuiWindow extends ContainerScreen<CheckGUIGui.GuiContainerM
 		this.font.drawString(ms, "Heavy Armor: " + ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireEmblemModVariables.PlayerVariables())).heavyarmor) + "", 8, 62, -12829636);
 		this.font.drawString(ms, "Attack: " + ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).atk) + "", 8, 73, -12829636);
+				.orElse(new FireEmblemModVariables.PlayerVariables())).atkformula) + "", 8, 73, -12829636);
 		this.font.drawString(ms, "Player Stats", 108, 16, -12829636);
 		this.font.drawString(ms, "Class: " + ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass) + "", 8, 98, -12829636);

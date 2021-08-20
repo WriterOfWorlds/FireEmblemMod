@@ -91,12 +91,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Attack: <VAR:atk>",
+          "text": "Attack: <VAR:atkformula>",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Attack: <VAR:atk>",
+          "name": "Attack: <VAR:atkformula>",
           "x": 132,
           "y": 136
         }
