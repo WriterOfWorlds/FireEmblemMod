@@ -1,5 +1,5 @@
 {
-  "parent": "fire_emblem:custom/goddessstatue",
+  "parent": "fire_emblem:custom/goddessstatue_(1)",
   "textures": {
     "all": "fire_emblem:blocks/texture_1",
     "particle": "fire_emblem:blocks/texture_1",

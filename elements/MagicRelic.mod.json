@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "luin",
+    "texture": "luin_nostone",
     "customModelName": "Normal",
     "name": "Lúin",
     "specialInfo": [],

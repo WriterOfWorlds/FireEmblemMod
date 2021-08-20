@@ -1635,16 +1635,7 @@
       "value": "0"
     }
   ],
-  "sound_elements": [
-    {
-      "name": "lost-in-thoughts-all-alone",
-      "files": [
-        "lost-in-thoughts-all-alone"
-      ],
-      "category": "music",
-      "subtitle": "True Credits"
-    }
-  ],
+  "sound_elements": [],
   "language_map": {
     "en_us": {
       "item.fire_emblem.silver_sword": "Silver Sword",

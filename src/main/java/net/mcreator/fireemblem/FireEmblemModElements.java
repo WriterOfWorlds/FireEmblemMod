@@ -46,8 +46,6 @@ public class FireEmblemModElements {
 	public final List<Supplier<Enchantment>> enchantments = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 	public FireEmblemModElements() {
-		sounds.put(new ResourceLocation("fire_emblem", "lost-in-thoughts-all-alone"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("fire_emblem", "lost-in-thoughts-all-alone")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("fire_emblem").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();
