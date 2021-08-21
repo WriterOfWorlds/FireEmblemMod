@@ -104,7 +104,7 @@ public class FireEmblemModVariables {
 
 	public static class MapVariables extends WorldSavedData {
 		public static final String DATA_NAME = "fire_emblem_mapvars";
-		public double day = 0;
+		public double day = 1.0;
 		public String month = "Guardian Moon";
 		public double year = 1180.0;
 		public MapVariables() {

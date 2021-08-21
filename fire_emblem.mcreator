@@ -1541,6 +1541,74 @@
           }
         ]
       }
+    },
+    {
+      "name": "TimePass",
+      "type": "procedure",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "time_pass",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Calendar",
+      "type": "gui",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "calendar"
+    },
+    {
+      "name": "OpenCalendarOnKeyPressed",
+      "type": "procedure",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "open_calendar_on_key_pressed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OpenCalendar",
+      "type": "keybind",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "open_calendar"
     }
   ],
   "variable_elements": [
@@ -1650,7 +1718,7 @@
       "name": "day",
       "type": "number",
       "scope": "map",
-      "value": "0"
+      "value": "1.0"
     },
     {
       "name": "month",
@@ -1693,6 +1761,7 @@
       "block.fire_emblem.goddess_sothis": "Goddess Statue",
       "item.fire_emblem.forged_iron_axe": "Iron Axe+",
       "item.fire_emblem.hammor": "Thunderbrand",
+      "key.fire_emblem.open_calendar": "Open Calendar",
       "item.fire_emblem.magic_relic": "Lúin",
       "item.fire_emblem.forged_gold_axe": "Gold Axe+",
       "item.fire_emblem.forged_nether_axe": "Netherite Axe+",
