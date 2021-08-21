@@ -49,7 +49,7 @@ public class TimePassProcedure {
 			FireEmblemModVariables.MapVariables.get(world).dorn = (boolean) (true);
 			FireEmblemModVariables.MapVariables.get(world).syncData(world);
 		}
-		if ((FireEmblemModVariables.MapVariables.get(world).dorn && ((world instanceof World) ? ((World) world).isDaytime() : false))) {
+		if ((FireEmblemModVariables.MapVariables.get(world).dorn && (((world instanceof World) ? ((World) world).isDaytime() : false) == (true)))) {
 			FireEmblemModVariables.MapVariables.get(world).dorn = (boolean) (false);
 			FireEmblemModVariables.MapVariables.get(world).syncData(world);
 			if (!world.isRemote()) {
