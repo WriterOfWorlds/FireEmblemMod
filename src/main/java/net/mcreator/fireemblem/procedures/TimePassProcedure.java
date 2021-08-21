@@ -1,10 +1,16 @@
 package net.mcreator.fireemblem.procedures;
 
+import net.minecraftforge.fml.server.ServerLifecycleHooks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ChatType;
+import net.minecraft.util.Util;
+import net.minecraft.server.MinecraftServer;
 
 import net.mcreator.fireemblem.FireEmblemModVariables;
 import net.mcreator.fireemblem.FireEmblemMod;
@@ -33,7 +39,26 @@ public class TimePassProcedure {
 			return;
 		}
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((world.getWorldInfo().getDayTime()) == 0)) {
+		if (((FireEmblemModVariables.MapVariables.get(world).dorn == (false))
+				&& (((world instanceof World) ? ((World) world).isDaytime() : false) == (false)))) {
+			if (!world.isRemote()) {
+				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+				if (mcserv != null)
+					mcserv.getPlayerList().func_232641_a_(new StringTextComponent("WHY THIS DO"), ChatType.SYSTEM, Util.DUMMY_UUID);
+			}
+			FireEmblemModVariables.MapVariables.get(world).dorn = (boolean) (true);
+			FireEmblemModVariables.MapVariables.get(world).syncData(world);
+		}
+		if ((FireEmblemModVariables.MapVariables.get(world).dorn && ((world instanceof World) ? ((World) world).isDaytime() : false))) {
+			FireEmblemModVariables.MapVariables.get(world).dorn = (boolean) (false);
+			FireEmblemModVariables.MapVariables.get(world).syncData(world);
+			if (!world.isRemote()) {
+				MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
+				if (mcserv != null)
+					mcserv.getPlayerList().func_232641_a_(
+							new StringTextComponent((("THIST DO A WORK") + "" + ((FireEmblemModVariables.MapVariables.get(world).day + 1)))),
+							ChatType.SYSTEM, Util.DUMMY_UUID);
+			}
 			if (((FireEmblemModVariables.MapVariables.get(world).month).equals("Guardian Moon"))) {
 				if ((FireEmblemModVariables.MapVariables.get(world).day < 31)) {
 					FireEmblemModVariables.MapVariables.get(world).day = (double) (FireEmblemModVariables.MapVariables.get(world).day + 1);

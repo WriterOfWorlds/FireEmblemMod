@@ -72,8 +72,9 @@ public class CalendarGuiWindow extends ContainerScreen<CalendarGui.GuiContainerM
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 		this.font.drawString(ms, "" + (FireEmblemModVariables.MapVariables.get(world).month) + "", 7, 9, -12829636);
-		this.font.drawString(ms, "" + (FireEmblemModVariables.MapVariables.get(world).year) + "", 73, 9, -12829636);
+		this.font.drawString(ms, "" + (FireEmblemModVariables.MapVariables.get(world).year) + "", 110, 9, -12829636);
 		this.font.drawString(ms, "" + (FireEmblemModVariables.MapVariables.get(world).day) + "", 7, 23, -12829636);
+		this.font.drawString(ms, "" + (FireEmblemModVariables.MapVariables.get(world).dorn) + "", 7, 143, -12829636);
 	}
 
 	@Override

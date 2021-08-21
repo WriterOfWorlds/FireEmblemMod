@@ -107,6 +107,7 @@ public class FireEmblemModVariables {
 		public double day = 1.0;
 		public String month = "Guardian Moon";
 		public double year = 1180.0;
+		public boolean dorn = false;
 		public MapVariables() {
 			super(DATA_NAME);
 		}
@@ -120,6 +121,7 @@ public class FireEmblemModVariables {
 			day = nbt.getDouble("day");
 			month = nbt.getString("month");
 			year = nbt.getDouble("year");
+			dorn = nbt.getBoolean("dorn");
 		}
 
 		@Override
@@ -127,6 +129,7 @@ public class FireEmblemModVariables {
 			nbt.putDouble("day", day);
 			nbt.putString("month", month);
 			nbt.putDouble("year", year);
+			nbt.putBoolean("dorn", dorn);
 			return nbt;
 		}
 

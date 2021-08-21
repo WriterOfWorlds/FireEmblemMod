@@ -32,7 +32,7 @@
             "falpha": 0.0
           },
           "name": "<VAR:year>",
-          "x": 199,
+          "x": 236,
           "y": 46
         }
       },
@@ -47,6 +47,19 @@
           "name": "<VAR:day>",
           "x": 133,
           "y": 60
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:dorn>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:dorn>",
+          "x": 133,
+          "y": 180
         }
       }
     ],
