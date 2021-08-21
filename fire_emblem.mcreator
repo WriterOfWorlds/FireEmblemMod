@@ -1609,6 +1609,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "open_calendar"
+    },
+    {
+      "name": "CheckTimeIG",
+      "type": "keybind",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "check_time_ig"
     }
   ],
   "variable_elements": [
@@ -1760,19 +1769,20 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "gamerule.crest": "Crest",
       "item.fire_emblem.forged_silver_sword": "Silver Sword+",
+      "gamerule.crest": "Crest",
       "item.fire_emblem.forged_gold_sword": "Gold Sword+",
       "block.fire_emblem.silver_ore": "Silver Ore",
       "block.fire_emblem.goddess_sothis": "Goddess Statue",
       "item.fire_emblem.forged_iron_axe": "Iron Axe+",
       "item.fire_emblem.hammor": "Thunderbrand",
       "key.fire_emblem.open_calendar": "Open Calendar",
-      "item.fire_emblem.forged_gold_axe": "Gold Axe+",
       "item.fire_emblem.magic_relic": "Lúin",
-      "block.fire_emblem.goddess_stone_base": "Goddess Base",
+      "item.fire_emblem.forged_gold_axe": "Gold Axe+",
       "item.fire_emblem.forged_nether_axe": "Netherite Axe+",
+      "block.fire_emblem.goddess_stone_base": "Goddess Base",
       "item.fire_emblem.forged_nether_sword": "Netherite Sword+",
+      "key.fire_emblem.check_time_ig": "Check Time IG",
       "item.fire_emblem.silver_apple": "Silver Apple",
       "item.fire_emblem.silver_sword": "Silver Sword",
       "item.fire_emblem.forged_diamond_axe": "Diamond Axe+",

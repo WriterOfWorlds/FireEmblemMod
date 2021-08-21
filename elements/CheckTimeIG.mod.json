@@ -1,0 +1,12 @@
+{
+  "_fv": 24,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "X",
+    "keyBindingName": "Check Time IG",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "TimePass"
+    }
+  }
+}
