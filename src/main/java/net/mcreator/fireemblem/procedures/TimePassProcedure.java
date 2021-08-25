@@ -24,5 +24,6 @@ public class TimePassProcedure {
 		}
 	}
 	public static void executeProcedure(Map<String, Object> dependencies) {
+		double worldtime = 0;
 	}
 }

@@ -1613,27 +1613,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "check_time_ig"
-    },
-    {
-      "name": "DonDieIG",
-      "type": "procedure",
-      "sortid": 170,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "don_die_ig",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
-          }
-        ]
-      }
     }
   ],
   "variable_elements": [
