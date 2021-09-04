@@ -591,10 +591,6 @@
             "type": "entity"
           },
           {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -1543,76 +1539,58 @@
       }
     },
     {
-      "name": "TimePass",
-      "type": "procedure",
-      "sortid": 166,
+      "name": "CuriosThing",
+      "type": "code",
+      "sortid": 170,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
-      "registry_name": "time_pass",
-      "metadata": {
-        "dependencies": []
-      }
+      "registry_name": "curios_thing"
     },
     {
-      "name": "Calendar",
-      "type": "gui",
-      "sortid": 167,
+      "name": "BlackEaglePendant",
+      "type": "item",
+      "sortid": 171,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "calendar"
+      "registry_name": "black_eagle_pendant"
     },
     {
-      "name": "OpenCalendarOnKeyPressed",
-      "type": "procedure",
-      "sortid": 168,
+      "name": "RafailGem",
+      "type": "item",
+      "sortid": 172,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "open_calendar_on_key_pressed",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
+      "registry_name": "rafail_gem"
     },
     {
-      "name": "OpenCalendar",
-      "type": "keybind",
-      "sortid": 168,
+      "name": "ExperienceGem",
+      "type": "item",
+      "sortid": 173,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "open_calendar"
+      "registry_name": "experience_gem"
     },
     {
-      "name": "CheckTimeIG",
-      "type": "keybind",
-      "sortid": 169,
+      "name": "KnowledgeGem",
+      "type": "item",
+      "sortid": 174,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "check_time_ig"
+      "registry_name": "knowledge_gem"
+    },
+    {
+      "name": "FettersOfDromi",
+      "type": "item",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fetters_of_dromi"
     }
   ],
   "variable_elements": [
@@ -1777,26 +1755,31 @@
       "block.fire_emblem.goddess_sothis": "Goddess Statue",
       "item.fire_emblem.forged_iron_axe": "Iron Axe+",
       "item.fire_emblem.hammor": "Thunderbrand",
-      "key.fire_emblem.open_calendar": "Open Calendar",
-      "item.fire_emblem.forged_gold_axe": "Gold Axe+",
       "item.fire_emblem.magic_relic": "Lúin",
-      "block.fire_emblem.goddess_stone_base": "Goddess Base",
+      "item.fire_emblem.forged_gold_axe": "Gold Axe+",
+      "item.fire_emblem.fetters_of_dromi": "Fetters Of Dromi",
       "item.fire_emblem.forged_nether_axe": "Netherite Axe+",
+      "block.fire_emblem.goddess_stone_base": "Goddess Base",
+      "item.fire_emblem.knowledge_gem": "Knowledge Gem",
       "item.fire_emblem.forged_nether_sword": "Netherite Sword+",
-      "key.fire_emblem.check_time_ig": "Check Time IG",
       "item.fire_emblem.silver_apple": "Silver Apple",
       "item.fire_emblem.silver_sword": "Silver Sword",
       "item.fire_emblem.forged_diamond_axe": "Diamond Axe+",
       "item.fire_emblem.forged_iron_sword": "Iron Sword+",
+      "curios.identifier.shield": "Shield Slot",
       "subtitles.lost-in-thoughts-all-alone": "True Credits",
       "item.fire_emblem.forged_diamond_sword": "Diamond Sword+",
+      "curios.identifier.gem": "Gem Slot",
+      "item.fire_emblem.rafail_gem": "Rafail Gem",
       "item.fire_emblem.class_certifier": "Beginner Seal",
       "item.fire_emblem.relic_sword": "Areadbhar",
       "item.fire_emblem.intermediate_seal": "Intermediate Seal",
       "key.fire_emblem.open_gui": "Open Unit Stats",
       "gamerule.crest.description": "Sets crest",
+      "item.fire_emblem.black_eagle_pendant": "Black Eagle Pendant",
       "item.fire_emblem.silver_ingot": "Silver Ingot",
-      "block.fire_emblem.silver_block": "Block of Silver"
+      "block.fire_emblem.silver_block": "Block of Silver",
+      "item.fire_emblem.experience_gem": "Experience Gem"
     }
   },
   "foldersRoot": {
@@ -1825,5 +1808,5 @@
     "modElementsPackage": "net.mcreator.fireemblem",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100233614
+  "mcreatorVersion": 202100235315
 }
