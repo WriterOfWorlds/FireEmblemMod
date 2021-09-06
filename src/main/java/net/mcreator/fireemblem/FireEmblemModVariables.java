@@ -235,6 +235,8 @@ public class FireEmblemModVariables {
 			nbt.putBoolean("hasSB", instance.hasSB);
 			nbt.putDouble("atkmod", instance.atkmod);
 			nbt.putDouble("atkformula", instance.atkformula);
+			nbt.putBoolean("hasSS", instance.hasSS);
+			nbt.putBoolean("SSip", instance.SSip);
 			return nbt;
 		}
 
@@ -261,6 +263,8 @@ public class FireEmblemModVariables {
 			instance.hasSB = nbt.getBoolean("hasSB");
 			instance.atkmod = nbt.getDouble("atkmod");
 			instance.atkformula = nbt.getDouble("atkformula");
+			instance.hasSS = nbt.getBoolean("hasSS");
+			instance.SSip = nbt.getBoolean("SSip");
 		}
 	}
 
@@ -285,6 +289,8 @@ public class FireEmblemModVariables {
 		public boolean hasSB = false;
 		public double atkmod = 0;
 		public double atkformula = 0;
+		public boolean hasSS = false;
+		public boolean SSip = false;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				FireEmblemMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -330,6 +336,7 @@ public class FireEmblemModVariables {
 		clone.atk = original.atk;
 		clone.crest = original.crest;
 		clone.hasSB = original.hasSB;
+		clone.hasSS = original.hasSS;
 		if (!event.isWasDeath()) {
 			clone.headslow = original.headslow;
 			clone.chestslow = original.chestslow;
@@ -338,6 +345,7 @@ public class FireEmblemModVariables {
 			clone.page = original.page;
 			clone.atkmod = original.atkmod;
 			clone.atkformula = original.atkformula;
+			clone.SSip = original.SSip;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -381,6 +389,8 @@ public class FireEmblemModVariables {
 					variables.hasSB = message.data.hasSB;
 					variables.atkmod = message.data.atkmod;
 					variables.atkformula = message.data.atkformula;
+					variables.hasSS = message.data.hasSS;
+					variables.SSip = message.data.SSip;
 				}
 			});
 			context.setPacketHandled(true);
