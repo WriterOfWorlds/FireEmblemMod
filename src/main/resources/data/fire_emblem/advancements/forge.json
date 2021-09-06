@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:anvil"
+    },
+    "title": {
+      "translate": "advancements.forge.title"
+    },
+    "description": {
+      "translate": "advancements.forge.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "forge": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 4
+  },
+  "parent": "fire_emblem:questing"
+}

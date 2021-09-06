@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "fire_emblem:hammor"
+    },
+    "title": {
+      "translate": "advancements.hero.title"
+    },
+    "description": {
+      "translate": "advancements.hero.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "hero": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "fire_emblem:questing"
+}

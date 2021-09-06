@@ -1,0 +1,26 @@
+{
+  "display": {
+    "background": "fire_emblem:textures/questingtile.png",
+    "icon": {
+      "item": "fire_emblem:forged_diamond_sword"
+    },
+    "title": {
+      "translate": "advancements.questing.title"
+    },
+    "description": {
+      "translate": "advancements.questing.descr"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "questing": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {
+    "experience": 0
+  }
+}

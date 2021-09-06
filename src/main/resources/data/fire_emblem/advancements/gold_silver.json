@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "fire_emblem:silver_ingot"
+    },
+    "title": {
+      "translate": "advancements.gold_silver.title"
+    },
+    "description": {
+      "translate": "advancements.gold_silver.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "gold_silver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "fire_emblem:silver_ingot",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 2
+  },
+  "parent": "fire_emblem:questing"
+}

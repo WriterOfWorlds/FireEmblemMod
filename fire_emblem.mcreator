@@ -1691,6 +1691,110 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "plank_items"
+    },
+    {
+      "name": "Hero",
+      "type": "achievement",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hero"
+    },
+    {
+      "name": "RewardHero",
+      "type": "procedure",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "reward_hero",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Questing",
+      "type": "achievement",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "questing"
+    },
+    {
+      "name": "GoldSilver",
+      "type": "achievement",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gold_silver"
+    },
+    {
+      "name": "Forge",
+      "type": "achievement",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forge"
+    },
+    {
+      "name": "GiveForge",
+      "type": "procedure",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "give_forge",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sad",
+      "type": "achievement",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sad"
+    },
+    {
+      "name": "GiveSad",
+      "type": "procedure",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "give_sad",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1867,19 +1971,29 @@
       "block.fire_emblem.goddess_sothis": "Goddess Statue",
       "item.fire_emblem.forged_iron_axe": "Iron Axe+",
       "item.fire_emblem.hammor": "Thunderbrand",
+      "advancements.hero.descr": "Obtain a Hero\u0027s Relic",
       "item.fire_emblem.magic_relic": "Lúin",
       "item.fire_emblem.forged_gold_axe": "Gold Axe+",
+      "advancements.questing.descr": "Begin your journey!",
+      "advancements.forge.descr": "Forge a weapon and make it better than before!",
       "item.fire_emblem.fetters_of_dromi": "Fetters Of Dromi",
+      "advancements.gold_silver.title": "Not Quite \"Hitting Gold\"",
       "item.fire_emblem.forged_nether_axe": "Netherite Axe+",
       "block.fire_emblem.goddess_stone_base": "Goddess Base",
       "item.fire_emblem.knowledge_gem": "Knowledge Gem",
+      "advancements.questing.title": "Questing",
       "item.fire_emblem.forged_nether_sword": "Netherite Sword+",
+      "advancements.forge.title": "Almost Like New!",
+      "advancements.sad.descr": "Break a forged weapon",
+      "advancements.sad.title": "...But it wasn\u0027t good enough",
       "item.fire_emblem.silver_apple": "Silver Apple",
+      "advancements.hero.title": "Hero\u0027s Tale",
       "item.fire_emblem.silver_sword": "Silver Sword",
       "item.fire_emblem.forged_diamond_axe": "Diamond Axe+",
       "item.fire_emblem.forged_iron_sword": "Iron Sword+",
       "curios.identifier.shield": "Shield Slot",
       "subtitles.lost-in-thoughts-all-alone": "True Credits",
+      "advancements.gold_silver.descr": "Find silver ore and obtain it",
       "item.fire_emblem.forged_diamond_sword": "Diamond Sword+",
       "curios.identifier.gem": "Gem Slot",
       "item.fire_emblem.rafail_gem": "Rafail Gem",
