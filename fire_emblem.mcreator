@@ -1799,7 +1799,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "marble"
+      "registry_name": "marble_tile"
     },
     {
       "name": "CertMyrmbackwards",
@@ -1872,6 +1872,33 @@
             "name": "z",
             "type": "number"
           },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Marble",
+      "type": "block",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "marble"
+    },
+    {
+      "name": "MarbleAdditionalGenerationCondition",
+      "type": "procedure",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "marble_additional_generation_condition",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
           {
             "name": "world",
             "type": "world"
@@ -2074,6 +2101,7 @@
       "item.fire_emblem.forged_diamond_axe": "Diamond Axe+",
       "item.fire_emblem.level_gem": "Level Gem",
       "item.fire_emblem.forged_iron_sword": "Iron Sword+",
+      "block.fire_emblem.marble_tile": "Marble Tile",
       "item.fire_emblem.beginner_seal": "Beginner Seal",
       "curios.identifier.shield": "Shield Slot",
       "subtitles.lost-in-thoughts-all-alone": "True Credits",
@@ -2089,7 +2117,7 @@
       "item.fire_emblem.black_eagle_pendant": "Black Eagle Pendant",
       "item.fire_emblem.silver_ingot": "Silver Ingot",
       "block.fire_emblem.silver_block": "Block of Silver",
-      "block.fire_emblem.marble": "Marble Tile",
+      "block.fire_emblem.marble": "Marble",
       "item.fire_emblem.experience_gem": "Experience Gem"
     }
   },
