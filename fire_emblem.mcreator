@@ -1836,6 +1836,48 @@
           }
         ]
       }
+    },
+    {
+      "name": "LevelGem",
+      "type": "item",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "level_gem"
+    },
+    {
+      "name": "GemLoot",
+      "type": "procedure",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gem_loot",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -2030,6 +2072,7 @@
       "advancements.hero.title": "Hero\u0027s Tale",
       "item.fire_emblem.silver_sword": "Silver Sword",
       "item.fire_emblem.forged_diamond_axe": "Diamond Axe+",
+      "item.fire_emblem.level_gem": "Level Gem",
       "item.fire_emblem.forged_iron_sword": "Iron Sword+",
       "item.fire_emblem.beginner_seal": "Beginner Seal",
       "curios.identifier.shield": "Shield Slot",
