@@ -25,7 +25,7 @@ import java.util.HashMap;
 
 @FireEmblemModElements.ModElement.Tag
 public class ClassCertifierItem extends FireEmblemModElements.ModElement {
-	@ObjectHolder("fire_emblem:class_certifier")
+	@ObjectHolder("fire_emblem:beginner_seal")
 	public static final Item block = null;
 	public ClassCertifierItem(FireEmblemModElements instance) {
 		super(instance, 88);
@@ -38,7 +38,7 @@ public class ClassCertifierItem extends FireEmblemModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).isImmuneToFire().rarity(Rarity.RARE));
-			setRegistryName("class_certifier");
+			setRegistryName("beginner_seal");
 		}
 
 		@Override
@@ -66,7 +66,6 @@ public class ClassCertifierItem extends FireEmblemModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("itemstack", itemstack);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
@@ -91,7 +90,6 @@ public class ClassCertifierItem extends FireEmblemModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("itemstack", itemstack);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);

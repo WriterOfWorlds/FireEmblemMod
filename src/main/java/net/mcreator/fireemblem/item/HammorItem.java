@@ -22,7 +22,7 @@ import com.google.common.collect.ImmutableMap;
 
 @FireEmblemModElements.ModElement.Tag
 public class HammorItem extends FireEmblemModElements.ModElement {
-	@ObjectHolder("fire_emblem:hammor")
+	@ObjectHolder("fire_emblem:thunderbrand")
 	public static final Item block = null;
 	public HammorItem(FireEmblemModElements instance) {
 		super(instance, 67);
@@ -68,6 +68,6 @@ public class HammorItem extends FireEmblemModElements.ModElement {
 				}
 				return true;
 			}
-		}.setRegistryName("hammor"));
+		}.setRegistryName("thunderbrand"));
 	}
 }

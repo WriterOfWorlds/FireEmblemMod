@@ -1,5 +1,5 @@
 {
-  "parent": "fire_emblem:block/marble_ig",
+  "parent": "fire_emblem:block/marble",
   "display": {
     "thirdperson": {
       "rotation": [

@@ -22,7 +22,7 @@ import com.google.common.collect.ImmutableMap;
 
 @FireEmblemModElements.ModElement.Tag
 public class MagicRelicItem extends FireEmblemModElements.ModElement {
-	@ObjectHolder("fire_emblem:magic_relic")
+	@ObjectHolder("fire_emblem:luin")
 	public static final Item block = null;
 	public MagicRelicItem(FireEmblemModElements instance) {
 		super(instance, 75);
@@ -68,6 +68,6 @@ public class MagicRelicItem extends FireEmblemModElements.ModElement {
 				}
 				return true;
 			}
-		}.setRegistryName("magic_relic"));
+		}.setRegistryName("luin"));
 	}
 }

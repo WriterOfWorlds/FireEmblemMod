@@ -8,7 +8,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "relic_sword"
+      "registry_name": "areadbhar"
     },
     {
       "name": "RelicSwordLivingEntityIsHitWithTool",
@@ -175,7 +175,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "hammor"
+      "registry_name": "thunderbrand"
     },
     {
       "name": "StatHealth",
@@ -184,7 +184,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "stat_health",
+      "registry_name": "stats",
       "metadata": {
         "dependencies": [
           {
@@ -239,7 +239,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "magic_relic"
+      "registry_name": "luin"
     },
     {
       "name": "MagicRelicLivingEntityIsHitWithTool",
@@ -459,7 +459,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "class_certifier"
+      "registry_name": "beginner_seal"
     },
     {
       "name": "ClassSelect",
@@ -1590,7 +1590,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "fetters_of_dromi"
+      "registry_name": "dromi_fetters"
     },
     {
       "name": "SkywardSlashSkill",
@@ -1799,7 +1799,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "marble_ig"
+      "registry_name": "marble"
     }
   ],
   "variable_elements": [
@@ -1974,20 +1974,19 @@
       "item.fire_emblem.forged_gold_sword": "Gold Sword+",
       "block.fire_emblem.silver_ore": "Silver Ore",
       "block.fire_emblem.goddess_sothis": "Goddess Statue",
+      "item.fire_emblem.areadbhar": "Areadbhar",
       "item.fire_emblem.forged_iron_axe": "Iron Axe+",
-      "item.fire_emblem.hammor": "Thunderbrand",
       "advancements.hero.descr": "Obtain a Hero\u0027s Relic",
-      "item.fire_emblem.magic_relic": "Lúin",
       "item.fire_emblem.forged_gold_axe": "Gold Axe+",
       "advancements.questing.descr": "Begin your journey!",
       "advancements.forge.descr": "Forge a weapon and make it better than before!",
-      "item.fire_emblem.fetters_of_dromi": "Fetters Of Dromi",
       "advancements.gold_silver.title": "Not Quite \"Hitting Gold\"",
       "item.fire_emblem.forged_nether_axe": "Netherite Axe+",
       "block.fire_emblem.goddess_stone_base": "Goddess Base",
       "item.fire_emblem.knowledge_gem": "Knowledge Gem",
       "advancements.questing.title": "Questing",
       "item.fire_emblem.forged_nether_sword": "Netherite Sword+",
+      "item.fire_emblem.luin": "Lúin",
       "advancements.forge.title": "Almost Like New!",
       "advancements.sad.descr": "Break a forged weapon",
       "advancements.sad.title": "...But it wasn\u0027t good enough",
@@ -1996,21 +1995,22 @@
       "item.fire_emblem.silver_sword": "Silver Sword",
       "item.fire_emblem.forged_diamond_axe": "Diamond Axe+",
       "item.fire_emblem.forged_iron_sword": "Iron Sword+",
-      "block.fire_emblem.marble_ig": "Marble Tile",
+      "item.fire_emblem.beginner_seal": "Beginner Seal",
       "curios.identifier.shield": "Shield Slot",
       "subtitles.lost-in-thoughts-all-alone": "True Credits",
       "advancements.gold_silver.descr": "Find silver ore and obtain it",
       "item.fire_emblem.forged_diamond_sword": "Diamond Sword+",
       "curios.identifier.gem": "Gem Slot",
       "item.fire_emblem.rafail_gem": "Rafail Gem",
-      "item.fire_emblem.class_certifier": "Beginner Seal",
-      "item.fire_emblem.relic_sword": "Areadbhar",
+      "item.fire_emblem.dromi_fetters": "Fetters Of Dromi",
+      "item.fire_emblem.thunderbrand": "Thunderbrand",
       "item.fire_emblem.intermediate_seal": "Intermediate Seal",
       "key.fire_emblem.open_gui": "Open Unit Stats",
       "gamerule.crest.description": "Sets crest",
       "item.fire_emblem.black_eagle_pendant": "Black Eagle Pendant",
       "item.fire_emblem.silver_ingot": "Silver Ingot",
       "block.fire_emblem.silver_block": "Block of Silver",
+      "block.fire_emblem.marble": "Marble Tile",
       "item.fire_emblem.experience_gem": "Experience Gem"
     }
   },

@@ -22,7 +22,7 @@ import com.google.common.collect.ImmutableMap;
 
 @FireEmblemModElements.ModElement.Tag
 public class RelicSwordItem extends FireEmblemModElements.ModElement {
-	@ObjectHolder("fire_emblem:relic_sword")
+	@ObjectHolder("fire_emblem:areadbhar")
 	public static final Item block = null;
 	public RelicSwordItem(FireEmblemModElements instance) {
 		super(instance, 25);
@@ -68,6 +68,6 @@ public class RelicSwordItem extends FireEmblemModElements.ModElement {
 				}
 				return true;
 			}
-		}.setRegistryName("relic_sword"));
+		}.setRegistryName("areadbhar"));
 	}
 }
