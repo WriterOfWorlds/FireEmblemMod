@@ -16,6 +16,8 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.fireemblem.procedures.ClassSelectProcedure;
 import net.mcreator.fireemblem.procedures.CertifyFighterProcedure;
+import net.mcreator.fireemblem.procedures.CertMyrmbackwardsProcedure;
+import net.mcreator.fireemblem.procedures.CertFightbackwardsProcedure;
 import net.mcreator.fireemblem.FireEmblemMod;
 
 import java.util.HashMap;
@@ -82,6 +84,10 @@ public class CertifyClassGuiWindow extends ContainerScreen<CertifyClassGui.GuiCo
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
+		if (CertFightbackwardsProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "Req not met", 98, 67, -12829636);
+		if (CertMyrmbackwardsProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+			this.font.drawString(ms, "Req not met", 11, 67, -12829636);
 		this.font.drawString(ms, "Myrmidon", 10, 11, -12829636);
 		this.font.drawString(ms, "Fighter", 97, 11, -12829636);
 		this.font.drawString(ms, ".", 6, 24, -12829636);
