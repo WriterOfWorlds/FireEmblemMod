@@ -7,8 +7,8 @@ import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.item.ItemStack;
-import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.entity.monster.WitchEntity;
+import net.minecraft.entity.monster.EvokerEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.Entity;
 
@@ -77,7 +77,7 @@ public class GemLootProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		double rand = 0;
-		if (((entity instanceof ZombieEntity) || (entity instanceof WitchEntity))) {
+		if (((entity instanceof EvokerEntity) || (entity instanceof WitchEntity))) {
 			rand = (double) ((new Random()).nextInt((int) 90 + 1));
 			if ((rand < 15)) {
 				if (world instanceof World && !world.isRemote()) {
@@ -87,7 +87,7 @@ public class GemLootProcedure {
 					world.addEntity(entityToSpawn);
 				}
 			}
-			if (((rand > 15) && (rand < 30))) {
+			if (((rand > 15) && (rand < 25))) {
 				if (world instanceof World && !world.isRemote()) {
 					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(KnowledgeGemItem.block));
 					entityToSpawn.setPickupDelay((int) 10);
@@ -95,7 +95,7 @@ public class GemLootProcedure {
 					world.addEntity(entityToSpawn);
 				}
 			}
-			if (((rand > 30) && (rand < 35))) {
+			if (((rand > 25) && (rand < 30))) {
 				if (world instanceof World && !world.isRemote()) {
 					ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(LevelGemItem.block));
 					entityToSpawn.setPickupDelay((int) 10);
