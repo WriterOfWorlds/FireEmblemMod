@@ -1548,15 +1548,6 @@
       "registry_name": "curios_thing"
     },
     {
-      "name": "BlackEaglePendant",
-      "type": "item",
-      "sortid": 171,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "black_eagle_pendant"
-    },
-    {
       "name": "RafailGem",
       "type": "item",
       "sortid": 172,
@@ -1905,6 +1896,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "LeatherShield",
+      "type": "item",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "leather_shield"
     }
   ],
   "variable_elements": [
@@ -2086,6 +2086,7 @@
       "advancements.questing.descr": "Begin your journey!",
       "advancements.forge.descr": "Forge a weapon and make it better than before!",
       "advancements.gold_silver.title": "Not Quite \"Hitting Gold\"",
+      "item.fire_emblem.leather_shield": "Leather Shield",
       "item.fire_emblem.forged_nether_axe": "Netherite Axe+",
       "block.fire_emblem.goddess_stone_base": "Goddess Base",
       "item.fire_emblem.knowledge_gem": "Knowledge Gem",
@@ -2114,7 +2115,6 @@
       "item.fire_emblem.intermediate_seal": "Intermediate Seal",
       "key.fire_emblem.open_gui": "Open Unit Stats",
       "gamerule.crest.description": "Sets crest",
-      "item.fire_emblem.black_eagle_pendant": "Black Eagle Pendant",
       "item.fire_emblem.silver_ingot": "Silver Ingot",
       "block.fire_emblem.silver_block": "Block of Silver",
       "block.fire_emblem.marble": "Marble",

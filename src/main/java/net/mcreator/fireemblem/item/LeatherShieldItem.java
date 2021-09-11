@@ -12,11 +12,11 @@ import net.minecraft.block.BlockState;
 import net.mcreator.fireemblem.FireEmblemModElements;
 
 @FireEmblemModElements.ModElement.Tag
-public class BlackEaglePendantItem extends FireEmblemModElements.ModElement {
-	@ObjectHolder("fire_emblem:black_eagle_pendant")
+public class LeatherShieldItem extends FireEmblemModElements.ModElement {
+	@ObjectHolder("fire_emblem:leather_shield")
 	public static final Item block = null;
-	public BlackEaglePendantItem(FireEmblemModElements instance) {
-		super(instance, 171);
+	public LeatherShieldItem(FireEmblemModElements instance) {
+		super(instance, 199);
 	}
 
 	@Override
@@ -25,8 +25,8 @@ public class BlackEaglePendantItem extends FireEmblemModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1).rarity(Rarity.RARE));
-			setRegistryName("black_eagle_pendant");
+			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(64).rarity(Rarity.COMMON));
+			setRegistryName("leather_shield");
 		}
 
 		@Override

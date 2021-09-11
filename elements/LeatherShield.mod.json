@@ -3,14 +3,14 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "be_pendant",
+    "texture": "leathershield",
     "customModelName": "Normal",
-    "name": "Black Eagle Pendant",
-    "rarity": "RARE",
+    "name": "Leather Shield",
+    "rarity": "COMMON",
     "creativeTab": {
       "value": "COMBAT"
     },
-    "stackSize": 1,
+    "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
