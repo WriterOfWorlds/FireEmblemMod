@@ -37,7 +37,6 @@ import net.mcreator.fireemblem.item.ForgedDiamondAxeItem;
 import net.mcreator.fireemblem.FireEmblemModVariables;
 import net.mcreator.fireemblem.FireEmblemMod;
 
-import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -115,7 +114,7 @@ public class StatIncBCProcedure {
 				sourceentity.getPersistentData().putDouble("sword", 1);
 				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd M"))) {
-					if ((((new Random()).nextInt((int) 99 + 1)) <= 19)) {
+					if ((Math.round((Math.random() * 10)) <= 2)) {
 						entity.attackEntityFrom(DamageSource.GENERIC, (float) 6);
 						if (!world.isRemote()) {
 							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
@@ -125,7 +124,7 @@ public class StatIncBCProcedure {
 					}
 				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd m"))) {
-					if ((((new Random()).nextInt((int) 99 + 1)) <= 9)) {
+					if ((Math.round((Math.random() * 10)) <= 1)) {
 						entity.attackEntityFrom(DamageSource.GENERIC, (float) 3);
 						if (!world.isRemote()) {
 							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
@@ -136,7 +135,7 @@ public class StatIncBCProcedure {
 				}
 				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon M"))) {
-					if ((((new Random()).nextInt((int) 99 + 1)) <= 69)) {
+					if ((Math.round((Math.random() * 10)) <= 7)) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -182,7 +181,7 @@ public class StatIncBCProcedure {
 					}
 				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon m"))) {
-					if ((((new Random()).nextInt((int) 99 + 1)) <= 39)) {
+					if ((Math.round((Math.random() * 10)) <= 4)) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -229,7 +228,7 @@ public class StatIncBCProcedure {
 				}
 				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel M"))) {
-					if ((((new Random()).nextInt((int) 99 + 1)) <= 69)) {
+					if ((Math.round((Math.random() * 10)) <= 7)) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -275,7 +274,7 @@ public class StatIncBCProcedure {
 					}
 				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel m"))) {
-					if ((((new Random()).nextInt((int) 99 + 1)) <= 39)) {
+					if ((Math.round((Math.random() * 10)) <= 4)) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -344,7 +343,7 @@ public class StatIncBCProcedure {
 				sourceentity.getPersistentData().putDouble("axe", 1);
 				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon M"))) {
-					if ((((new Random()).nextInt((int) 99 + 1)) <= 69)) {
+					if ((Math.round((Math.random() * 10)) <= 7)) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -390,7 +389,7 @@ public class StatIncBCProcedure {
 					}
 				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon m"))) {
-					if ((((new Random()).nextInt((int) 99 + 1)) <= 39)) {
+					if ((Math.round((Math.random() * 10)) <= 4)) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -437,7 +436,7 @@ public class StatIncBCProcedure {
 				}
 				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel M"))) {
-					if ((((new Random()).nextInt((int) 99 + 1)) <= 69)) {
+					if ((Math.round((Math.random() * 10)) <= 7)) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -483,7 +482,7 @@ public class StatIncBCProcedure {
 					}
 				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel m"))) {
-					if ((((new Random()).nextInt((int) 99 + 1)) <= 39)) {
+					if ((Math.round((Math.random() * 10)) <= 4)) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -544,7 +543,7 @@ public class StatIncBCProcedure {
 				sourceentity.getPersistentData().putDouble("magic", 1);
 				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Dominic M"))) {
-					if ((((new Random()).nextInt((int) 99 + 1)) <= 19)) {
+					if ((Math.round((Math.random() * 10)) <= 2)) {
 						(((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
 								.setDamage((int) (((((sourceentity instanceof LivingEntity)
 										? ((LivingEntity) sourceentity).getHeldItemMainhand()
@@ -557,7 +556,7 @@ public class StatIncBCProcedure {
 					}
 				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Dominic m"))) {
-					if ((((new Random()).nextInt((int) 99 + 1)) <= 9)) {
+					if ((Math.round((Math.random() * 10)) <= 1)) {
 						(((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
 								.setDamage((int) (((((sourceentity instanceof LivingEntity)
 										? ((LivingEntity) sourceentity).getHeldItemMainhand()
@@ -571,7 +570,7 @@ public class StatIncBCProcedure {
 				}
 				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon M"))) {
-					if ((((new Random()).nextInt((int) 99 + 1)) <= 69)) {
+					if ((Math.round((Math.random() * 10)) <= 2)) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -617,7 +616,7 @@ public class StatIncBCProcedure {
 					}
 				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon m"))) {
-					if ((((new Random()).nextInt((int) 99 + 1)) <= 39)) {
+					if ((Math.round((Math.random() * 10)) <= 1)) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -664,7 +663,7 @@ public class StatIncBCProcedure {
 				}
 				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel M"))) {
-					if ((((new Random()).nextInt((int) 99 + 1)) <= 69)) {
+					if ((Math.round((Math.random() * 10)) <= 7)) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -710,7 +709,7 @@ public class StatIncBCProcedure {
 					}
 				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel m"))) {
-					if ((((new Random()).nextInt((int) 99 + 1)) <= 39)) {
+					if ((Math.round((Math.random() * 10)) <= 4)) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

@@ -381,36 +381,6 @@
       }
     },
     {
-      "name": "CheckStatsCommandExecuted",
-      "type": "procedure",
-      "sortid": 85,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "check_stats_command_executed",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "CheckStats",
-      "type": "command",
-      "sortid": 85,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "check_stats"
-    },
-    {
       "name": "StatIncBC",
       "type": "procedure",
       "sortid": 86,
@@ -1905,6 +1875,23 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "leather_shield"
+    },
+    {
+      "name": "BugFix",
+      "type": "procedure",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bug_fix",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -2128,9 +2115,8 @@
   "workspaceSettings": {
     "modid": "fire_emblem",
     "modName": "Fire Emblem",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "author": "Bounccake",
-    "websiteURL": "https://mcreator.net",
     "license": "GNU General Public License version 3 (GPLv3)",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
@@ -2143,9 +2129,8 @@
       "geckolib"
     ],
     "currentGenerator": "forge-1.16.5",
-    "credits": "Made with MCreator lol",
     "modElementsPackage": "net.mcreator.fireemblem",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100235315
+  "mcreatorVersion": 202100236710
 }

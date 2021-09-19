@@ -4,6 +4,3 @@ I literally just dump all the new changes here, so compile it yourself if you kn
 <br>
 Or you can just wait for me to post it to Curseforge.
 https://www.curseforge.com/minecraft/mc-mods/fire-emblemc
-<br>
-Or to Modrinth.
-(Mod not approved yet)

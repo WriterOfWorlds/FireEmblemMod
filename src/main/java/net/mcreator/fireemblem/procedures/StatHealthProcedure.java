@@ -6,8 +6,6 @@ import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.World;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.fireemblem.FireEmblemModVariables;
@@ -45,14 +43,6 @@ public class StatHealthProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		((LivingEntity) entity).getAttribute(Attributes.MAX_HEALTH)
-				.setBaseValue((20 + ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0)));
-		((LivingEntity) entity).getAttribute(Attributes.ATTACK_DAMAGE)
-				.setBaseValue(((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).atk)
-						+ (1 + (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) / 2)))
-						+ ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new FireEmblemModVariables.PlayerVariables())).atkmod)));
 		{
 			double _setval = (double) ((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new FireEmblemModVariables.PlayerVariables())).atk)

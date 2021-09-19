@@ -16,7 +16,7 @@
     "rewardRecipes": [],
     "rewardFunction": "No function",
     "rewardXP": 4,
-    "achievementType": "challenge",
+    "achievementType": "task",
     "parent": {
       "value": "CUSTOM:Questing"
     },
