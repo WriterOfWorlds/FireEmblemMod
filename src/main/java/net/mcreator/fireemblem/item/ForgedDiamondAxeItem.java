@@ -17,6 +17,7 @@ import net.mcreator.fireemblem.FireEmblemModElements;
 public class ForgedDiamondAxeItem extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:forged_diamond_axe")
 	public static final Item block = null;
+
 	public ForgedDiamondAxeItem(FireEmblemModElements instance) {
 		super(instance, 148);
 	}

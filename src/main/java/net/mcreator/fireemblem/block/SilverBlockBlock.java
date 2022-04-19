@@ -25,6 +25,7 @@ import java.util.Collections;
 public class SilverBlockBlock extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:silver_block")
 	public static final Block block = null;
+
 	public SilverBlockBlock(FireEmblemModElements instance) {
 		super(instance, 51);
 	}
@@ -35,6 +36,7 @@ public class SilverBlockBlock extends FireEmblemModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(5f, 10f).setLightLevel(s -> 0).harvestLevel(3)

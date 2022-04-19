@@ -13,7 +13,6 @@ import net.minecraft.command.CommandSource;
 
 import net.mcreator.fireemblem.procedures.OpenChangeGUICommandExecutedProcedure;
 
-import java.util.Map;
 import java.util.HashMap;
 import java.util.Arrays;
 
@@ -21,14 +20,16 @@ import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import com.mojang.brigadier.arguments.StringArgumentType;
 
+import com.google.common.collect.ImmutableMap;
+
 @Mod.EventBusSubscriber
 public class OpenChangeGUICommand {
 	@SubscribeEvent
 	public static void registerCommands(RegisterCommandsEvent event) {
-		event.getDispatcher()
-				.register(LiteralArgumentBuilder.<CommandSource>literal("gui")
-						.then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(OpenChangeGUICommand::execute))
-						.executes(OpenChangeGUICommand::execute));
+		event.getDispatcher().register(LiteralArgumentBuilder.<CommandSource>literal("gui")
+
+				.then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(OpenChangeGUICommand::execute))
+				.executes(OpenChangeGUICommand::execute));
 	}
 
 	private static int execute(CommandContext<CommandSource> ctx) {
@@ -46,15 +47,9 @@ public class OpenChangeGUICommand {
 				cmdparams.put(Integer.toString(index[0]), param);
 			index[0]++;
 		});
-		{
-			Map<String, Object> $_dependencies = new HashMap<>();
-			$_dependencies.put("entity", entity);
-			$_dependencies.put("x", x);
-			$_dependencies.put("y", y);
-			$_dependencies.put("z", z);
-			$_dependencies.put("world", world);
-			OpenChangeGUICommandExecutedProcedure.executeProcedure($_dependencies);
-		}
+
+		OpenChangeGUICommandExecutedProcedure.executeProcedure(
+				ImmutableMap.<String, Object>builder().put("entity", entity).put("x", x).put("y", y).put("z", z).put("world", world).build());
 		return 0;
 	}
 }

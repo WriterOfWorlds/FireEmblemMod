@@ -27,6 +27,7 @@ public class MilaCardGuiWindow extends ContainerScreen<MilaCardGui.GuiContainerM
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = MilaCardGui.guistate;
+
 	public MilaCardGuiWindow(MilaCardGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -42,7 +43,9 @@ public class MilaCardGuiWindow extends ContainerScreen<MilaCardGui.GuiContainerM
 	public boolean isPauseScreen() {
 		return true;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("fire_emblem:textures/mila_card.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);

@@ -28,6 +28,7 @@ import java.util.Collections;
 public class MarbleIGBlock extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:marble_tile")
 	public static final Block block = null;
+
 	public MarbleIGBlock(FireEmblemModElements instance) {
 		super(instance, 192);
 	}
@@ -38,6 +39,7 @@ public class MarbleIGBlock extends FireEmblemModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).harvestLevel(1)

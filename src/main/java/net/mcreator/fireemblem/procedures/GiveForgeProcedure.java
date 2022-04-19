@@ -52,6 +52,7 @@ public class GiveForgeProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -59,40 +60,33 @@ public class GiveForgeProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ForgedIronSwordItem.block)) : false)
-				|| (((entity instanceof PlayerEntity)
-						? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ForgedIronAxeItem.block))
+		if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ForgedIronSwordItem.block)) : false)
+				|| ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ForgedIronAxeItem.block)) : false)
+				|| ((entity instanceof PlayerEntity)
+						? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ForgedGoldSwordItem.block))
 						: false)
-						|| (((entity instanceof PlayerEntity)
-								? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ForgedGoldSwordItem.block))
-								: false)
-								|| (((entity instanceof PlayerEntity)
-										? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ForgedGoldAxeItem.block))
-										: false)
-										|| (((entity instanceof PlayerEntity)
-												? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ForgedDiamondSwordItem.block))
-												: false)
-												|| (((entity instanceof PlayerEntity)
-														? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ForgedDiamondAxeItem.block))
-														: false)
-														|| (((entity instanceof PlayerEntity)
-																? ((PlayerEntity) entity).inventory
-																		.hasItemStack(new ItemStack(ForgedNetherSwordItem.block))
-																: false)
-																|| (((entity instanceof PlayerEntity)
-																		? ((PlayerEntity) entity).inventory
-																				.hasItemStack(new ItemStack(ForgedNetherAxeItem.block))
-																		: false)
-																		|| ((entity instanceof PlayerEntity)
-																				? ((PlayerEntity) entity).inventory
-																						.hasItemStack(new ItemStack(ForgedSilverSwordItem.block))
-																				: false)))))))))) {
-			if ((!(((entity instanceof ServerPlayerEntity) && (entity.world instanceof ServerWorld))
+				|| ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ForgedGoldAxeItem.block)) : false)
+				|| ((entity instanceof PlayerEntity)
+						? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ForgedDiamondSwordItem.block))
+						: false)
+				|| ((entity instanceof PlayerEntity)
+						? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ForgedDiamondAxeItem.block))
+						: false)
+				|| ((entity instanceof PlayerEntity)
+						? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ForgedNetherSwordItem.block))
+						: false)
+				|| ((entity instanceof PlayerEntity)
+						? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ForgedNetherAxeItem.block))
+						: false)
+				|| ((entity instanceof PlayerEntity)
+						? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(ForgedSilverSwordItem.block))
+						: false)) {
+			if (!(((entity instanceof ServerPlayerEntity) && (entity.world instanceof ServerWorld))
 					? ((ServerPlayerEntity) entity).getAdvancements()
 							.getProgress(((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
 									.getAdvancement(new ResourceLocation("fire_emblem:forge")))
 							.isDone()
-					: false))) {
+					: false)) {
 				if (entity instanceof ServerPlayerEntity) {
 					Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
 							.getAdvancement(new ResourceLocation("fire_emblem:forge"));

@@ -17,6 +17,7 @@ import net.mcreator.fireemblem.FireEmblemModElements;
 public class ForgedGoldAxeItem extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:forged_gold_axe")
 	public static final Item block = null;
+
 	public ForgedGoldAxeItem(FireEmblemModElements instance) {
 		super(instance, 146);
 	}

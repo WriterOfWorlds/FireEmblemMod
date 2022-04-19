@@ -17,6 +17,7 @@ import net.mcreator.fireemblem.FireEmblemModElements;
 public class ForgedNetherSwordItem extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:forged_nether_sword")
 	public static final Item block = null;
+
 	public ForgedNetherSwordItem(FireEmblemModElements instance) {
 		super(instance, 149);
 	}

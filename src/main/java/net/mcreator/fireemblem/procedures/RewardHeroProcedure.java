@@ -46,6 +46,7 @@ public class RewardHeroProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -53,17 +54,17 @@ public class RewardHeroProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((!(((entity instanceof ServerPlayerEntity) && (entity.world instanceof ServerWorld))
+		if (!(((entity instanceof ServerPlayerEntity) && (entity.world instanceof ServerWorld))
 				? ((ServerPlayerEntity) entity).getAdvancements()
 						.getProgress(((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
 								.getAdvancement(new ResourceLocation("fire_emblem:hero")))
 						.isDone()
-				: false))) {
-			if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(RelicSwordItem.block)) : false)
-					|| (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(HammorItem.block)) : false)
-							|| ((entity instanceof PlayerEntity)
-									? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MagicRelicItem.block))
-									: false)))) {
+				: false)) {
+			if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(RelicSwordItem.block)) : false)
+					|| ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(HammorItem.block)) : false)
+					|| ((entity instanceof PlayerEntity)
+							? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(MagicRelicItem.block))
+							: false)) {
 				if (entity instanceof ServerPlayerEntity) {
 					Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
 							.getAdvancement(new ResourceLocation("fire_emblem:hero"));

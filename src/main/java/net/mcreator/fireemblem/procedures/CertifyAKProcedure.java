@@ -8,6 +8,7 @@ import net.mcreator.fireemblem.FireEmblemMod;
 import java.util.Map;
 
 public class CertifyAKProcedure {
+
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -15,12 +16,12 @@ public class CertifyAKProcedure {
 			return false;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).axe) >= 100)
-				&& (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).res) >= 2))) {
-			return (true);
+		if ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireEmblemModVariables.PlayerVariables())).axe >= 100
+				&& (entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).res >= 2) {
+			return true;
 		}
-		return (false);
+		return false;
 	}
 }

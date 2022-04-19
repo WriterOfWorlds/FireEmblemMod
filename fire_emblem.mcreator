@@ -1885,13 +1885,17 @@
       "ids": {},
       "registry_name": "bug_fix",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       }
+    },
+    {
+      "name": "TestFile",
+      "type": "procedure",
+      "sortid": 201,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "test_file"
     }
   ],
   "variable_elements": [
@@ -2132,5 +2136,5 @@
     "modElementsPackage": "net.mcreator.fireemblem",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100236710
+  "mcreatorVersion": 202100345419
 }

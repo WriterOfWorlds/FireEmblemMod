@@ -15,6 +15,7 @@ import net.mcreator.fireemblem.FireEmblemModElements;
 public class LevelGemItem extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:level_gem")
 	public static final Item block = null;
+
 	public LevelGemItem(FireEmblemModElements instance) {
 		super(instance, 195);
 	}
@@ -23,6 +24,7 @@ public class LevelGemItem extends FireEmblemModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MATERIALS).maxStackSize(64).rarity(Rarity.UNCOMMON));

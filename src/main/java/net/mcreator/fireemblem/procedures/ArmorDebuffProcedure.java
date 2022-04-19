@@ -42,6 +42,7 @@ public class ArmorDebuffProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -49,9 +50,8 @@ public class ArmorDebuffProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
-				: ItemStack.EMPTY).getItem() == Items.IRON_HELMET)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.HEAD) : ItemStack.EMPTY)
+				.getItem() == Items.IRON_HELMET) {
 			{
 				double _setval = (double) 0;
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -60,9 +60,8 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
-				: ItemStack.EMPTY).getItem() == Items.IRON_CHESTPLATE)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST) : ItemStack.EMPTY)
+				.getItem() == Items.IRON_CHESTPLATE) {
 			{
 				double _setval = (double) 0;
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -71,9 +70,8 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
-				: ItemStack.EMPTY).getItem() == Items.IRON_LEGGINGS)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.LEGS) : ItemStack.EMPTY)
+				.getItem() == Items.IRON_LEGGINGS) {
 			{
 				double _setval = (double) 0;
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -82,9 +80,8 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
-				: ItemStack.EMPTY).getItem() == Items.IRON_BOOTS)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET) : ItemStack.EMPTY)
+				.getItem() == Items.IRON_BOOTS) {
 			{
 				double _setval = (double) 0;
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -93,9 +90,8 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
-				: ItemStack.EMPTY).getItem() == Items.DIAMOND_HELMET)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.HEAD) : ItemStack.EMPTY)
+				.getItem() == Items.DIAMOND_HELMET) {
 			{
 				double _setval = (double) 0;
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -104,9 +100,8 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
-				: ItemStack.EMPTY).getItem() == Items.DIAMOND_CHESTPLATE)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST) : ItemStack.EMPTY)
+				.getItem() == Items.DIAMOND_CHESTPLATE) {
 			{
 				double _setval = (double) 1;
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -115,9 +110,8 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
-				: ItemStack.EMPTY).getItem() == Items.DIAMOND_LEGGINGS)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.LEGS) : ItemStack.EMPTY)
+				.getItem() == Items.DIAMOND_LEGGINGS) {
 			{
 				double _setval = (double) 1;
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -126,9 +120,8 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
-				: ItemStack.EMPTY).getItem() == Items.DIAMOND_BOOTS)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET) : ItemStack.EMPTY)
+				.getItem() == Items.DIAMOND_BOOTS) {
 			{
 				double _setval = (double) 0;
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -137,9 +130,8 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
-				: ItemStack.EMPTY).getItem() == Items.NETHERITE_HELMET)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.HEAD) : ItemStack.EMPTY)
+				.getItem() == Items.NETHERITE_HELMET) {
 			{
 				double _setval = (double) 1;
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -148,9 +140,8 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
-				: ItemStack.EMPTY).getItem() == Items.NETHERITE_CHESTPLATE)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST) : ItemStack.EMPTY)
+				.getItem() == Items.NETHERITE_CHESTPLATE) {
 			{
 				double _setval = (double) 2;
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -159,9 +150,8 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
-				: ItemStack.EMPTY).getItem() == Items.NETHERITE_LEGGINGS)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.LEGS) : ItemStack.EMPTY)
+				.getItem() == Items.NETHERITE_LEGGINGS) {
 			{
 				double _setval = (double) 1;
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -170,9 +160,8 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
-				: ItemStack.EMPTY).getItem() == Items.NETHERITE_BOOTS)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET) : ItemStack.EMPTY)
+				.getItem() == Items.NETHERITE_BOOTS) {
 			{
 				double _setval = (double) 1;
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -181,9 +170,8 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
-				: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.HEAD) : ItemStack.EMPTY)
+				.getItem() == Blocks.AIR.asItem()) {
 			{
 				double _setval = (double) (-1);
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -192,9 +180,8 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
-				: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST) : ItemStack.EMPTY)
+				.getItem() == Blocks.AIR.asItem()) {
 			{
 				double _setval = (double) (-1);
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -203,9 +190,8 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
-				: ItemStack.EMPTY).getItem() == Items.ELYTRA)) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST) : ItemStack.EMPTY)
+				.getItem() == Items.ELYTRA) {
 			{
 				double _setval = (double) (-1);
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -214,9 +200,8 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
-				: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.LEGS) : ItemStack.EMPTY)
+				.getItem() == Blocks.AIR.asItem()) {
 			{
 				double _setval = (double) (-1);
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -225,9 +210,8 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if ((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
-				: ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.FEET) : ItemStack.EMPTY)
+				.getItem() == Blocks.AIR.asItem()) {
 			{
 				double _setval = (double) (-1);
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -236,28 +220,28 @@ public class ArmorDebuffProcedure {
 				});
 			}
 		}
-		if (((((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).headslow)
-				+ ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).chestslow))
-				+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).legslow)
-						+ ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new FireEmblemModVariables.PlayerVariables())).footslow)))
-				- ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).res)) >= 0)) {
+		if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireEmblemModVariables.PlayerVariables())).headslow
+				+ (entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).chestslow
+				+ (entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).legslow
+				+ (entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).footslow)
+				- (entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).res >= 0) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 20,
-						(int) (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new FireEmblemModVariables.PlayerVariables())).headslow)
-								+ ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-										.orElse(new FireEmblemModVariables.PlayerVariables())).chestslow))
-								+ (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-										.orElse(new FireEmblemModVariables.PlayerVariables())).legslow)
-										+ ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-												.orElse(new FireEmblemModVariables.PlayerVariables())).footslow)))
-								- ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-										.orElse(new FireEmblemModVariables.PlayerVariables())).res))));
+						(int) (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new FireEmblemModVariables.PlayerVariables())).headslow
+								+ (entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new FireEmblemModVariables.PlayerVariables())).chestslow
+								+ (entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new FireEmblemModVariables.PlayerVariables())).legslow
+								+ (entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new FireEmblemModVariables.PlayerVariables())).footslow)
+								- (entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new FireEmblemModVariables.PlayerVariables())).res)));
 		}
 	}
 }

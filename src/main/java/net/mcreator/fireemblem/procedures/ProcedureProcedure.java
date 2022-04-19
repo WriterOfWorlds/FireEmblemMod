@@ -37,6 +37,7 @@ public class ProcedureProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -50,7 +51,7 @@ public class ProcedureProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 1)) {
+		if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 1) {
 			{
 				String _setval = (String) "Blaiddyd M";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -58,7 +59,7 @@ public class ProcedureProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		} else if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 2)) {
+		} else if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 2) {
 			{
 				String _setval = (String) "Blaiddyd m";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -67,7 +68,7 @@ public class ProcedureProcedure {
 				});
 			}
 		}
-		if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 3)) {
+		if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 3) {
 			{
 				String _setval = (String) "Charon M";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -75,7 +76,7 @@ public class ProcedureProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		} else if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 4)) {
+		} else if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 4) {
 			{
 				String _setval = (String) "Charon m";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -84,7 +85,7 @@ public class ProcedureProcedure {
 				});
 			}
 		}
-		if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 5)) {
+		if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 5) {
 			{
 				String _setval = (String) "Daphnel M";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -92,7 +93,7 @@ public class ProcedureProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		} else if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 6)) {
+		} else if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 6) {
 			{
 				String _setval = (String) "Daphnel m";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -101,7 +102,7 @@ public class ProcedureProcedure {
 				});
 			}
 		}
-		if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 7)) {
+		if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 7) {
 			{
 				String _setval = (String) "Dominic M";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -109,7 +110,7 @@ public class ProcedureProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		} else if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 8)) {
+		} else if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 8) {
 			{
 				String _setval = (String) "Dominic m";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -118,7 +119,7 @@ public class ProcedureProcedure {
 				});
 			}
 		}
-		if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 9)) {
+		if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 9) {
 			{
 				String _setval = (String) "Fraldarius M";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -126,7 +127,7 @@ public class ProcedureProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		} else if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 10)) {
+		} else if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 10) {
 			{
 				String _setval = (String) "Fraldarius m";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -135,7 +136,7 @@ public class ProcedureProcedure {
 				});
 			}
 		}
-		if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 11)) {
+		if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 11) {
 			{
 				String _setval = (String) "Gautier M";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -143,7 +144,7 @@ public class ProcedureProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		} else if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 12)) {
+		} else if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 12) {
 			{
 				String _setval = (String) "Gautier m";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -152,7 +153,7 @@ public class ProcedureProcedure {
 				});
 			}
 		}
-		if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 13)) {
+		if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 13) {
 			{
 				String _setval = (String) "Gloucester M";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -160,7 +161,7 @@ public class ProcedureProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		} else if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 14)) {
+		} else if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 14) {
 			{
 				String _setval = (String) "Gloucester m";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -169,7 +170,7 @@ public class ProcedureProcedure {
 				});
 			}
 		}
-		if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 15)) {
+		if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 15) {
 			{
 				String _setval = (String) "Goneril M";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -177,7 +178,7 @@ public class ProcedureProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		} else if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 16)) {
+		} else if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 16) {
 			{
 				String _setval = (String) "Goneril m";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -186,7 +187,7 @@ public class ProcedureProcedure {
 				});
 			}
 		}
-		if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 17)) {
+		if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 17) {
 			{
 				String _setval = (String) "Lamine M";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -194,7 +195,7 @@ public class ProcedureProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		} else if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 18)) {
+		} else if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 18) {
 			{
 				String _setval = (String) "Lamine m";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -203,7 +204,7 @@ public class ProcedureProcedure {
 				});
 			}
 		}
-		if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 19)) {
+		if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 19) {
 			{
 				String _setval = (String) "Riegan M";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -211,7 +212,7 @@ public class ProcedureProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		} else if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 20)) {
+		} else if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 20) {
 			{
 				String _setval = (String) "Riegan m";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -220,7 +221,7 @@ public class ProcedureProcedure {
 				});
 			}
 		}
-		if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 21)) {
+		if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 21) {
 			{
 				String _setval = (String) "Maurice M";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -228,7 +229,7 @@ public class ProcedureProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		} else if (((world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule)) == 22)) {
+		} else if (world.getWorldInfo().getGameRulesInstance().getInt(CrestGameRule.gamerule) == 22) {
 			{
 				String _setval = (String) "Maurice m";
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

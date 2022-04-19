@@ -8,6 +8,7 @@ import net.mcreator.fireemblem.FireEmblemMod;
 import java.util.Map;
 
 public class RelicSwordMakeItemGlowProcedure {
+
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -15,12 +16,12 @@ public class RelicSwordMakeItemGlowProcedure {
 			return false;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd M"))
-				|| ((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd m")))) {
-			return (true);
+		if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Blaiddyd M")
+				|| ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Blaiddyd m")) {
+			return true;
 		}
-		return (false);
+		return false;
 	}
 }

@@ -48,6 +48,7 @@ import com.google.common.collect.ImmutableMap;
 public class MarbleBlock extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:marble")
 	public static final Block block = null;
+
 	public MarbleBlock(FireEmblemModElements instance) {
 		super(instance, 197);
 		MinecraftForge.EVENT_BUS.register(this);
@@ -60,6 +61,7 @@ public class MarbleBlock extends FireEmblemModElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName(block.getRegistryName()));
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0));
@@ -79,12 +81,15 @@ public class MarbleBlock extends FireEmblemModElements.ModElement {
 			return Collections.singletonList(new ItemStack(this, 1));
 		}
 	}
+
 	private static Feature<OreFeatureConfig> feature = null;
 	private static ConfiguredFeature<?, ?> configuredFeature = null;
 	private static IRuleTestType<CustomRuleTest> CUSTOM_MATCH = null;
+
 	private static class CustomRuleTest extends RuleTest {
 		static final CustomRuleTest INSTANCE = new CustomRuleTest();
 		static final com.mojang.serialization.Codec<CustomRuleTest> codec = com.mojang.serialization.Codec.unit(() -> INSTANCE);
+
 		public boolean test(BlockState blockAt, Random random) {
 			boolean blockCriteria = false;
 			if (blockAt.getBlock() == Blocks.STONE)
@@ -113,7 +118,8 @@ public class MarbleBlock extends FireEmblemModElements.ModElement {
 					int x = pos.getX();
 					int y = pos.getY();
 					int z = pos.getZ();
-					if (!MarbleAdditionalGenerationConditionProcedure.executeProcedure(ImmutableMap.of("world", world)))
+					if (!MarbleAdditionalGenerationConditionProcedure
+							.executeProcedure(ImmutableMap.<String, Object>builder().put("world", world).build()))
 						return false;
 					return super.generate(world, generator, rand, pos, config);
 				}
@@ -124,6 +130,7 @@ public class MarbleBlock extends FireEmblemModElements.ModElement {
 			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation("fire_emblem:marble"), configuredFeature);
 		}
 	}
+
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 		event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> configuredFeature);

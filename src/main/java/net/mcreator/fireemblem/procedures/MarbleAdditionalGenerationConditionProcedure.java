@@ -7,6 +7,7 @@ import net.mcreator.fireemblem.FireEmblemMod;
 import java.util.Map;
 
 public class MarbleAdditionalGenerationConditionProcedure {
+
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
@@ -14,9 +15,9 @@ public class MarbleAdditionalGenerationConditionProcedure {
 			return false;
 		}
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((net.minecraftforge.fml.ModList.get().isLoaded("quark"))) {
-			return (false);
+		if (net.minecraftforge.fml.ModList.get().isLoaded("quark")) {
+			return false;
 		}
-		return (true);
+		return true;
 	}
 }

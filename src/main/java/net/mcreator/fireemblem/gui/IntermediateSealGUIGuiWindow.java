@@ -33,6 +33,7 @@ public class IntermediateSealGUIGuiWindow extends ContainerScreen<IntermediateSe
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = IntermediateSealGUIGui.guistate;
+
 	public IntermediateSealGUIGuiWindow(IntermediateSealGUIGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -48,7 +49,9 @@ public class IntermediateSealGUIGuiWindow extends ContainerScreen<IntermediateSe
 	public boolean isPauseScreen() {
 		return true;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("fire_emblem:textures/intermediate_seal_gui.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
@@ -113,50 +116,50 @@ public class IntermediateSealGUIGuiWindow extends ContainerScreen<IntermediateSe
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
 		this.addButton(new Button(this.guiLeft + 9, this.guiTop + 50, 60, 20, new StringTextComponent("Certify"), e -> {
-			if (CertifyBrawlerProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+			if (CertifyBrawlerProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build())) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new IntermediateSealGUIGui.ButtonPressedMessage(0, x, y, z));
 				IntermediateSealGUIGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(MatrixStack ms, int gx, int gy, float ticks) {
-				if (CertifyBrawlerProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+				if (CertifyBrawlerProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build()))
 					super.render(ms, gx, gy, ticks);
 			}
 		});
 		this.addButton(new Button(this.guiLeft + 95, this.guiTop + 50, 60, 20, new StringTextComponent("Certify"), e -> {
-			if (CertifyAKProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+			if (CertifyAKProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build())) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new IntermediateSealGUIGui.ButtonPressedMessage(1, x, y, z));
 				IntermediateSealGUIGui.handleButtonAction(entity, 1, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(MatrixStack ms, int gx, int gy, float ticks) {
-				if (CertifyAKProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+				if (CertifyAKProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build()))
 					super.render(ms, gx, gy, ticks);
 			}
 		});
 		this.addButton(new Button(this.guiLeft + 9, this.guiTop + 112, 60, 20, new StringTextComponent("Certify"), e -> {
-			if (CertifyBrigandProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+			if (CertifyBrigandProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build())) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new IntermediateSealGUIGui.ButtonPressedMessage(2, x, y, z));
 				IntermediateSealGUIGui.handleButtonAction(entity, 2, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(MatrixStack ms, int gx, int gy, float ticks) {
-				if (CertifyBrigandProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+				if (CertifyBrigandProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build()))
 					super.render(ms, gx, gy, ticks);
 			}
 		});
 		this.addButton(new Button(this.guiLeft + 95, this.guiTop + 113, 55, 20, new StringTextComponent("Certify"), e -> {
-			if (CertifyArcherProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+			if (CertifyArcherProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build())) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new IntermediateSealGUIGui.ButtonPressedMessage(3, x, y, z));
 				IntermediateSealGUIGui.handleButtonAction(entity, 3, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(MatrixStack ms, int gx, int gy, float ticks) {
-				if (CertifyArcherProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+				if (CertifyArcherProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build()))
 					super.render(ms, gx, gy, ticks);
 			}
 		});

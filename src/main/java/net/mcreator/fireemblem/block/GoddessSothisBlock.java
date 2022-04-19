@@ -46,6 +46,7 @@ import java.util.Collections;
 public class GoddessSothisBlock extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:goddess_sothis")
 	public static final Block block = null;
+
 	public GoddessSothisBlock(FireEmblemModElements instance) {
 		super(instance, 163);
 	}
@@ -61,9 +62,11 @@ public class GoddessSothisBlock extends FireEmblemModElements.ModElement {
 	public void clientLoad(FMLClientSetupEvent event) {
 		RenderTypeLookup.setRenderLayer(block, RenderType.getCutoutMipped());
 	}
+
 	public static class CustomBlock extends Block implements IWaterLoggable {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).notSolid()
 					.setOpaque((bs, br, bp) -> false));
@@ -87,17 +90,29 @@ public class GoddessSothisBlock extends FireEmblemModElements.ModElement {
 			switch ((Direction) state.get(FACING)) {
 				case SOUTH :
 				default :
-					return VoxelShapes.or(makeCuboidShape(15, 0, 15, 1, 4, 1), makeCuboidShape(13, 3.5, 9, 3, 14, 7)).withOffset(offset.x, offset.y,
-							offset.z);
+					return VoxelShapes.or(makeCuboidShape(15, 0, 15, 1, 4, 1), makeCuboidShape(13, 3.5, 9, 3, 14, 7)
+
+					)
+
+							.withOffset(offset.x, offset.y, offset.z);
 				case NORTH :
-					return VoxelShapes.or(makeCuboidShape(1, 0, 1, 15, 4, 15), makeCuboidShape(3, 3.5, 7, 13, 14, 9)).withOffset(offset.x, offset.y,
-							offset.z);
+					return VoxelShapes.or(makeCuboidShape(1, 0, 1, 15, 4, 15), makeCuboidShape(3, 3.5, 7, 13, 14, 9)
+
+					)
+
+							.withOffset(offset.x, offset.y, offset.z);
 				case EAST :
-					return VoxelShapes.or(makeCuboidShape(15, 0, 1, 1, 4, 15), makeCuboidShape(9, 3.5, 3, 7, 14, 13)).withOffset(offset.x, offset.y,
-							offset.z);
+					return VoxelShapes.or(makeCuboidShape(15, 0, 1, 1, 4, 15), makeCuboidShape(9, 3.5, 3, 7, 14, 13)
+
+					)
+
+							.withOffset(offset.x, offset.y, offset.z);
 				case WEST :
-					return VoxelShapes.or(makeCuboidShape(1, 0, 15, 15, 4, 1), makeCuboidShape(7, 3.5, 13, 9, 14, 3)).withOffset(offset.x, offset.y,
-							offset.z);
+					return VoxelShapes.or(makeCuboidShape(1, 0, 15, 15, 4, 1), makeCuboidShape(7, 3.5, 13, 9, 14, 3)
+
+					)
+
+							.withOffset(offset.x, offset.y, offset.z);
 			}
 		}
 

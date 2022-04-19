@@ -8,6 +8,7 @@ import net.mcreator.fireemblem.FireEmblemMod;
 import java.util.Map;
 
 public class CertMyrmbackwardsProcedure {
+
 	public static boolean executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -15,10 +16,10 @@ public class CertMyrmbackwardsProcedure {
 			return false;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).sword) >= 50)) {
-			return (false);
+		if ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireEmblemModVariables.PlayerVariables())).sword >= 50) {
+			return false;
 		}
-		return (true);
+		return true;
 	}
 }

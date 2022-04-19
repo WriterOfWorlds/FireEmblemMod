@@ -16,6 +16,7 @@ import net.mcreator.fireemblem.FireEmblemModElements;
 public class SilverSwordItem extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:silver_sword")
 	public static final Item block = null;
+
 	public SilverSwordItem(FireEmblemModElements instance) {
 		super(instance, 57);
 	}

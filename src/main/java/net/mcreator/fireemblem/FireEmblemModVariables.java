@@ -67,8 +67,10 @@ public class FireEmblemModVariables {
 						new WorldSavedDataSyncMessage(1, worlddata));
 		}
 	}
+
 	public static class WorldVariables extends WorldSavedData {
 		public static final String DATA_NAME = "fire_emblem_worldvars";
+
 		public WorldVariables() {
 			super(DATA_NAME);
 		}
@@ -92,7 +94,9 @@ public class FireEmblemModVariables {
 				FireEmblemMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(((World) world)::getDimensionKey),
 						new WorldSavedDataSyncMessage(1, this));
 		}
+
 		static WorldVariables clientSide = new WorldVariables();
+
 		public static WorldVariables get(IWorld world) {
 			if (world instanceof ServerWorld) {
 				return ((ServerWorld) world).getSavedData().getOrCreate(WorldVariables::new, DATA_NAME);
@@ -109,6 +113,7 @@ public class FireEmblemModVariables {
 		public double year = 1180.0;
 		public boolean dorn = false;
 		public double tick = 0;
+
 		public MapVariables() {
 			super(DATA_NAME);
 		}
@@ -141,7 +146,9 @@ public class FireEmblemModVariables {
 			if (world instanceof World && !world.isRemote())
 				FireEmblemMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new WorldSavedDataSyncMessage(0, this));
 		}
+
 		static MapVariables clientSide = new MapVariables();
+
 		public static MapVariables get(IWorld world) {
 			if (world instanceof IServerWorld) {
 				return ((IServerWorld) world).getWorld().getServer().getWorld(World.OVERWORLD).getSavedData().getOrCreate(MapVariables::new,
@@ -155,6 +162,7 @@ public class FireEmblemModVariables {
 	public static class WorldSavedDataSyncMessage {
 		public int type;
 		public WorldSavedData data;
+
 		public WorldSavedDataSyncMessage(PacketBuffer buffer) {
 			this.type = buffer.readInt();
 			this.data = this.type == 0 ? new MapVariables() : new WorldVariables();
@@ -184,15 +192,19 @@ public class FireEmblemModVariables {
 			context.setPacketHandled(true);
 		}
 	}
+
 	@CapabilityInject(PlayerVariables.class)
 	public static Capability<PlayerVariables> PLAYER_VARIABLES_CAPABILITY = null;
+
 	@SubscribeEvent
 	public void onAttachCapabilities(AttachCapabilitiesEvent<Entity> event) {
 		if (event.getObject() instanceof PlayerEntity && !(event.getObject() instanceof FakePlayer))
 			event.addCapability(new ResourceLocation("fire_emblem", "player_variables"), new PlayerVariablesProvider());
 	}
+
 	private static class PlayerVariablesProvider implements ICapabilitySerializable<INBT> {
 		private final LazyOptional<PlayerVariables> instance = LazyOptional.of(PLAYER_VARIABLES_CAPABILITY::getDefaultInstance);
+
 		@Override
 		public <T> LazyOptional<T> getCapability(Capability<T> cap, Direction side) {
 			return cap == PLAYER_VARIABLES_CAPABILITY ? instance.cast() : LazyOptional.empty();
@@ -291,12 +303,14 @@ public class FireEmblemModVariables {
 		public double atkformula = 0;
 		public boolean hasSS = false;
 		public boolean SSip = false;
+
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				FireEmblemMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
 						new PlayerVariablesSyncMessage(this));
 		}
 	}
+
 	@SubscribeEvent
 	public void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
 		if (!event.getPlayer().world.isRemote())
@@ -348,8 +362,10 @@ public class FireEmblemModVariables {
 			clone.SSip = original.SSip;
 		}
 	}
+
 	public static class PlayerVariablesSyncMessage {
 		public PlayerVariables data;
+
 		public PlayerVariablesSyncMessage(PacketBuffer buffer) {
 			this.data = new PlayerVariables();
 			new PlayerVariablesStorage().readNBT(null, this.data, null, buffer.readCompoundTag());

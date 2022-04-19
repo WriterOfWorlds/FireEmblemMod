@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "fire_emblem:silver_block",
-    "fire_emblem:silver_ore"
+    "fire_emblem:silver_ore",
+    "fire_emblem:silver_block"
   ]
 }

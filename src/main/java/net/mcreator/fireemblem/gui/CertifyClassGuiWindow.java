@@ -33,6 +33,7 @@ public class CertifyClassGuiWindow extends ContainerScreen<CertifyClassGui.GuiCo
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = CertifyClassGui.guistate;
+
 	public CertifyClassGuiWindow(CertifyClassGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -48,7 +49,9 @@ public class CertifyClassGuiWindow extends ContainerScreen<CertifyClassGui.GuiCo
 	public boolean isPauseScreen() {
 		return true;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("fire_emblem:textures/certify_class.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
@@ -84,9 +87,9 @@ public class CertifyClassGuiWindow extends ContainerScreen<CertifyClassGui.GuiCo
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		if (CertFightbackwardsProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+		if (CertFightbackwardsProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build()))
 			this.font.drawString(ms, "Req not met", 98, 67, -12829636);
-		if (CertMyrmbackwardsProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+		if (CertMyrmbackwardsProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build()))
 			this.font.drawString(ms, "Req not met", 11, 67, -12829636);
 		this.font.drawString(ms, "Myrmidon", 10, 11, -12829636);
 		this.font.drawString(ms, "Fighter", 97, 11, -12829636);
@@ -112,26 +115,26 @@ public class CertifyClassGuiWindow extends ContainerScreen<CertifyClassGui.GuiCo
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
 		this.addButton(new Button(this.guiLeft + 9, this.guiTop + 62, 60, 20, new StringTextComponent("Certify"), e -> {
-			if (ClassSelectProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+			if (ClassSelectProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build())) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new CertifyClassGui.ButtonPressedMessage(0, x, y, z));
 				CertifyClassGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(MatrixStack ms, int gx, int gy, float ticks) {
-				if (ClassSelectProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+				if (ClassSelectProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build()))
 					super.render(ms, gx, gy, ticks);
 			}
 		});
 		this.addButton(new Button(this.guiLeft + 95, this.guiTop + 62, 60, 20, new StringTextComponent("Certify"), e -> {
-			if (CertifyFighterProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+			if (CertifyFighterProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build())) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new CertifyClassGui.ButtonPressedMessage(1, x, y, z));
 				CertifyClassGui.handleButtonAction(entity, 1, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(MatrixStack ms, int gx, int gy, float ticks) {
-				if (CertifyFighterProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+				if (CertifyFighterProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build()))
 					super.render(ms, gx, gy, ticks);
 			}
 		});

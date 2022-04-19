@@ -24,6 +24,7 @@ import com.google.common.collect.ImmutableMap;
 public class HammorItem extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:thunderbrand")
 	public static final Item block = null;
+
 	public HammorItem(FireEmblemModElements instance) {
 		super(instance, 67);
 	}
@@ -63,7 +64,7 @@ public class HammorItem extends FireEmblemModElements.ModElement {
 				double x = entity.getPosX();
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
-				if (!(ThunderBrandGlowProcedure.executeProcedure(ImmutableMap.of("entity", entity)))) {
+				if (!(ThunderBrandGlowProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build()))) {
 					return false;
 				}
 				return true;

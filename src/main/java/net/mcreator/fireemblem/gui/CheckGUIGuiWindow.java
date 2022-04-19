@@ -25,6 +25,7 @@ public class CheckGUIGuiWindow extends ContainerScreen<CheckGUIGui.GuiContainerM
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = CheckGUIGui.guistate;
+
 	public CheckGUIGuiWindow(CheckGUIGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -35,7 +36,9 @@ public class CheckGUIGuiWindow extends ContainerScreen<CheckGUIGui.GuiContainerM
 		this.xSize = 180;
 		this.ySize = 115;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("fire_emblem:textures/check_gui.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);

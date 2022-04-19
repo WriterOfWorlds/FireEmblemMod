@@ -11,6 +11,7 @@ import java.lang.reflect.Method;
 @FireEmblemModElements.ModElement.Tag
 public class CrestGameRule extends FireEmblemModElements.ModElement {
 	public static final GameRules.RuleKey<GameRules.IntegerValue> gamerule = GameRules.register("crest", GameRules.Category.PLAYER, create(0));
+
 	public CrestGameRule(FireEmblemModElements instance) {
 		super(instance, 164);
 	}

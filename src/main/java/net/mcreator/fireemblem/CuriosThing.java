@@ -18,7 +18,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.client.event.TextureStitchEvent;
+//import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
@@ -51,20 +51,20 @@ public class CuriosThing {
 	public static boolean isDietLoaded = false;
 	//public static final String MODID = CuriosApi.MODID;
 	public static final String MODID = "fire_emblem";
-	public static final ResourceLocation SLOT_TEXTURE1 = new ResourceLocation(MODID, "items/gem_slot");
-	public static final ResourceLocation SLOT_TEXTURE2 = new ResourceLocation(MODID, "items/shield_slot");
+	//public static final ResourceLocation SLOT_TEXTURE1 = new ResourceLocation(MODID, "items/gem_slot");
+	//public static final ResourceLocation SLOT_TEXTURE2 = new ResourceLocation(MODID, "items/shield_slot");
 
-@OnlyIn(Dist.CLIENT)
-	private void textureStitch(TextureStitchEvent.Pre event) {
-   		event.addSprite(SLOT_TEXTURE1);
-   		event.addSprite(SLOT_TEXTURE2);
-   	}
+//@OnlyIn(Dist.CLIENT)
+//	private void textureStitch(TextureStitchEvent.Pre event) {
+//   		event.addSprite(SLOT_TEXTURE1);
+//   		event.addSprite(SLOT_TEXTURE2);
+//   	}
 	
 	public CuriosThing() {
 		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
     	eventBus.addListener(this::setup);
     	eventBus.addListener(this::enqueue);
-		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::textureStitch);
+//		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::textureStitch);
     	isDietLoaded = ModList.get().isLoaded("diet");
 	}
 
@@ -78,8 +78,8 @@ public class CuriosThing {
 		InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.HANDS.getMessageBuilder().build());
 		InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.BRACELET.getMessageBuilder().size(2).build());
 		InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () -> SlotTypePreset.NECKLACE.getMessageBuilder().build());
-	    InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("gem").size(2).icon(SLOT_TEXTURE1).build());
-		InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("shield").icon(SLOT_TEXTURE2).build());
+	    InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("gem").size(2).build());
+		InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE, () -> new SlotTypeMessage.Builder("shield").build());
   	}
 	
 	@SubscribeEvent

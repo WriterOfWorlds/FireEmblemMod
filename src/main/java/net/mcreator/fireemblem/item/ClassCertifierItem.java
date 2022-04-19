@@ -20,13 +20,13 @@ import net.minecraft.block.BlockState;
 import net.mcreator.fireemblem.procedures.ClassCertifierRightClickedInAirProcedure;
 import net.mcreator.fireemblem.FireEmblemModElements;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @FireEmblemModElements.ModElement.Tag
 public class ClassCertifierItem extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:beginner_seal")
 	public static final Item block = null;
+
 	public ClassCertifierItem(FireEmblemModElements instance) {
 		super(instance, 88);
 	}
@@ -35,6 +35,7 @@ public class ClassCertifierItem extends FireEmblemModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).isImmuneToFire().rarity(Rarity.RARE));
@@ -63,15 +64,9 @@ public class ClassCertifierItem extends FireEmblemModElements.ModElement {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				ClassCertifierRightClickedInAirProcedure.executeProcedure($_dependencies);
-			}
+
+			ClassCertifierRightClickedInAirProcedure.executeProcedure(
+					ImmutableMap.<String, Object>builder().put("entity", entity).put("x", x).put("y", y).put("z", z).put("world", world).build());
 			return ar;
 		}
 
@@ -87,15 +82,9 @@ public class ClassCertifierItem extends FireEmblemModElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			ItemStack itemstack = context.getItem();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				ClassCertifierRightClickedInAirProcedure.executeProcedure($_dependencies);
-			}
+
+			ClassCertifierRightClickedInAirProcedure.executeProcedure(
+					ImmutableMap.<String, Object>builder().put("entity", entity).put("x", x).put("y", y).put("z", z).put("world", world).build());
 			return retval;
 		}
 	}

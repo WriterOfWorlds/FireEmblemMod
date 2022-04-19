@@ -15,6 +15,7 @@ import net.mcreator.fireemblem.FireEmblemModElements;
 public class SilverIngotItem extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:silver_ingot")
 	public static final Item block = null;
+
 	public SilverIngotItem(FireEmblemModElements instance) {
 		super(instance, 49);
 	}
@@ -23,6 +24,7 @@ public class SilverIngotItem extends FireEmblemModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64).rarity(Rarity.COMMON));

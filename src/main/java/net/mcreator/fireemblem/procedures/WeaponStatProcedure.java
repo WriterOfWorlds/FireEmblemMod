@@ -35,6 +35,7 @@ public class WeaponStatProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -42,10 +43,10 @@ public class WeaponStatProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((entity.getPersistentData().getDouble("sword")) > 0)) {
+		if (entity.getPersistentData().getDouble("sword") > 0) {
 			{
-				double _setval = (double) (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).sword) + (entity.getPersistentData().getDouble("sword")));
+				double _setval = (double) ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).sword + entity.getPersistentData().getDouble("sword"));
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.sword = _setval;
 					capability.syncPlayerVariables(entity);
@@ -53,10 +54,10 @@ public class WeaponStatProcedure {
 			}
 			entity.getPersistentData().putDouble("sword", 0);
 		}
-		if (((entity.getPersistentData().getDouble("axe")) > 0)) {
+		if (entity.getPersistentData().getDouble("axe") > 0) {
 			{
-				double _setval = (double) (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).axe) + (entity.getPersistentData().getDouble("axe")));
+				double _setval = (double) ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).axe + entity.getPersistentData().getDouble("axe"));
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.axe = _setval;
 					capability.syncPlayerVariables(entity);
@@ -64,10 +65,10 @@ public class WeaponStatProcedure {
 			}
 			entity.getPersistentData().putDouble("axe", 0);
 		}
-		if (((entity.getPersistentData().getDouble("bow")) > 0)) {
+		if (entity.getPersistentData().getDouble("bow") > 0) {
 			{
-				double _setval = (double) (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).bow) + (entity.getPersistentData().getDouble("bow")));
+				double _setval = (double) ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).bow + entity.getPersistentData().getDouble("bow"));
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.bow = _setval;
 					capability.syncPlayerVariables(entity);
@@ -75,10 +76,10 @@ public class WeaponStatProcedure {
 			}
 			entity.getPersistentData().putDouble("bow", 0);
 		}
-		if (((entity.getPersistentData().getDouble("magic")) > 0)) {
+		if (entity.getPersistentData().getDouble("magic") > 0) {
 			{
-				double _setval = (double) (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).magic) + (entity.getPersistentData().getDouble("magic")));
+				double _setval = (double) ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).magic + entity.getPersistentData().getDouble("magic"));
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.magic = _setval;
 					capability.syncPlayerVariables(entity);
@@ -86,10 +87,10 @@ public class WeaponStatProcedure {
 			}
 			entity.getPersistentData().putDouble("magic", 0);
 		}
-		if (((entity.getPersistentData().getDouble("brawl")) > 0)) {
+		if (entity.getPersistentData().getDouble("brawl") > 0) {
 			{
-				double _setval = (double) (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).brawl) + (entity.getPersistentData().getDouble("brawl")));
+				double _setval = (double) ((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).brawl + entity.getPersistentData().getDouble("brawl"));
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.brawl = _setval;
 					capability.syncPlayerVariables(entity);

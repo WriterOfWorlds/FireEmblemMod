@@ -24,6 +24,7 @@ import com.google.common.collect.ImmutableMap;
 public class MagicRelicItem extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:luin")
 	public static final Item block = null;
+
 	public MagicRelicItem(FireEmblemModElements instance) {
 		super(instance, 75);
 	}
@@ -63,7 +64,7 @@ public class MagicRelicItem extends FireEmblemModElements.ModElement {
 				double x = entity.getPosX();
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
-				if (!(LuinGlowProcedure.executeProcedure(ImmutableMap.of("entity", entity)))) {
+				if (!(LuinGlowProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build()))) {
 					return false;
 				}
 				return true;

@@ -66,6 +66,7 @@ public class StatIncBCProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -86,35 +87,35 @@ public class StatIncBCProcedure {
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
 		IWorld world = (IWorld) dependencies.get("world");
 		double rand = 0;
-		if ((sourceentity instanceof ServerPlayerEntity)) {
-			if (((((((((((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == Items.WOODEN_SWORD)
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.STONE_SWORD))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.IRON_SWORD))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.GOLDEN_SWORD))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.DIAMOND_SWORD))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.NETHERITE_SWORD))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == SilverSwordItem.block))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == ForgedSilverSwordItem.block))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == ForgedIronSwordItem.block))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == ForgedGoldSwordItem.block))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == ForgedDiamondSwordItem.block))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == ForgedNetherSwordItem.block))) {
+		if (sourceentity instanceof ServerPlayerEntity) {
+			if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == Items.WOODEN_SWORD
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.STONE_SWORD
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.IRON_SWORD
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.GOLDEN_SWORD
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.DIAMOND_SWORD
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.NETHERITE_SWORD
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == SilverSwordItem.block
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedSilverSwordItem.block
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedIronSwordItem.block
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedGoldSwordItem.block
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedDiamondSwordItem.block
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedNetherSwordItem.block) {
 				sourceentity.getPersistentData().putDouble("sword", 1);
-				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd M"))) {
-					if ((Math.round((Math.random() * 10)) <= 2)) {
+				if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Blaiddyd M")) {
+					if (Math.round(Math.random() * 10) <= 2) {
 						entity.attackEntityFrom(DamageSource.GENERIC, (float) 6);
 						if (!world.isRemote()) {
 							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
@@ -122,9 +123,9 @@ public class StatIncBCProcedure {
 								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest CRIT"), ChatType.SYSTEM, Util.DUMMY_UUID);
 						}
 					}
-				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Blaiddyd m"))) {
-					if ((Math.round((Math.random() * 10)) <= 1)) {
+				} else if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Blaiddyd m")) {
+					if (Math.round(Math.random() * 10) <= 1) {
 						entity.attackEntityFrom(DamageSource.GENERIC, (float) 3);
 						if (!world.isRemote()) {
 							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
@@ -133,9 +134,9 @@ public class StatIncBCProcedure {
 						}
 					}
 				}
-				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon M"))) {
-					if ((Math.round((Math.random() * 10)) <= 7)) {
+				if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Charon M")) {
+					if (Math.round(Math.random() * 10) <= 7) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -152,6 +153,7 @@ public class StatIncBCProcedure {
 							private int ticks = 0;
 							private float waitTicks;
 							private IWorld world;
+
 							public void start(IWorld world, int waitTicks) {
 								this.waitTicks = waitTicks;
 								MinecraftForge.EVENT_BUS.register(this);
@@ -179,9 +181,9 @@ public class StatIncBCProcedure {
 							}
 						}.start(world, (int) 100);
 					}
-				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon m"))) {
-					if ((Math.round((Math.random() * 10)) <= 4)) {
+				} else if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Charon m")) {
+					if (Math.round(Math.random() * 10) <= 4) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -198,6 +200,7 @@ public class StatIncBCProcedure {
 							private int ticks = 0;
 							private float waitTicks;
 							private IWorld world;
+
 							public void start(IWorld world, int waitTicks) {
 								this.waitTicks = waitTicks;
 								MinecraftForge.EVENT_BUS.register(this);
@@ -226,9 +229,9 @@ public class StatIncBCProcedure {
 						}.start(world, (int) 100);
 					}
 				}
-				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel M"))) {
-					if ((Math.round((Math.random() * 10)) <= 7)) {
+				if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Daphnel M")) {
+					if (Math.round(Math.random() * 10) <= 7) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -245,6 +248,7 @@ public class StatIncBCProcedure {
 							private int ticks = 0;
 							private float waitTicks;
 							private IWorld world;
+
 							public void start(IWorld world, int waitTicks) {
 								this.waitTicks = waitTicks;
 								MinecraftForge.EVENT_BUS.register(this);
@@ -272,9 +276,9 @@ public class StatIncBCProcedure {
 							}
 						}.start(world, (int) 100);
 					}
-				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel m"))) {
-					if ((Math.round((Math.random() * 10)) <= 4)) {
+				} else if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Daphnel m")) {
+					if (Math.round(Math.random() * 10) <= 4) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -291,6 +295,7 @@ public class StatIncBCProcedure {
 							private int ticks = 0;
 							private float waitTicks;
 							private IWorld world;
+
 							public void start(IWorld world, int waitTicks) {
 								this.waitTicks = waitTicks;
 								MinecraftForge.EVENT_BUS.register(this);
@@ -320,30 +325,30 @@ public class StatIncBCProcedure {
 					}
 				}
 			}
-			if (((((((((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == Items.WOODEN_AXE)
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.STONE_AXE))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.IRON_AXE))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.GOLDEN_AXE))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.DIAMOND_AXE))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.NETHERITE_AXE))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == ForgedIronAxeItem.block))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == ForgedGoldAxeItem.block))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == ForgedDiamondAxeItem.block))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == ForgedNetherAxeItem.block))) {
+			if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == Items.WOODEN_AXE
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.STONE_AXE
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.IRON_AXE
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.GOLDEN_AXE
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.DIAMOND_AXE
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.NETHERITE_AXE
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedIronAxeItem.block
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedGoldAxeItem.block
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedDiamondAxeItem.block
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == ForgedNetherAxeItem.block) {
 				sourceentity.getPersistentData().putDouble("axe", 1);
-				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon M"))) {
-					if ((Math.round((Math.random() * 10)) <= 7)) {
+				if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Charon M")) {
+					if (Math.round(Math.random() * 10) <= 7) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -360,6 +365,7 @@ public class StatIncBCProcedure {
 							private int ticks = 0;
 							private float waitTicks;
 							private IWorld world;
+
 							public void start(IWorld world, int waitTicks) {
 								this.waitTicks = waitTicks;
 								MinecraftForge.EVENT_BUS.register(this);
@@ -387,9 +393,9 @@ public class StatIncBCProcedure {
 							}
 						}.start(world, (int) 100);
 					}
-				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon m"))) {
-					if ((Math.round((Math.random() * 10)) <= 4)) {
+				} else if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Charon m")) {
+					if (Math.round(Math.random() * 10) <= 4) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -406,6 +412,7 @@ public class StatIncBCProcedure {
 							private int ticks = 0;
 							private float waitTicks;
 							private IWorld world;
+
 							public void start(IWorld world, int waitTicks) {
 								this.waitTicks = waitTicks;
 								MinecraftForge.EVENT_BUS.register(this);
@@ -434,9 +441,9 @@ public class StatIncBCProcedure {
 						}.start(world, (int) 100);
 					}
 				}
-				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel M"))) {
-					if ((Math.round((Math.random() * 10)) <= 7)) {
+				if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Daphnel M")) {
+					if (Math.round(Math.random() * 10) <= 7) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -453,6 +460,7 @@ public class StatIncBCProcedure {
 							private int ticks = 0;
 							private float waitTicks;
 							private IWorld world;
+
 							public void start(IWorld world, int waitTicks) {
 								this.waitTicks = waitTicks;
 								MinecraftForge.EVENT_BUS.register(this);
@@ -480,9 +488,9 @@ public class StatIncBCProcedure {
 							}
 						}.start(world, (int) 100);
 					}
-				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel m"))) {
-					if ((Math.round((Math.random() * 10)) <= 4)) {
+				} else if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Daphnel m")) {
+					if (Math.round(Math.random() * 10) <= 4) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -499,6 +507,7 @@ public class StatIncBCProcedure {
 							private int ticks = 0;
 							private float waitTicks;
 							private IWorld world;
+
 							public void start(IWorld world, int waitTicks) {
 								this.waitTicks = waitTicks;
 								MinecraftForge.EVENT_BUS.register(this);
@@ -528,39 +537,39 @@ public class StatIncBCProcedure {
 					}
 				}
 			}
-			if (((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == Items.BOW)
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == Items.CROSSBOW))) {
+			if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == Items.BOW
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == Items.CROSSBOW) {
 				sourceentity.getPersistentData().putDouble("bow", 1);
 			}
-			if ((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == RelicSwordItem.block)
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == HammorItem.block))
-					|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == MagicRelicItem.block))) {
+			if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == RelicSwordItem.block
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == HammorItem.block
+					|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+							.getItem() == MagicRelicItem.block) {
 				sourceentity.getPersistentData().putDouble("magic", 1);
-				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Dominic M"))) {
-					if ((Math.round((Math.random() * 10)) <= 2)) {
+				if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Dominic M")) {
+					if (Math.round(Math.random() * 10) <= 2) {
 						(((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
-								.setDamage((int) (((((sourceentity instanceof LivingEntity)
+								.setDamage((int) ((((sourceentity instanceof LivingEntity)
 										? ((LivingEntity) sourceentity).getHeldItemMainhand()
-										: ItemStack.EMPTY)).getDamage()) + 12));
+										: ItemStack.EMPTY)).getDamage() + 12));
 						if (!world.isRemote()) {
 							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 							if (mcserv != null)
 								mcserv.getPlayerList().func_232641_a_(new StringTextComponent("Crest FIX"), ChatType.SYSTEM, Util.DUMMY_UUID);
 						}
 					}
-				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Dominic m"))) {
-					if ((Math.round((Math.random() * 10)) <= 1)) {
+				} else if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Dominic m")) {
+					if (Math.round(Math.random() * 10) <= 1) {
 						(((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY))
-								.setDamage((int) (((((sourceentity instanceof LivingEntity)
+								.setDamage((int) ((((sourceentity instanceof LivingEntity)
 										? ((LivingEntity) sourceentity).getHeldItemMainhand()
-										: ItemStack.EMPTY)).getDamage()) + 6));
+										: ItemStack.EMPTY)).getDamage() + 6));
 						if (!world.isRemote()) {
 							MinecraftServer mcserv = ServerLifecycleHooks.getCurrentServer();
 							if (mcserv != null)
@@ -568,9 +577,9 @@ public class StatIncBCProcedure {
 						}
 					}
 				}
-				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon M"))) {
-					if ((Math.round((Math.random() * 10)) <= 2)) {
+				if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Charon M")) {
+					if (Math.round(Math.random() * 10) <= 2) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -587,6 +596,7 @@ public class StatIncBCProcedure {
 							private int ticks = 0;
 							private float waitTicks;
 							private IWorld world;
+
 							public void start(IWorld world, int waitTicks) {
 								this.waitTicks = waitTicks;
 								MinecraftForge.EVENT_BUS.register(this);
@@ -614,9 +624,9 @@ public class StatIncBCProcedure {
 							}
 						}.start(world, (int) 100);
 					}
-				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Charon m"))) {
-					if ((Math.round((Math.random() * 10)) <= 1)) {
+				} else if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Charon m")) {
+					if (Math.round(Math.random() * 10) <= 1) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -633,6 +643,7 @@ public class StatIncBCProcedure {
 							private int ticks = 0;
 							private float waitTicks;
 							private IWorld world;
+
 							public void start(IWorld world, int waitTicks) {
 								this.waitTicks = waitTicks;
 								MinecraftForge.EVENT_BUS.register(this);
@@ -661,9 +672,9 @@ public class StatIncBCProcedure {
 						}.start(world, (int) 100);
 					}
 				}
-				if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel M"))) {
-					if ((Math.round((Math.random() * 10)) <= 7)) {
+				if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Daphnel M")) {
+					if (Math.round(Math.random() * 10) <= 7) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -680,6 +691,7 @@ public class StatIncBCProcedure {
 							private int ticks = 0;
 							private float waitTicks;
 							private IWorld world;
+
 							public void start(IWorld world, int waitTicks) {
 								this.waitTicks = waitTicks;
 								MinecraftForge.EVENT_BUS.register(this);
@@ -707,9 +719,9 @@ public class StatIncBCProcedure {
 							}
 						}.start(world, (int) 100);
 					}
-				} else if (((((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new FireEmblemModVariables.PlayerVariables())).crest)).equals("Daphnel m"))) {
-					if ((Math.round((Math.random() * 10)) <= 4)) {
+				} else if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new FireEmblemModVariables.PlayerVariables())).crest).equals("Daphnel m")) {
+					if (Math.round(Math.random() * 10) <= 4) {
 						{
 							double _setval = (double) 5;
 							sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -726,6 +738,7 @@ public class StatIncBCProcedure {
 							private int ticks = 0;
 							private float waitTicks;
 							private IWorld world;
+
 							public void start(IWorld world, int waitTicks) {
 								this.waitTicks = waitTicks;
 								MinecraftForge.EVENT_BUS.register(this);
@@ -755,8 +768,8 @@ public class StatIncBCProcedure {
 					}
 				}
 			}
-			if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == Blocks.AIR.asItem())) {
+			if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+					.getItem() == Blocks.AIR.asItem()) {
 				sourceentity.getPersistentData().putDouble("brawl", 1);
 			}
 		}

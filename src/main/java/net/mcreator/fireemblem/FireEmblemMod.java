@@ -46,6 +46,7 @@ public class FireEmblemMod {
 	public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation("fire_emblem", "fire_emblem"),
 			() -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
 	public FireEmblemModElements elements;
+
 	public FireEmblemMod() {
 		elements = new FireEmblemModElements();
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
@@ -86,8 +87,10 @@ public class FireEmblemMod {
 	public void registerSounds(RegistryEvent.Register<net.minecraft.util.SoundEvent> event) {
 		elements.registerSounds(event);
 	}
+
 	private static class FireEmblemModFMLBusEvents {
 		private final FireEmblemMod parent;
+
 		FireEmblemModFMLBusEvents(FireEmblemMod parent) {
 			this.parent = parent;
 		}

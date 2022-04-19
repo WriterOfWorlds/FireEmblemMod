@@ -23,13 +23,14 @@ import net.mcreator.fireemblem.FireEmblemModElements;
 import net.mcreator.fireemblem.FireEmblemMod;
 
 import java.util.function.Supplier;
-import java.util.Map;
-import java.util.HashMap;
+
+import com.google.common.collect.ImmutableMap;
 
 @FireEmblemModElements.ModElement.Tag
 public class OpenGUIKeyBinding extends FireEmblemModElements.ModElement {
 	@OnlyIn(Dist.CLIENT)
 	private KeyBinding keys;
+
 	public OpenGUIKeyBinding(FireEmblemModElements instance) {
 		super(instance, 132);
 		elements.addNetworkMessage(KeyBindingPressedMessage.class, KeyBindingPressedMessage::buffer, KeyBindingPressedMessage::new,
@@ -56,8 +57,10 @@ public class OpenGUIKeyBinding extends FireEmblemModElements.ModElement {
 			}
 		}
 	}
+
 	public static class KeyBindingPressedMessage {
 		int type, pressedms;
+
 		public KeyBindingPressedMessage(int type, int pressedms) {
 			this.type = type;
 			this.pressedms = pressedms;
@@ -81,6 +84,7 @@ public class OpenGUIKeyBinding extends FireEmblemModElements.ModElement {
 			context.setPacketHandled(true);
 		}
 	}
+
 	private static void pressAction(PlayerEntity entity, int type, int pressedms) {
 		World world = entity.world;
 		double x = entity.getPosX();
@@ -90,15 +94,9 @@ public class OpenGUIKeyBinding extends FireEmblemModElements.ModElement {
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
 		if (type == 0) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				OpenCheckMenuProcedure.executeProcedure($_dependencies);
-			}
+
+			OpenCheckMenuProcedure.executeProcedure(
+					ImmutableMap.<String, Object>builder().put("entity", entity).put("x", x).put("y", y).put("z", z).put("world", world).build());
 		}
 	}
 }

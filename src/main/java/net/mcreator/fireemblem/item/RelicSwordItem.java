@@ -24,6 +24,7 @@ import com.google.common.collect.ImmutableMap;
 public class RelicSwordItem extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:areadbhar")
 	public static final Item block = null;
+
 	public RelicSwordItem(FireEmblemModElements instance) {
 		super(instance, 25);
 	}
@@ -63,7 +64,7 @@ public class RelicSwordItem extends FireEmblemModElements.ModElement {
 				double x = entity.getPosX();
 				double y = entity.getPosY();
 				double z = entity.getPosZ();
-				if (!(RelicSwordMakeItemGlowProcedure.executeProcedure(ImmutableMap.of("entity", entity)))) {
+				if (!(RelicSwordMakeItemGlowProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build()))) {
 					return false;
 				}
 				return true;

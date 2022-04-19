@@ -49,6 +49,7 @@ public class GiveSadProcedure {
 			executeProcedure(dependencies);
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -62,17 +63,17 @@ public class GiveSadProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
-		if ((((itemstack).getItem() == ForgedIronSwordItem.block) || (((itemstack).getItem() == ForgedIronAxeItem.block)
-				|| (((itemstack).getItem() == ForgedGoldSwordItem.block) || (((itemstack).getItem() == ForgedGoldAxeItem.block)
-						|| (((itemstack).getItem() == ForgedDiamondSwordItem.block) || (((itemstack).getItem() == ForgedDiamondAxeItem.block)
-								|| (((itemstack).getItem() == ForgedNetherSwordItem.block) || (((itemstack).getItem() == ForgedNetherAxeItem.block)
-										|| ((itemstack).getItem() == ForgedSilverSwordItem.block)))))))))) {
-			if ((!(((entity instanceof ServerPlayerEntity) && (entity.world instanceof ServerWorld))
+		if (itemstack.getItem() == ForgedIronSwordItem.block || itemstack.getItem() == ForgedIronAxeItem.block
+				|| itemstack.getItem() == ForgedGoldSwordItem.block || itemstack.getItem() == ForgedGoldAxeItem.block
+				|| itemstack.getItem() == ForgedDiamondSwordItem.block || itemstack.getItem() == ForgedDiamondAxeItem.block
+				|| itemstack.getItem() == ForgedNetherSwordItem.block || itemstack.getItem() == ForgedNetherAxeItem.block
+				|| itemstack.getItem() == ForgedSilverSwordItem.block) {
+			if (!(((entity instanceof ServerPlayerEntity) && (entity.world instanceof ServerWorld))
 					? ((ServerPlayerEntity) entity).getAdvancements()
 							.getProgress(((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
 									.getAdvancement(new ResourceLocation("fire_emblem:sad")))
 							.isDone()
-					: false))) {
+					: false)) {
 				if (entity instanceof ServerPlayerEntity) {
 					Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
 							.getAdvancement(new ResourceLocation("fire_emblem:sad"));

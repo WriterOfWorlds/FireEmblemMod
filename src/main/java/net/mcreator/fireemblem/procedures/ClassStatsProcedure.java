@@ -40,6 +40,7 @@ public class ClassStatsProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -48,22 +49,19 @@ public class ClassStatsProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		double general = 0;
-		if ((((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-				.getItem() == Items.WOODEN_SWORD)
-				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == Items.STONE_SWORD))
-				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == Items.IRON_SWORD))
-				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == Items.GOLDEN_SWORD))
-				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == Items.DIAMOND_SWORD))
-				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == Items.NETHERITE_SWORD))
-				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == SilverSwordItem.block))) {
-			if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Myrmidon"))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.WOODEN_SWORD
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.STONE_SWORD
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.IRON_SWORD
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == Items.GOLDEN_SWORD
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == Items.DIAMOND_SWORD
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == Items.NETHERITE_SWORD
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == SilverSwordItem.block) {
+			if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass).equals("Myrmidon")) {
 				{
 					double _setval = (double) 1;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -72,8 +70,8 @@ public class ClassStatsProcedure {
 					});
 				}
 			}
-			if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Mercenary"))) {
+			if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass).equals("Mercenary")) {
 				{
 					double _setval = (double) 3;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -82,8 +80,8 @@ public class ClassStatsProcedure {
 					});
 				}
 			}
-			if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Thief"))) {
+			if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass).equals("Thief")) {
 				{
 					double _setval = (double) 3;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -92,8 +90,8 @@ public class ClassStatsProcedure {
 					});
 				}
 			}
-			if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Archer"))) {
+			if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass).equals("Archer")) {
 				{
 					double _setval = (double) 1;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -103,18 +101,15 @@ public class ClassStatsProcedure {
 				}
 			}
 		}
-		if (((((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.WOODEN_AXE)
-				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == Items.STONE_AXE))
-				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.IRON_AXE))
-				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == Items.GOLDEN_AXE))
-				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == Items.DIAMOND_AXE))
-				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == Items.NETHERITE_AXE))) {
-			if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Mercenary"))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.WOODEN_AXE
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.STONE_AXE
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.IRON_AXE
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.GOLDEN_AXE
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.DIAMOND_AXE
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == Items.NETHERITE_AXE) {
+			if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass).equals("Mercenary")) {
 				{
 					double _setval = (double) 1;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -123,8 +118,8 @@ public class ClassStatsProcedure {
 					});
 				}
 			}
-			if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Brigand"))) {
+			if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass).equals("Brigand")) {
 				{
 					double _setval = (double) 3;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -133,8 +128,8 @@ public class ClassStatsProcedure {
 					});
 				}
 			}
-			if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("AK"))) {
+			if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass).equals("AK")) {
 				{
 					double _setval = (double) 3;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -143,8 +138,8 @@ public class ClassStatsProcedure {
 					});
 				}
 			}
-			if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Brawler"))) {
+			if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass).equals("Brawler")) {
 				{
 					double _setval = (double) 2;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -153,8 +148,8 @@ public class ClassStatsProcedure {
 					});
 				}
 			}
-			if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Fighter"))) {
+			if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass).equals("Fighter")) {
 				{
 					double _setval = (double) 1;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -164,11 +159,10 @@ public class ClassStatsProcedure {
 				}
 			}
 		}
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BOW)
-				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == Items.CROSSBOW))) {
-			if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Thief"))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.BOW
+				|| ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.CROSSBOW) {
+			if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass).equals("Thief")) {
 				{
 					double _setval = (double) 1;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -177,8 +171,8 @@ public class ClassStatsProcedure {
 					});
 				}
 			}
-			if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Archer"))) {
+			if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass).equals("Archer")) {
 				{
 					double _setval = (double) 3;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -187,8 +181,8 @@ public class ClassStatsProcedure {
 					});
 				}
 			}
-			if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Fighter"))) {
+			if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass).equals("Fighter")) {
 				{
 					double _setval = (double) 1;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -198,9 +192,9 @@ public class ClassStatsProcedure {
 				}
 			}
 		}
-		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem())) {
-			if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Brigand"))) {
+		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
+			if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass).equals("Brigand")) {
 				{
 					double _setval = (double) 2;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -209,8 +203,8 @@ public class ClassStatsProcedure {
 					});
 				}
 			}
-			if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Brawler"))) {
+			if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass).equals("Brawler")) {
 				{
 					double _setval = (double) 3;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -219,8 +213,8 @@ public class ClassStatsProcedure {
 					});
 				}
 			}
-			if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("Fighter"))) {
+			if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass).equals("Fighter")) {
 				{
 					double _setval = (double) 1;
 					entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -230,8 +224,8 @@ public class ClassStatsProcedure {
 				}
 			}
 		}
-		if (((((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass)).equals("AK"))) {
+		if (((entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new FireEmblemModVariables.PlayerVariables())).playerclass).equals("AK")) {
 			{
 				double _setval = (double) 2;
 				entity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

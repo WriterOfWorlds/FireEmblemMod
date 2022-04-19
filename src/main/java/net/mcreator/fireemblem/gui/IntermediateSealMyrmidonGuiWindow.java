@@ -31,6 +31,7 @@ public class IntermediateSealMyrmidonGuiWindow extends ContainerScreen<Intermedi
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = IntermediateSealMyrmidonGui.guistate;
+
 	public IntermediateSealMyrmidonGuiWindow(IntermediateSealMyrmidonGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -46,7 +47,9 @@ public class IntermediateSealMyrmidonGuiWindow extends ContainerScreen<Intermedi
 	public boolean isPauseScreen() {
 		return true;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("fire_emblem:textures/intermediate_seal_myrmidon.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
@@ -103,26 +106,26 @@ public class IntermediateSealMyrmidonGuiWindow extends ContainerScreen<Intermedi
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
 		this.addButton(new Button(this.guiLeft + 10, this.guiTop + 50, 60, 20, new StringTextComponent("Certify"), e -> {
-			if (CertifyMercenaryProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+			if (CertifyMercenaryProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build())) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new IntermediateSealMyrmidonGui.ButtonPressedMessage(0, x, y, z));
 				IntermediateSealMyrmidonGui.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(MatrixStack ms, int gx, int gy, float ticks) {
-				if (CertifyMercenaryProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+				if (CertifyMercenaryProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build()))
 					super.render(ms, gx, gy, ticks);
 			}
 		});
 		this.addButton(new Button(this.guiLeft + 96, this.guiTop + 50, 60, 20, new StringTextComponent("Certify"), e -> {
-			if (CertifyThiefProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
+			if (CertifyThiefProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build())) {
 				FireEmblemMod.PACKET_HANDLER.sendToServer(new IntermediateSealMyrmidonGui.ButtonPressedMessage(1, x, y, z));
 				IntermediateSealMyrmidonGui.handleButtonAction(entity, 1, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(MatrixStack ms, int gx, int gy, float ticks) {
-				if (CertifyThiefProcedure.executeProcedure(ImmutableMap.of("entity", entity)))
+				if (CertifyThiefProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build()))
 					super.render(ms, gx, gy, ticks);
 			}
 		});

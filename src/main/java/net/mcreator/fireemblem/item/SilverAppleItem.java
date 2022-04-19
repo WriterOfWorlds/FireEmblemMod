@@ -17,13 +17,13 @@ import net.minecraft.entity.LivingEntity;
 import net.mcreator.fireemblem.procedures.SilverAppleFoodEatenProcedure;
 import net.mcreator.fireemblem.FireEmblemModElements;
 
-import java.util.Map;
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
 
 @FireEmblemModElements.ModElement.Tag
 public class SilverAppleItem extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:silver_apple")
 	public static final Item block = null;
+
 	public SilverAppleItem(FireEmblemModElements instance) {
 		super(instance, 65);
 	}
@@ -32,10 +32,13 @@ public class SilverAppleItem extends FireEmblemModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new FoodItemCustom());
 	}
+
 	public static class FoodItemCustom extends Item {
 		public FoodItemCustom() {
 			super(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(64).rarity(Rarity.RARE)
-					.food((new Food.Builder()).hunger(6).saturation(0.3f).setAlwaysEdible().build()));
+					.food((new Food.Builder()).hunger(6).saturation(0.3f).setAlwaysEdible()
+
+							.build()));
 			setRegistryName("silver_apple");
 		}
 
@@ -56,11 +59,8 @@ public class SilverAppleItem extends FireEmblemModElements.ModElement {
 			double x = entity.getPosX();
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				SilverAppleFoodEatenProcedure.executeProcedure($_dependencies);
-			}
+
+			SilverAppleFoodEatenProcedure.executeProcedure(ImmutableMap.<String, Object>builder().put("entity", entity).build());
 			return retval;
 		}
 	}

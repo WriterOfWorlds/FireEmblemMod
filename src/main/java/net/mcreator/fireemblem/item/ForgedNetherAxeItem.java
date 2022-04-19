@@ -17,6 +17,7 @@ import net.mcreator.fireemblem.FireEmblemModElements;
 public class ForgedNetherAxeItem extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:forged_nether_axe")
 	public static final Item block = null;
+
 	public ForgedNetherAxeItem(FireEmblemModElements instance) {
 		super(instance, 150);
 	}

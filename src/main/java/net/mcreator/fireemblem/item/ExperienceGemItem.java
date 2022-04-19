@@ -15,6 +15,7 @@ import net.mcreator.fireemblem.FireEmblemModElements;
 public class ExperienceGemItem extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:experience_gem")
 	public static final Item block = null;
+
 	public ExperienceGemItem(FireEmblemModElements instance) {
 		super(instance, 173);
 	}
@@ -23,6 +24,7 @@ public class ExperienceGemItem extends FireEmblemModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1).rarity(Rarity.UNCOMMON));

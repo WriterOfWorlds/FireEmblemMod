@@ -22,6 +22,7 @@ import java.util.Map;
 import io.netty.buffer.Unpooled;
 
 public class OpenChangeGUICommandExecutedProcedure {
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))

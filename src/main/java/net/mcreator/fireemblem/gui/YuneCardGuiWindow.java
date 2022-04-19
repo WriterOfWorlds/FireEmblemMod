@@ -27,6 +27,7 @@ public class YuneCardGuiWindow extends ContainerScreen<YuneCardGui.GuiContainerM
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = YuneCardGui.guistate;
+
 	public YuneCardGuiWindow(YuneCardGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -42,7 +43,9 @@ public class YuneCardGuiWindow extends ContainerScreen<YuneCardGui.GuiContainerM
 	public boolean isPauseScreen() {
 		return true;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("fire_emblem:textures/yune_card.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);

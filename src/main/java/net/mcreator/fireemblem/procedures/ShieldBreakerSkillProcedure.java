@@ -49,6 +49,7 @@ public class ShieldBreakerSkillProcedure {
 			}
 		}
 	}
+
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
@@ -62,31 +63,31 @@ public class ShieldBreakerSkillProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if ((entity instanceof ServerPlayerEntity)) {
-			if ((sourceentity instanceof ServerPlayerEntity)) {
-				if (((((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-						.getItem() == Items.STONE_AXE)
-						|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-								.getItem() == Items.IRON_AXE))
-						|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-								.getItem() == Items.GOLDEN_AXE))
-						|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-								.getItem() == Items.DIAMOND_AXE))
-						|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-								.getItem() == Items.NETHERITE_AXE))
-						|| ((((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-								.getItem() == ForgedIronAxeItem.block)
-								|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-										.getItem() == ForgedGoldAxeItem.block))
-								|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-										.getItem() == ForgedDiamondAxeItem.block))
-								|| (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
-										.getItem() == ForgedNetherAxeItem.block)))) {
-					if (((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new FireEmblemModVariables.PlayerVariables())).hasSB)) {
+		if (entity instanceof ServerPlayerEntity) {
+			if (sourceentity instanceof ServerPlayerEntity) {
+				if (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+						.getItem() == Items.STONE_AXE
+						|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+								.getItem() == Items.IRON_AXE
+						|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+								.getItem() == Items.GOLDEN_AXE
+						|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+								.getItem() == Items.DIAMOND_AXE
+						|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+								.getItem() == Items.NETHERITE_AXE
+						|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+								.getItem() == ForgedIronAxeItem.block
+						|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+								.getItem() == ForgedGoldAxeItem.block
+						|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+								.getItem() == ForgedDiamondAxeItem.block
+						|| ((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
+								.getItem() == ForgedNetherAxeItem.block) {
+					if ((sourceentity.getCapability(FireEmblemModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new FireEmblemModVariables.PlayerVariables())).hasSB) {
 						((PlayerEntity) entity).disableShield((true));
-						if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-								.getItem() == Items.SHIELD)) {
+						if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+								.getItem() == Items.SHIELD) {
 							{
 								ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
 								if (_ist.attemptDamageItem((int) 5, new Random(), null)) {
@@ -94,8 +95,8 @@ public class ShieldBreakerSkillProcedure {
 									_ist.setDamage(0);
 								}
 							}
-						} else if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
-								.getItem() == Items.SHIELD)) {
+						} else if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+								.getItem() == Items.SHIELD) {
 							{
 								ItemStack _ist = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY);
 								if (_ist.attemptDamageItem((int) 5, new Random(), null)) {

@@ -15,6 +15,7 @@ import net.mcreator.fireemblem.FireEmblemModElements;
 public class FettersOfDromiItem extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:dromi_fetters")
 	public static final Item block = null;
+
 	public FettersOfDromiItem(FireEmblemModElements instance) {
 		super(instance, 175);
 	}
@@ -23,6 +24,7 @@ public class FettersOfDromiItem extends FireEmblemModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1).rarity(Rarity.RARE));

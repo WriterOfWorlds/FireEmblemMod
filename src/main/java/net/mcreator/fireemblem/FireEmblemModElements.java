@@ -45,6 +45,7 @@ public class FireEmblemModElements {
 	public final List<Supplier<EntityType<?>>> entities = new ArrayList<>();
 	public final List<Supplier<Enchantment>> enchantments = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
+
 	public FireEmblemModElements() {
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("fire_emblem").getFile().getScanResult();
@@ -68,7 +69,9 @@ public class FireEmblemModElements {
 		for (Map.Entry<ResourceLocation, net.minecraft.util.SoundEvent> sound : sounds.entrySet())
 			event.getRegistry().register(sound.getValue().setRegistryName(sound.getKey()));
 	}
+
 	private int messageID = 0;
+
 	public <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, PacketBuffer> encoder, Function<PacketBuffer, T> decoder,
 			BiConsumer<T, Supplier<NetworkEvent.Context>> messageConsumer) {
 		FireEmblemMod.PACKET_HANDLER.registerMessage(messageID, messageType, encoder, decoder, messageConsumer);
@@ -94,12 +97,15 @@ public class FireEmblemModElements {
 	public List<Supplier<Enchantment>> getEnchantments() {
 		return enchantments;
 	}
+
 	public static class ModElement implements Comparable<ModElement> {
 		@Retention(RetentionPolicy.RUNTIME)
 		public @interface Tag {
 		}
+
 		protected final FireEmblemModElements elements;
 		protected final int sortid;
+
 		public ModElement(FireEmblemModElements elements, int sortid) {
 			this.elements = elements;
 			this.sortid = sortid;

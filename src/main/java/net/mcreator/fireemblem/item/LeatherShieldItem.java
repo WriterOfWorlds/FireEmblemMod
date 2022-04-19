@@ -15,6 +15,7 @@ import net.mcreator.fireemblem.FireEmblemModElements;
 public class LeatherShieldItem extends FireEmblemModElements.ModElement {
 	@ObjectHolder("fire_emblem:leather_shield")
 	public static final Item block = null;
+
 	public LeatherShieldItem(FireEmblemModElements instance) {
 		super(instance, 199);
 	}
@@ -23,6 +24,7 @@ public class LeatherShieldItem extends FireEmblemModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new ItemCustom());
 	}
+
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(64).rarity(Rarity.COMMON));

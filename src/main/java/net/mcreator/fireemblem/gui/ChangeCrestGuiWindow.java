@@ -27,6 +27,7 @@ public class ChangeCrestGuiWindow extends ContainerScreen<ChangeCrestGui.GuiCont
 	private int x, y, z;
 	private PlayerEntity entity;
 	private final static HashMap guistate = ChangeCrestGui.guistate;
+
 	public ChangeCrestGuiWindow(ChangeCrestGui.GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -37,7 +38,9 @@ public class ChangeCrestGuiWindow extends ContainerScreen<ChangeCrestGui.GuiCont
 		this.xSize = 176;
 		this.ySize = 83;
 	}
+
 	private static final ResourceLocation texture = new ResourceLocation("fire_emblem:textures/change_crest.png");
+
 	@Override
 	public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
